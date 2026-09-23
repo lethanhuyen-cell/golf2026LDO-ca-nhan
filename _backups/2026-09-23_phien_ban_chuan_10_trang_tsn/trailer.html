@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trailer 60s Khai Mạc Giải Thể Thao - Giải Golf Báo Lao Động Open 2026</title>
+  <title>Trailer 60s Fast-Cut Điện Ảnh - Giải Golf Báo Lao Động Open 2026</title>
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -168,19 +168,6 @@
       0% { opacity: 0; transform: translateY(20px) scale(0.95); }
       100% { opacity: 1; transform: translateY(0) scale(1); }
     }
-
-    /* Equalizer Bar Animation */
-    .eq-bar {
-      display: inline-block;
-      width: 3.5px;
-      background: #DFBE79;
-      border-radius: 2px;
-      animation: eqPulse 0.8s ease-in-out infinite alternate;
-    }
-    @keyframes eqPulse {
-      0% { height: 4px; }
-      100% { height: 18px; }
-    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col justify-between p-3 sm:p-5 lg:p-6">
@@ -193,11 +180,11 @@
       </a>
       <div class="flex items-center gap-2">
         <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-        <span class="text-xs font-bold uppercase tracking-widest text-slate-200">TRAILER 60S • GRAND SPORTS ANTHEM</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-200">TRAILER 60S • 26 FAST-CUTS CINEMATIC</span>
       </div>
     </div>
 
-    <!-- Right Controls: Aspect Ratio, Music Mode & Video Record -->
+    <!-- Right Controls: Aspect Ratio, Speed, Custom MP3 & Video Record -->
     <div class="flex flex-wrap items-center gap-2">
       
       <!-- 16:9 vs 9:16 Toggle -->
@@ -216,21 +203,12 @@
         <button id="btnPaceFast" onclick="setPacing(1.25)" class="px-2 py-1.5 rounded-lg font-bold text-royal-gold hover:text-white transition-all">1.25x Dồn Dập</button>
       </div>
 
-      <!-- Sports Anthem Theme Selector -->
-      <div class="bg-black/60 p-1 rounded-xl border border-white/10 flex items-center gap-1 text-xs">
-        <button id="btnThemeOpening" onclick="setSportsTheme('opening')" class="px-2 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all">
-          🏆 Khai Mạc PGA
-        </button>
-        <button id="btnThemeStadium" onclick="setSportsTheme('stadium')" class="px-2 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all">
-          ⚡ Sân Vận Động
-        </button>
-      </div>
-
-      <!-- Music Toggle Button -->
-      <button id="btnMusicToggle" onclick="toggleSportsMusic()" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-emerald-800 to-emerald-950 border border-emerald-400/50 text-emerald-200 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg hover:brightness-110">
-        <i id="musicIcon" data-lucide="volume-2" class="w-4 h-4 text-emerald-300"></i>
-        <span id="musicLabel">Nhạc Thể Thao: BẬT</span>
-      </button>
+      <!-- Optional Custom MP3 Upload (Optional for user) -->
+      <label class="cursor-pointer px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-slate-200 text-xs font-semibold transition-all flex items-center gap-1.5">
+        <i data-lucide="upload-cloud" class="w-3.5 h-3.5 text-royal-gold"></i>
+        <span id="customMusicLabel">Gắn file nhạc (MP3 tùy chọn)</span>
+        <input type="file" id="customAudioInput" accept="audio/*" class="hidden" onchange="handleCustomAudio(event)" />
+      </label>
 
       <!-- Record & Download Video Button -->
       <button id="btnRecordVideo" onclick="toggleRecording()" class="px-3.5 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5">
@@ -299,20 +277,6 @@
         <!-- Gold / White Flash on Cut -->
         <div id="flashOverlay" class="absolute inset-0 bg-white pointer-events-none opacity-0 z-30"></div>
 
-        <!-- Live Sports Music Visualizer Wave Bar -->
-        <div class="absolute bottom-3 left-4 right-4 z-30 text-center pointer-events-none">
-          <div class="inline-flex items-center gap-3 bg-black/85 backdrop-blur-md px-4 py-1.5 rounded-full border border-royal-gold/50 text-xs font-semibold text-royal-goldLight shadow-2xl">
-            <div class="flex items-end gap-1 h-4">
-              <span class="eq-bar" style="animation-duration: 0.35s; height: 12px;"></span>
-              <span class="eq-bar" style="animation-duration: 0.6s; height: 16px;"></span>
-              <span class="eq-bar" style="animation-duration: 0.45s; height: 8px;"></span>
-              <span class="eq-bar" style="animation-duration: 0.75s; height: 14px;"></span>
-              <span class="eq-bar" style="animation-duration: 0.5s; height: 10px;"></span>
-            </div>
-            <span id="musicTrackTitle" class="tracking-wider uppercase font-bold text-amber-200">🎺 GRAND SPORTS OPENING FANFARE & MARCHING CADENCE (128 BPM)</span>
-          </div>
-        </div>
-
       </div>
 
       <!-- Play/Pause Big Center Button -->
@@ -321,6 +285,9 @@
       </button>
 
     </div>
+
+    <!-- Hidden audio element for custom user MP3 if uploaded -->
+    <audio id="customAudioPlayer" class="hidden" preload="auto"></audio>
 
     <!-- ================= BOTTOM TIMELINE & NAVIGATION ================= -->
     <div class="max-w-5xl w-full mx-auto mt-3.5 bg-black/60 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border border-white/10 space-y-2.5">
@@ -384,11 +351,11 @@
       Ban Biên Tập Báo Lao Động • Văn phòng đại diện TP.HCM và Đông Nam Bộ
     </div>
     <div class="text-slate-400">
-      Động cơ 26 Ảnh Dồn Dập (Fast-Cut 1.8s) • Khúc Ca Khai Mạc Giải Thể Thao Đỉnh Cao (Trumpet Fanfare, Marching Snare & Timpani)
+      Động cơ 26 Ảnh Dồn Dập (Fast-Cut 1.8s) • Bản Trình Chiếu Điện Ảnh (Chế độ Không Nhạc / Sẵn Sàng Dựng Video)
     </div>
   </footer>
 
-  <!-- ================= FAST-CUT & GRAND SPORTS ANTHEM JAVASCRIPT ================= -->
+  <!-- ================= FAST-CUT CINEMATIC JAVASCRIPT ================= -->
   <script>
     lucide.createIcons();
 
@@ -582,7 +549,7 @@
         anim: 'rotate-tilt-zoom',
         badge: '✨ VINH DANH NHÀ VÔ ĐỊCH DƯỚI ÁNH ĐÈN SÂN KHẤU',
         title: 'Khoảnh Khắc Tôn Vinh <br/><span class="text-gold-gradient">Rạng Rỡ & Đầy Cảm Xúc</span>',
-        desc: 'Trao cúp vinh quang, quà tặng Lucky Draw giá trị cao và tri ân các nhà tài trợ.',
+        desc: 'Trao cúp vinh quang, quà tặng Lucky Draw giá trị cao và tri ấn các nhà tài trợ.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
         category: 'LUCKY DRAW & TRI ÂN NHÀ TÀI TRỢ'
       },
@@ -695,258 +662,18 @@
     let currentSecond = 0;
     let isPlaying = false;
     let playInterval = null;
-    let isMusicEnabled = true;
     let currentCutIndex = -1;
     let playbackPacing = 1.0;
-    let currentTheme = 'opening'; // 'opening' (PGA/Olympic Fanfare) or 'stadium' (Fast Stadium Pulse)
+    let customAudio = null;
 
-    // ================= GRAND SPORTS TOURNAMENT ANTHEM ENGINE =================
-    // Olympic / PGA Tour Major Opening Fanfare (128 BPM, Triumphant Major Brass, Marching Snare Cadence & Timpani)
-    let audioCtx = null;
-    let masterGain = null;
-    let musicTimer = null;
-    let musicStep = 0;
-
-    function initAudioContext() {
-      if (!audioCtx) {
-        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        masterGain = audioCtx.createGain();
-        masterGain.gain.setValueAtTime(0.9, audioCtx.currentTime);
-        masterGain.connect(audioCtx.destination);
-      }
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-    }
-
-    // Triumphant Sports Trumpet (Bright, Heroic Brass Fanfare)
-    function playSportsTrumpet(freq, time, dur = 0.22, accent = 1.0) {
-      if (!isMusicEnabled || !audioCtx) return;
-      try {
-        const osc1 = audioCtx.createOscillator();
-        const osc2 = audioCtx.createOscillator();
-        const filter = audioCtx.createBiquadFilter();
-        const gain = audioCtx.createGain();
-
-        osc1.type = 'sawtooth';
-        osc2.type = 'square';
-        osc1.frequency.setValueAtTime(freq, time);
-        osc2.frequency.setValueAtTime(freq * 1.004, time); // slight chorus for stadium ensemble
-
-        filter.type = 'bandpass';
-        filter.frequency.setValueAtTime(1400, time);
-        filter.Q.setValueAtTime(2.2, time);
-
-        gain.gain.setValueAtTime(0.01, time);
-        gain.gain.linearRampToValueAtTime(0.48 * accent, time + 0.04);
-        gain.gain.exponentialRampToValueAtTime(0.005, time + dur);
-
-        osc1.connect(filter);
-        osc2.connect(filter);
-        filter.connect(gain);
-        gain.connect(masterGain);
-
-        osc1.start(time);
-        osc2.start(time);
-        osc1.stop(time + dur);
-        osc2.stop(time + dur);
-      } catch (e) {}
-    }
-
-    // Majestic French Horns (Rich Warm Harmony Chords)
-    function playMajesticHorns(freq, time, dur = 0.5) {
-      if (!isMusicEnabled || !audioCtx) return;
-      try {
-        const osc = audioCtx.createOscillator();
-        const filter = audioCtx.createBiquadFilter();
-        const gain = audioCtx.createGain();
-
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(freq, time);
-
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(950, time);
-        filter.frequency.linearRampToValueAtTime(1600, time + 0.1);
-        filter.frequency.exponentialRampToValueAtTime(600, time + dur);
-
-        gain.gain.setValueAtTime(0.01, time);
-        gain.gain.linearRampToValueAtTime(0.35, time + 0.06);
-        gain.gain.exponentialRampToValueAtTime(0.005, time + dur);
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(masterGain);
-
-        osc.start(time);
-        osc.stop(time + dur);
-      } catch (e) {}
-    }
-
-    // Marching Snare Cadence (Stadium Marching Drums)
-    function playMarchingSnare(time, isRoll = false) {
-      if (!isMusicEnabled || !audioCtx) return;
-      try {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(320, time);
-        
-        const dur = isRoll ? 0.06 : 0.12;
-        const volume = isRoll ? 0.25 : 0.5;
-
-        gain.gain.setValueAtTime(volume, time);
-        gain.gain.exponentialRampToValueAtTime(0.01, time + dur);
-
-        osc.connect(gain);
-        gain.connect(masterGain);
-        osc.start(time);
-        osc.stop(time + dur);
-      } catch (e) {}
-    }
-
-    // Timpani & Stadium Bass Drum (Deep Resonant Downbeat)
-    function playStadiumTimpani(time, intensity = 1.0) {
-      if (!isMusicEnabled || !audioCtx) return;
-      try {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(160 * intensity, time);
-        osc.frequency.exponentialRampToValueAtTime(35, time + 0.75);
-
-        gain.gain.setValueAtTime(0.95 * intensity, time);
-        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.75);
-
-        osc.connect(gain);
-        gain.connect(masterGain);
-        osc.start(time);
-        osc.stop(time + 0.75);
-      } catch (e) {}
-    }
-
-    // Crash Cymbal (Celebratory Opening Ceremony Cymbal)
-    function playCymbalCrash(time) {
-      if (!isMusicEnabled || !audioCtx) return;
-      try {
-        const osc = audioCtx.createOscillator();
-        const filter = audioCtx.createBiquadFilter();
-        const gain = audioCtx.createGain();
-
-        osc.type = 'sawtooth';
-        osc.frequency.setValueAtTime(1200, time);
-        osc.frequency.linearRampToValueAtTime(400, time + 0.9);
-
-        filter.type = 'highpass';
-        filter.frequency.setValueAtTime(2500, time);
-
-        gain.gain.setValueAtTime(0.35, time);
-        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.9);
-
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(masterGain);
-
-        osc.start(time);
-        osc.stop(time + 0.9);
-      } catch (e) {}
-    }
-
-    // Triumphant Cut Transition Impact
-    function playTournamentCutImpact() {
-      if (!isMusicEnabled || !audioCtx) return;
-      initAudioContext();
-      const now = audioCtx.currentTime;
-      playStadiumTimpani(now, 1.3);
-      playCymbalCrash(now);
-      playSportsTrumpet(587.33, now, 0.45, 1.2); // High D5 brass stab
-    }
-
-    // ================= SPORTS ANTHEM SCORE (128 BPM) =================
-    // Olympic / PGA Major Fanfare Theme in C/G/D Major: Proud, Heroic, Celebratory
-    // Motif: "Ta-ta-ta-TAAA! Ta-ra-ra-TAAA! Ta-da-da-da DAAAA!"
-    const sportsFanfareTheme = [
-      // Measure 1: Opening Call
-      { step: 0, freq: 392.00, dur: 0.18, type: 'brass' }, // G4
-      { step: 2, freq: 392.00, dur: 0.18, type: 'brass' }, // G4
-      { step: 4, freq: 392.00, dur: 0.18, type: 'brass' }, // G4
-      { step: 6, freq: 523.25, dur: 0.55, type: 'brass', accent: 1.3 }, // C5 (Triumphant High)
-
-      // Measure 2: Marching Response
-      { step: 10, freq: 587.33, dur: 0.22, type: 'brass' }, // D5
-      { step: 12, freq: 523.25, dur: 0.22, type: 'brass' }, // C5
-      { step: 14, freq: 659.25, dur: 0.65, type: 'brass', accent: 1.4 }, // E5 (Majestic Peak)
-
-      // Measure 3: Heroic March
-      { step: 16, freq: 659.25, dur: 0.2, type: 'brass' },  // E5
-      { step: 18, freq: 587.33, dur: 0.2, type: 'brass' },  // D5
-      { step: 20, freq: 523.25, dur: 0.2, type: 'brass' },  // C5
-      { step: 22, freq: 587.33, dur: 0.45, type: 'brass' }, // D5
-      { step: 26, freq: 783.99, dur: 0.85, type: 'brass', accent: 1.5 }, // G5 (Golden Glory!)
-
-      // Measure 4: Anthemic Cadence
-      { step: 30, freq: 659.25, dur: 0.35, type: 'brass' }, // E5
-      { step: 32, freq: 587.33, dur: 0.35, type: 'brass' }, // D5
-      { step: 34, freq: 523.25, dur: 0.95, type: 'brass', accent: 1.3 }  // C5 (Resolution)
-    ];
-
-    // Stadium Snare Cadence Pattern (16-step loop)
-    const snareCadence = [
-      0, 2, 3, 4, 6, 8, 10, 11, 12, 14, 15
-    ];
-
-    function startSportsMusicEngine() {
-      if (musicTimer) clearInterval(musicTimer);
-      initAudioContext();
-
-      const stepDuration = (60 / 128) / 4; // 16th note at 128 BPM = ~117ms
-      musicStep = 0;
-
-      musicTimer = setInterval(() => {
-        if (!isPlaying || !isMusicEnabled || !audioCtx) return;
-        const now = audioCtx.currentTime;
-
-        const loop36 = musicStep % 36;
-        const loop16 = musicStep % 16;
-
-        // 1. Stadium Timpani on Downbeats
-        if (loop16 === 0) {
-          playStadiumTimpani(now, 1.1);
-          playCymbalCrash(now);
-        } else if (loop16 === 8) {
-          playStadiumTimpani(now, 0.8);
-        }
-
-        // 2. Marching Snare Cadence & Rolls
-        if (snareCadence.includes(loop16)) {
-          const isRoll = (loop16 === 3 || loop16 === 11 || loop16 === 15);
-          playMarchingSnare(now, isRoll);
-        }
-
-        // 3. Majestic French Horns Bass/Harmony
-        if (loop16 === 0) {
-          playMajesticHorns(261.63, now, 0.7); // C4 Horn Chord
-          playMajesticHorns(329.63, now, 0.7); // E4 Horn Chord
-        } else if (loop16 === 8) {
-          playMajesticHorns(293.66, now, 0.6); // D4 Horn Chord
-          playMajesticHorns(392.00, now, 0.6); // G4 Horn Chord
-        }
-
-        // 4. Heroic Sports Opening Fanfare (Trumpets)
-        const note = sportsFanfareTheme.find(f => f.step === loop36);
-        if (note) {
-          playSportsTrumpet(note.freq, now, note.dur, note.accent || 1.0);
-          // Octave harmony for big stadium sound
-          playSportsTrumpet(note.freq * 0.5, now, note.dur, 0.6);
-        }
-
-        musicStep++;
-      }, 117);
-    }
-
-    function stopSportsMusicEngine() {
-      if (musicTimer) {
-        clearInterval(musicTimer);
-        musicTimer = null;
+    // Custom Audio Upload Handler (Optional MP3)
+    function handleCustomAudio(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const audioUrl = URL.createObjectURL(file);
+        customAudio = document.getElementById('customAudioPlayer');
+        customAudio.src = audioUrl;
+        document.getElementById('customMusicLabel').textContent = "🎵 " + file.name.substring(0, 18) + "...";
       }
     }
 
@@ -967,7 +694,6 @@
     }
 
     function playVideo() {
-      initAudioContext();
       isPlaying = true;
       document.getElementById('btnCenterPlay').classList.add('hidden');
       document.getElementById('bottomPlayIcon').setAttribute('data-lucide', 'pause');
@@ -978,9 +704,13 @@
         currentCutIndex = -1;
       }
 
-      startSportsMusicEngine();
+      // Play custom audio if attached
+      if (customAudio && customAudio.src) {
+        customAudio.currentTime = currentSecond;
+        customAudio.play().catch(() => {});
+      }
 
-      const stepTime = 117; // ms
+      const stepTime = 120; // ms
       playInterval = setInterval(() => {
         currentSecond += (stepTime / 1000) * playbackPacing;
         if (currentSecond >= TOTAL_DURATION) {
@@ -994,7 +724,9 @@
     function pauseVideo() {
       isPlaying = false;
       clearInterval(playInterval);
-      stopSportsMusicEngine();
+      if (customAudio && customAudio.src) {
+        customAudio.pause();
+      }
       document.getElementById('btnCenterPlay').classList.remove('hidden');
       document.getElementById('bottomPlayIcon').setAttribute('data-lucide', 'play');
       lucide.createIcons();
@@ -1003,6 +735,9 @@
     function restartVideo() {
       currentSecond = 0;
       currentCutIndex = -1;
+      if (customAudio && customAudio.src) {
+        customAudio.currentTime = 0;
+      }
       updateTimeline();
       playVideo();
     }
@@ -1020,40 +755,27 @@
       }
     }
 
-    function setSportsTheme(theme) {
-      currentTheme = theme;
-      const btnOp = document.getElementById('btnThemeOpening');
-      const btnSt = document.getElementById('btnThemeStadium');
-      const titleEl = document.getElementById('musicTrackTitle');
-
-      if (theme === 'opening') {
-        btnOp.className = "px-2 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
-        btnSt.className = "px-2 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
-        titleEl.textContent = "🎺 GRAND SPORTS OPENING FANFARE & MARCHING CADENCE (128 BPM)";
-      } else {
-        btnSt.className = "px-2 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
-        btnOp.className = "px-2 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
-        titleEl.textContent = "⚡ STADIUM ANTHEM & UPBEAT DRUMS (128 BPM)";
-      }
-    }
-
     function seekVideo(event) {
       const rect = event.currentTarget.getBoundingClientRect();
       const clickX = event.clientX - rect.left;
       const ratio = clickX / rect.width;
       currentSecond = Math.min(TOTAL_DURATION, Math.max(0, ratio * TOTAL_DURATION));
       currentCutIndex = -1;
+      if (customAudio && customAudio.src) {
+        customAudio.currentTime = currentSecond;
+      }
       updateTimeline();
       triggerCutFlash();
-      playTournamentCutImpact();
     }
 
     function jumpToSecond(sec) {
       currentSecond = sec;
       currentCutIndex = -1;
+      if (customAudio && customAudio.src) {
+        customAudio.currentTime = sec;
+      }
       updateTimeline();
       triggerCutFlash();
-      playTournamentCutImpact();
       if (!isPlaying) playVideo();
     }
 
@@ -1089,9 +811,8 @@
         imgEl.className = 'w-full h-full object-cover object-center ' + curCut.anim;
         imgEl.src = curCut.img;
 
-        // 2. Trigger Flash & Impact SFX
+        // 2. Trigger Flash
         triggerCutFlash();
-        playTournamentCutImpact();
 
         // 3. Update Text Overlays with Kinetic Animation
         const textContainer = document.getElementById('mainTextContainer');
@@ -1125,23 +846,6 @@
       }
     }
 
-    // Toggle Sports Music
-    function toggleSportsMusic() {
-      isMusicEnabled = !isMusicEnabled;
-      const label = document.getElementById('musicLabel');
-      const icon = document.getElementById('musicIcon');
-      if (isMusicEnabled) {
-        label.textContent = "Nhạc Thể Thao: BẬT";
-        icon.setAttribute('data-lucide', 'volume-2');
-        if (isPlaying) startSportsMusicEngine();
-      } else {
-        label.textContent = "Nhạc Thể Thao: TẮT";
-        icon.setAttribute('data-lucide', 'volume-x');
-        stopSportsMusicEngine();
-      }
-      lucide.createIcons();
-    }
-
     // MediaRecorder Video Export
     let mediaRecorder = null;
     let recordedChunks = [];
@@ -1171,7 +875,7 @@
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026_SportsAnthem.webm';
+            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026_Visual_60s.webm';
             document.body.appendChild(a);
             a.click();
             setTimeout(() => {
