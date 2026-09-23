@@ -98,6 +98,94 @@
       background: #004d2c;
       border-radius: 4px;
     }
+    
+    /* Clean Full-Bleed Desktop View (No Excess Whitespace) */
+    @media print {
+      @page {
+        size: 1280px auto;
+        margin: 0;
+      }
+      html {
+        width: 1280px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #faf9f5 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+      body {
+        width: 1280px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #faf9f5 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow-x: hidden !important;
+      }
+      .max-w-7xl {
+        max-width: 1220px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+      }
+      section {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+        page-break-inside: avoid !important;
+      }
+      .hidden.xl\:flex {
+        display: flex !important;
+      }
+      .hidden.sm\:flex {
+        display: flex !important;
+      }
+      .hidden.sm\:inline {
+        display: inline !important;
+      }
+      .xl\:hidden {
+        display: none !important;
+      }
+      .lg\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      }
+      .lg\:col-span-7 {
+        grid-column: span 7 / span 7 !important;
+      }
+      .lg\:col-span-5 {
+        grid-column: span 5 / span 5 !important;
+      }
+      .lg\:col-span-6 {
+        grid-column: span 6 / span 6 !important;
+      }
+      .lg\:col-span-4 {
+        grid-column: span 4 / span 4 !important;
+      }
+      .lg\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      }
+      .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .md\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+      }
+      .md\:col-span-7 {
+        grid-column: span 7 / span 7 !important;
+      }
+      .md\:col-span-5 {
+        grid-column: span 5 / span 5 !important;
+      }
+      .sm\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .sm\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+      .sm\:grid-cols-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+      }
+    }
   </style>
 </head>
 <body class="selection:bg-masters-green selection:text-white bg-golf-pattern">
@@ -194,60 +282,63 @@
     </div>
   </header>
 
-  <!-- ================= HERO SECTION ================= -->
-  <section class="relative bg-white pt-6 pb-10 border-b border-slate-200 overflow-hidden">
-    <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-emerald-50/50 to-transparent pointer-events-none"></div>
-    <div class="absolute -top-40 -right-40 w-96 h-96 bg-royal-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+  <!-- ================= HERO SECTION (DARK LUXURY MASTERS TONE) ================= -->
+  <section class="relative bg-masters-dark text-white pt-8 pb-12 border-b border-royal-gold/30 overflow-hidden">
+    <!-- Radial lighting overlays -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-emerald-900/45 via-masters-dark/95 to-black pointer-events-none"></div>
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-royal-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-32 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
       <!-- Top Crest & Subheading -->
-      <div class="text-center max-w-4xl mx-auto mb-5">
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-royal-gold/40 mb-5">
-          <i data-lucide="calendar-check" class="w-4 h-4 text-royal-goldDark"></i>
-          <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-royal-goldDark">
+      <div class="text-center max-w-4xl mx-auto mb-6">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-royal-gold/20 border border-royal-gold/40 mb-4 shadow-lg">
+          <i data-lucide="trophy" class="w-4 h-4 text-royal-gold"></i>
+          <span class="text-xs font-extrabold uppercase tracking-[0.2em] text-royal-goldLight">
             SỰ KIỆN THỂ THAO & KẾT NỐI ĐỐI TÁC THƯỜNG NIÊN 2026
           </span>
         </div>
         
-        <h1 class="font-serif-luxury text-4xl sm:text-6xl lg:text-7xl font-bold text-masters-dark tracking-tight leading-[1.08] mb-3">
-          Giải Golf Báo Lao Động <span class="italic text-royal-goldDark font-normal">Open 2026</span>
+        <h1 class="font-serif-luxury text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.08] mb-3">
+          Giải Golf Báo Lao Động <br class="hidden sm:inline"/>
+          <span class="italic text-royal-goldLight font-normal">Open 2026</span>
         </h1>
         
-        <p class="font-sans text-lg sm:text-xl text-charcoal-700 leading-relaxed max-w-3xl mx-auto font-light">
-          Sân chơi thể thao danh giá dành cho <strong class="font-bold text-masters-dark">các Golfer không chuyên</strong> là lãnh đạo các cơ quan, tổ chức, doanh nghiệp, đối tác và cộng đồng golfer trên toàn quốc. Nơi khẳng định bản lĩnh thể thao đỉnh cao và mở rộng cơ hội hợp tác phát triển bền vững.
+        <p class="font-sans text-base sm:text-lg text-slate-300 leading-relaxed max-w-3xl mx-auto font-light">
+          Sân chơi thể thao danh giá quy tụ <strong class="font-bold text-white">các Golfer không chuyên</strong> là lãnh đạo các cơ quan, tổ chức, doanh nghiệp, đối tác và cộng đồng golfer trên toàn quốc. Nơi khẳng định bản lĩnh thể thao đỉnh cao và mở rộng cơ hội hợp tác phát triển bền vững.
         </p>
 
         <!-- COUNTDOWN TIMER & 24/7 DIRECT CONTACT ROW -->
-        <div class="mt-6 mb-3 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
+        <div class="mt-6 mb-2 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-3 items-stretch">
           
           <!-- Countdown Box (7 Cols) -->
-          <div class="md:col-span-7 bg-gradient-to-r from-emerald-950 via-masters-dark to-charcoal-900 border border-royal-gold/40 rounded-2xl p-4 shadow-xl text-white flex flex-col sm:flex-row items-center justify-between gap-3">
+          <div class="md:col-span-7 bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-4 shadow-2xl text-white flex flex-col sm:flex-row items-center justify-between gap-3">
             <div class="flex items-center gap-2.5 text-left">
               <div class="w-9 h-9 rounded-xl bg-royal-gold/20 border border-royal-gold/40 flex items-center justify-center text-royal-goldLight shrink-0">
-                <i data-lucide="timer" class="w-4 h-4"></i>
+                <i data-lucide="timer" class="w-4 h-4 text-royal-gold"></i>
               </div>
               <div>
-                <span class="text-[9px] font-extrabold uppercase tracking-widest text-royal-gold block">ĐẾM NGƯỢC THI ĐẤU</span>
+                <span class="text-[9px] font-extrabold uppercase tracking-widest text-royal-goldLight block">ĐẾM NGƯỢC THI ĐẤU</span>
                 <span class="font-serif-luxury text-sm font-bold text-white">Shotgun 07.11.2026</span>
               </div>
             </div>
 
             <!-- Countdown Units -->
             <div class="grid grid-cols-4 gap-1.5 sm:gap-2 text-center">
-              <div class="bg-white/10 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/15 min-w-[50px]">
+              <div class="bg-black/40 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-royal-gold/30 min-w-[50px]">
                 <span id="countdownDays" class="font-serif-luxury text-xl sm:text-2xl font-bold text-royal-goldLight block leading-none">00</span>
                 <span class="text-[8px] uppercase font-bold text-slate-300 tracking-wider">Ngày</span>
               </div>
-              <div class="bg-white/10 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/15 min-w-[50px]">
+              <div class="bg-black/40 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-royal-gold/30 min-w-[50px]">
                 <span id="countdownHours" class="font-serif-luxury text-xl sm:text-2xl font-bold text-white block leading-none">00</span>
                 <span class="text-[8px] uppercase font-bold text-slate-300 tracking-wider">Giờ</span>
               </div>
-              <div class="bg-white/10 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/15 min-w-[50px]">
+              <div class="bg-black/40 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-royal-gold/30 min-w-[50px]">
                 <span id="countdownMins" class="font-serif-luxury text-xl sm:text-2xl font-bold text-white block leading-none">00</span>
                 <span class="text-[8px] uppercase font-bold text-slate-300 tracking-wider">Phút</span>
               </div>
-              <div class="bg-white/10 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/15 min-w-[50px]">
+              <div class="bg-black/40 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-royal-gold/30 min-w-[50px]">
                 <span id="countdownSecs" class="font-serif-luxury text-xl sm:text-2xl font-bold text-emerald-400 block leading-none">00</span>
                 <span class="text-[8px] uppercase font-bold text-slate-300 tracking-wider">Giây</span>
               </div>
@@ -255,7 +346,7 @@
           </div>
 
           <!-- 24/7 Hotline Contact Card (5 Cols) -->
-          <a href="tel:0905567395" class="md:col-span-5 bg-gradient-to-br from-charcoal-900 via-charcoal-800 to-black border-2 border-royal-gold/60 hover:border-royal-gold rounded-2xl p-4 shadow-xl text-white flex items-center justify-between gap-3 group transition-all hover:scale-[1.02]">
+          <a href="tel:0905567395" class="md:col-span-5 bg-gradient-to-br from-charcoal-900 via-emerald-950 to-black border-2 border-royal-gold/70 hover:border-royal-gold rounded-2xl p-4 shadow-2xl text-white flex items-center justify-between gap-3 group transition-all hover:scale-[1.02]">
             <div class="flex items-center gap-3 text-left">
               <div class="w-10 h-10 rounded-xl bg-royal-gold text-charcoal-950 flex items-center justify-center font-bold shrink-0 group-hover:bg-royal-goldLight transition-colors">
                 <i data-lucide="phone-call" class="w-5 h-5 animate-pulse"></i>
@@ -280,101 +371,101 @@
       </div>
 
       <!-- Hero Visual & Key Tournament Highlights -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-3">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center mt-4">
         
-        <!-- Left Side: Action Image -->
+        <!-- Left Side: Majestic Tan Son Nhat Image Showcase -->
         <div class="lg:col-span-7 relative group">
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-slate-200">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-royal-gold/50 ring-1 ring-white/10">
             <img 
-              src="assets/images/hero_golf_sports_dynamic.jpg" 
-              alt="Cú đánh Swing uy lực tại Giải Golf Báo Lao Động" 
-              class="w-full h-[360px] sm:h-[400px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              src="assets/images/dossier_cover_tan_son_nhat.jpg" 
+              alt="Giải Golf Báo Lao Động Open 2026 - Sân Golf Tân Sơn Nhất" 
+              class="w-full h-[380px] sm:h-[430px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
             />
-            <div class="absolute inset-0 bg-gradient-to-t from-masters-dark/85 via-transparent to-black/20"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
             
             <!-- Live Tournament Badge on Image -->
-            <div class="absolute top-5 left-5 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-md border border-royal-gold/40 shadow-lg flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span class="text-xs font-bold uppercase tracking-wider text-masters-dark">Thứ Bảy, 07.11.2026 • Sân Golf Tân Sơn Nhất</span>
+            <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md px-3.5 py-1.5 rounded-lg border border-royal-gold/50 shadow-lg flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span class="text-xs font-bold uppercase tracking-wider text-royal-goldLight">Thứ Bảy, 07.11.2026 • Sân Golf Tân Sơn Nhất</span>
             </div>
 
             <!-- Bottom Floating Quote -->
-            <div class="absolute bottom-6 left-6 right-6 text-white">
-              <div class="flex items-center gap-2 text-royal-goldLight text-xs font-bold uppercase tracking-widest mb-1">
+            <div class="absolute bottom-5 left-5 right-5 text-white">
+              <div class="flex items-center gap-2 text-royal-gold text-xs font-bold uppercase tracking-widest mb-1">
                 <i data-lucide="sparkles" class="w-4 h-4"></i> Tinh Thần Thể Thao & Kết Nối Vị Thế
               </div>
-              <p class="font-serif-luxury text-xl sm:text-2xl italic font-normal leading-snug">
+              <p class="font-serif-luxury text-lg sm:text-xl italic font-normal leading-snug text-white">
                 "Khẳng định vị thế thể thao đỉnh cao, kết nối cộng đồng doanh nghiệp và cùng Báo Lao Động kiến tạo những giá trị nhân văn bền vững."
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Right Side: Dual Entry Cards -->
+        <!-- Right Side: Dual Entry Cards (Dark Luxury Glassmorphism) -->
         <div class="lg:col-span-5 space-y-3">
           
           <!-- Golfer Entry Card -->
-          <div class="bg-white rounded-xl p-4 sm:p-5 border-2 border-masters-green/30 shadow-md relative overflow-hidden luxury-card">
-            <div class="absolute top-0 right-0 w-24 h-24 bg-masters-green/5 rounded-bl-full pointer-events-none"></div>
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-12 h-12 rounded-lg bg-masters-green text-white flex items-center justify-center shadow-md">
-                <i data-lucide="user-check" class="w-6 h-6 text-royal-goldLight"></i>
+          <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-5 border border-white/20 hover:border-emerald-400/50 shadow-xl relative overflow-hidden transition-all group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-500/10 rounded-bl-full pointer-events-none"></div>
+            <div class="flex items-start justify-between mb-2.5">
+              <div class="w-11 h-11 rounded-xl bg-emerald-900/60 text-emerald-400 border border-emerald-500/30 flex items-center justify-center shadow-md group-hover:bg-emerald-800 transition-colors">
+                <i data-lucide="user-check" class="w-5 h-5"></i>
               </div>
-              <span class="text-[11px] font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100 px-2.5 py-1 rounded">
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-emerald-300 bg-emerald-950/80 border border-emerald-500/40 px-2.5 py-1 rounded-full">
                 DÀNH CHO GOLFER KHÔNG CHUYÊN
               </span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-masters-dark mb-1.5">Dành Cho Golfer Thi Đấu</h3>
-            <p class="text-sm text-charcoal-700 leading-relaxed mb-3 text-xs leading-relaxed">
+            <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white mb-1">Dành Cho Golfer Thi Đấu</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3 font-light">
               Thi đấu 18 hố shotgun theo thể thức System 36 (04 Bảng A, B, C & Nữ). Cơ cấu giải Best Gross, Cúp Nhất/Nhì/Ba, Giải kỹ thuật và giải Hole-in-One xe sang. Phí golfer thanh toán trực tiếp cho sân golf theo quy định.
             </p>
-            <a href="#register-golfer" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-lg bg-masters-green hover:bg-masters-deep text-white font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all gap-2">
+            <a href="#register-golfer" class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-masters-green hover:bg-emerald-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl border border-emerald-400/30 transition-all gap-2">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-royal-gold"></i>
               Đăng Ký Tham Dự Thi Đấu
             </a>
           </div>
 
           <!-- Enterprise Partnership Card (Dossier Mode) -->
-          <div class="bg-white rounded-xl p-4 sm:p-5 border-2 border-royal-gold/40 shadow-md relative overflow-hidden luxury-card">
-            <div class="absolute top-0 right-0 w-24 h-24 bg-royal-gold/10 rounded-bl-full pointer-events-none"></div>
-            <div class="flex items-start justify-between mb-3">
-              <div class="w-12 h-12 rounded-lg bg-royal-goldDark text-white flex items-center justify-center shadow-md">
-                <i data-lucide="shield-check" class="w-6 h-6 text-royal-goldLight"></i>
+          <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-5 border-2 border-royal-gold/50 hover:border-royal-gold shadow-xl relative overflow-hidden transition-all group">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-royal-gold/15 rounded-bl-full pointer-events-none"></div>
+            <div class="flex items-start justify-between mb-2.5">
+              <div class="w-11 h-11 rounded-xl bg-royal-gold/20 text-royal-goldLight border border-royal-gold/40 flex items-center justify-center shadow-md group-hover:bg-royal-gold group-hover:text-black transition-all">
+                <i data-lucide="shield-check" class="w-5 h-5"></i>
               </div>
-              <span class="text-[11px] font-extrabold uppercase tracking-widest text-amber-900 bg-amber-100 px-2.5 py-1 rounded">
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-royal-goldLight bg-royal-gold/20 border border-royal-gold/40 px-2.5 py-1 rounded-full">
                 HỢP TÁC CHIẾN LƯỢC
               </span>
             </div>
-            <h3 class="font-serif-luxury text-2xl font-bold text-masters-dark mb-1.5">Dành Cho Doanh Nghiệp & Đối Tác</h3>
-            <p class="text-sm text-charcoal-700 leading-relaxed mb-3 text-xs leading-relaxed">
+            <h3 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white mb-1">Dành Cho Doanh Nghiệp & Đối Tác</h3>
+            <p class="text-xs text-slate-300 leading-relaxed mb-3 font-light">
               07 không gian đồng hành độc quyền, hiện diện trang trọng trong Đêm Gala trao giải và bảo trợ truyền thông toàn diện trên hệ sinh thái Báo Lao Động.
             </p>
-            <a href="#sponsorship-dossier" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-lg bg-charcoal-900 hover:bg-black text-royal-goldLight border border-royal-gold/50 font-bold text-xs uppercase tracking-wider shadow-md hover:shadow-lg transition-all gap-2">
-              <i data-lucide="file-down" class="w-4 h-4 text-royal-gold"></i>
+            <a href="#sponsorship-dossier" class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-royal-gold hover:bg-royal-goldLight text-charcoal-950 font-bold text-xs uppercase tracking-wider shadow-xl transition-all gap-2">
+              <i data-lucide="file-down" class="w-4 h-4 text-charcoal-950"></i>
               Nhận Hồ Sơ Quyền Lợi Tài Trợ
             </a>
           </div>
 
           <!-- Organizing Hierarchy Card -->
-          <div class="p-3.5 bg-white rounded-xl border border-slate-200 shadow-sm space-y-2 text-xs">
-            <div class="flex items-center justify-between pb-1.5 border-b border-slate-100">
-              <span class="text-[11px] font-bold text-charcoal-700 uppercase tracking-wider">CƠ CẤU TỔ CHỨC GIẢI ĐẤU</span>
-              <span class="text-[10px] font-extrabold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded uppercase">07.11.2026</span>
+          <div class="p-3 bg-white/5 backdrop-blur-md rounded-xl border border-white/10 shadow-lg space-y-1.5 text-xs">
+            <div class="flex items-center justify-between pb-1.5 border-b border-white/10">
+              <span class="text-[10px] font-bold text-royal-gold uppercase tracking-wider">CƠ CẤU TỔ CHỨC GIẢI ĐẤU</span>
+              <span class="text-[9px] font-extrabold text-emerald-400 bg-emerald-950/80 border border-emerald-500/30 px-2 py-0.5 rounded uppercase">07.11.2026</span>
             </div>
-            <div class="space-y-1.5 text-xs">
+            <div class="space-y-1 text-xs text-slate-300">
               <div class="flex items-center justify-between">
-                <span class="text-charcoal-600">🏛️ <strong>Đơn vị chủ trì:</strong></span>
-                <span class="font-bold text-laodong-crimson">Báo Lao Động</span>
+                <span>🏛️ <strong>Đơn vị chủ trì:</strong></span>
+                <span class="font-bold text-laodong-crimson bg-white/95 px-2 py-0.5 rounded text-[10px]">Báo Lao Động</span>
               </div>
               <div class="flex items-center justify-between">
-                <span class="text-charcoal-600">🏢 <strong>Đầu mối tổ chức:</strong></span>
-                <span class="font-bold text-masters-dark text-[11px] text-right">VPĐD Báo Lao Động TP.HCM & ĐNB</span>
+                <span>🏢 <strong>Đầu mối tổ chức:</strong></span>
+                <span class="font-semibold text-white text-[10.5px] text-right">VPĐD Báo Lao Động TP.HCM & ĐNB</span>
               </div>
-              <div class="flex items-center justify-between pt-1 border-t border-slate-100">
-                <span class="text-charcoal-600">⛳ <strong>Đơn vị phối hợp:</strong></span>
+              <div class="flex items-center justify-between pt-1 border-t border-white/10">
+                <span>⛳ <strong>Đơn vị phối hợp:</strong></span>
                 <div class="flex items-center gap-1.5">
-                  <span class="font-bold text-emerald-800">Sân Golf Tân Sơn Nhất</span>
-                  <img src="assets/images/logo_tan_son_nhat.png" alt="Sân Golf Tân Sơn Nhất" class="h-4 w-auto object-contain" />
+                  <span class="font-bold text-emerald-400">Sân Golf Tân Sơn Nhất</span>
+                  <img src="assets/images/logo_tan_son_nhat.png" alt="Sân Golf Tân Sơn Nhất" class="h-3.5 w-auto object-contain bg-white/95 p-0.5 rounded" />
                 </div>
               </div>
             </div>
@@ -1162,15 +1253,9 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">Email Nhận Xác Nhận *</label>
-              <input type="email" required placeholder="golfer@domain.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-masters-green text-sm bg-slate-50/50" />
-            </div>
-            <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">Đơn Vị Công Tác / Doanh Nghiệp</label>
-              <input type="text" placeholder="Tập đoàn / Doanh nghiệp..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-masters-green text-sm bg-slate-50/50" />
-            </div>
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">Đơn Vị Công Tác / Doanh Nghiệp</label>
+            <input type="text" placeholder="Tập đoàn / Doanh nghiệp / Câu lạc bộ Golf..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-masters-green text-sm bg-slate-50/50" />
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -1239,8 +1324,8 @@
               <input type="tel" required placeholder="0901 234 567" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-royal-gold text-sm bg-slate-50/50" />
             </div>
             <div>
-              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">Email Nhận Hồ Sơ Proposal (PDF) *</label>
-              <input type="email" required placeholder="marketing@company.com" class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-royal-gold text-sm bg-slate-50/50" />
+              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">Chức Vụ / Phòng Ban Phụ Trách</label>
+              <input type="text" placeholder="Ban Đối ngoại / Ban Truyền thông..." class="w-full px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-royal-gold text-sm bg-slate-50/50" />
             </div>
           </div>
 
@@ -1341,13 +1426,13 @@
             <div class="bg-white/5 p-4 rounded-xl border border-white/10">
               <div class="text-[11px] font-bold uppercase text-emerald-400 mb-1">Tiểu Ban Chuyên Môn & Golfer</div>
               <div class="text-sm font-bold text-white">0901338910 - Mr. Thanh Vũ</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">golf@laodong.vn</div>
+              <div class="text-[11px] text-slate-400 mt-1">Hỗ trợ kỹ thuật, Handicap & xếp flight 24/7</div>
             </div>
 
             <div class="bg-white/5 p-4 rounded-xl border border-white/10">
               <div class="text-[11px] font-bold uppercase text-royal-gold mb-1">Tiểu Ban Tài Trợ & Đối Ngoại</div>
               <div class="text-sm font-bold text-white">090 5567395 - Mr. Đăng Văn</div>
-              <div class="text-[11px] text-slate-400 mt-0.5">taitro@laodong.vn</div>
+              <div class="text-[11px] text-slate-400 mt-1">Tư vấn gói tài trợ & quyền lợi đối tác 24/7</div>
             </div>
           </div>
 
