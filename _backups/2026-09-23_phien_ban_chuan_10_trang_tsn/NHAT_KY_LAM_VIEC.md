@@ -43,11 +43,32 @@
 
 ---
 
+### 🎬 C. Động Cơ Trailer 60s Fast-Cut Điện Ảnh (`trailer.html`)
+1. **Nâng Cấp 26 Cắt Ảnh Dồn Dập (Fast-Cut 1.8s – 2.2s/cảnh)**:
+   - Tăng cường số lượng ảnh thể thao 8K siêu nét từ 16 lên 26 bức ảnh dồn dập, đa dạng góc máy:
+     * Cú đánh bùng nổ văng giọt sương mai (`golf_driver_explosion_strike.jpg`)
+     * Cú cứu cát bunker đóng băng hàng ngàn hạt cát trên không trung (`golf_bunker_splash_action.jpg`)
+     * Săn xe sang Hole-in-One trên thảm đỏ Par 3 (`golf_hio_luxury_car_podium.jpg`)
+     * Đại tiệc Gala Dinner nâng ly sâm panh hoàng kim (`golf_gala_champagne_toast.jpg`)
+     * Toàn cảnh fairway, hồ nước, bảng nữ Lady Flight, phòng VIP Clubhouse...
+2. **Kỹ Xảo Chuyển Cảnh Rhythmic & Kinetic Typography**:
+   - Tích hợp 6 kiểu chuyển động máy quay: `hyper-zoom-in`, `zoom-punch`, `pan-slide-left`, `pan-slide-right`, `rotate-tilt-zoom`, `zoom-in-fast`.
+   - Hiệu ứng lóe sáng vàng/trắng (flash pulse) và rung chấn sub-bass 808 trên từng nhịp cắt.
+   - Nút chọn tốc độ chuyển cảnh: **1.0x Chuẩn** & **1.25x Dồn Dập Siêu Căng**.
+3. **Voice-Off Giọng Nam Trầm Hùng & Hiệu Ứng Âm Thanh (Web Audio API)**:
+   - Giọng đọc nam truyền cảm hứng đồng bộ tự động từng phân cảnh.
+   - Hiệu ứng âm thanh điện ảnh: Trống Kick Sub-bass 808, Snare nhịp phách, sóng âm visualizer.
+4. **Tính Năng Xuất Video & Đổi Khung Hình**:
+   - Chuyển đổi linh hoạt **16:9 Cinema Wide** (Màn hình LED, YouTube) và **9:16 Mobile Story** (TikTok, Reels, Shorts).
+   - Nút **Xuất Video (MP4/WebM)** ghi hình 1-click trực tiếp từ trình duyệt.
+
+---
+
 ## 📂 2. DANH MỤC CÁC TỆP TIN & ẤN PHẨM BÀN GIAO CHÍNH THỨC
 
 | STT | Tên Tệp Tin | Định Dạng | Mô Tả & Tình Trạng |
 |:---:|---|:---:|---|
-| 1 | **`trailer.html`** | Web App / Video Engine | Ứng dụng Trailer 60s tương tác điện ảnh, âm thanh Epic Synthesizer, đổi khung hình 16:9 & 9:16, nút ghi/xuất video 1-click. |
+| 1 | **`trailer.html`** | Web App / Video Engine | Trailer 60s **26 Cắt ảnh dồn dập (Fast-Cut)**, hiệu ứng âm thanh Sub-bass 808, Voice-off giọng nam trầm hùng, đổi khung hình 16:9 & 9:16, nút ghi video 1-click. |
 | 2 | **`HSTT_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (5.2 MB) | Bản xuất in PDF chất lượng cao **10 trang A4 chuẩn (`kMDItemNumberOfPages = 10`)**, tối ưu khoảng trắng, sắc nét từng trang. |
 | 3 | **`WEB_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.1 MB) | Bản PDF giao diện toàn bộ Landing Page chuẩn Desktop liền mạch, trọn vẹn, không bị vỡ bố cục. |
 | 4 | **`WEB_Golf_Bao_Lao_Dong_2026_FULL.png`** | PNG (4.7 MB) | Bản ảnh chụp toàn bộ chiều dài Landing Page ở độ phân giải siêu nét (1440px width). |
@@ -58,6 +79,12 @@
 | 9 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
 
 ---
+
+## 🔒 3. CAM KẾT CHẤT LƯỢNG & BẢO MẬT
+- ✅ **Chuẩn nhận diện**: Sử dụng chuẩn xác tên đơn vị phối hợp *"Sân Golf Tân Sơn Nhất"*.
+- ✅ **Bảo mật**: Tuyệt đối không để lộ email công khai trên các ấn phẩm tiếp thị đối ngoại, thông tin được định tuyến qua 3 đầu mối hotline 24/7.
+- ✅ **Tính sẵn sàng**: Toàn bộ mã nguồn, tài nguyên ảnh 8K, tài liệu và PDF đã được kiểm tra nghiêm ngặt, sao lưu đa tầng và sẵn sàng phục vụ công tác truyền thông, kêu gọi tài trợ.
+
 
 ## 💾 3. THÔNG TIN SAO LƯU & QUẢN TRỊ MÃ NGUỒN
 - **Thư mục sao lưu**: `_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`
