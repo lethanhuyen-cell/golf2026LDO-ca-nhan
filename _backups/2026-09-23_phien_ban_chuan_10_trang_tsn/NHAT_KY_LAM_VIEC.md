@@ -47,14 +47,15 @@
 
 | STT | Tên Tệp Tin | Định Dạng | Mô Tả & Tình Trạng |
 |:---:|---|:---:|---|
-| 1 | **`HSTT_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (5.2 MB) | Bản xuất in PDF chất lượng cao **10 trang A4 chuẩn (`kMDItemNumberOfPages = 10`)**, tối ưu khoảng trắng, sắc nét từng trang. |
-| 2 | **`WEB_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.1 MB) | Bản PDF giao diện toàn bộ Landing Page chuẩn Desktop liền mạch, trọn vẹn, không bị vỡ bố cục. |
-| 3 | **`WEB_Golf_Bao_Lao_Dong_2026_FULL.png`** | PNG (4.7 MB) | Bản ảnh chụp toàn bộ chiều dài Landing Page ở độ phân giải siêu nét (1440px width). |
-| 4 | **`index.html`** | Web App | Mã nguồn Landing Page chính thức (đã tích hợp đầy đủ khối Hiện vật, Cá nhân, Hotline). |
-| 5 | **`dossier.html`** | Web App / A4 | Mã nguồn Hồ Sơ Mời Tài Trợ 10 trang A4 chuẩn. |
-| 6 | **`_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`** | Thư mục Backup | Bộ sao lưu toàn vẹn chứa đầy đủ mã nguồn HTML, tài nguyên `assets/` và toàn bộ tệp PDF/PNG. |
-| 7 | **`QUY_TRINH_TO_CHUC_SU_KIEN_VA_THIET_KE_LANDING_PAGE_CHUAN.md`** | Markdown | Master SOP quy trình chuẩn 6 giai đoạn tổ chức sự kiện và xây dựng tài liệu cho Báo Lao Động. |
-| 8 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
+| 1 | **`trailer.html`** | Web App / Video Engine | Ứng dụng Trailer 60s tương tác điện ảnh, âm thanh Epic Synthesizer, đổi khung hình 16:9 & 9:16, nút ghi/xuất video 1-click. |
+| 2 | **`HSTT_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (5.2 MB) | Bản xuất in PDF chất lượng cao **10 trang A4 chuẩn (`kMDItemNumberOfPages = 10`)**, tối ưu khoảng trắng, sắc nét từng trang. |
+| 3 | **`WEB_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.1 MB) | Bản PDF giao diện toàn bộ Landing Page chuẩn Desktop liền mạch, trọn vẹn, không bị vỡ bố cục. |
+| 4 | **`WEB_Golf_Bao_Lao_Dong_2026_FULL.png`** | PNG (4.7 MB) | Bản ảnh chụp toàn bộ chiều dài Landing Page ở độ phân giải siêu nét (1440px width). |
+| 5 | **`index.html`** | Web App | Mã nguồn Landing Page chính thức (đã tích hợp đầy đủ khối Hiện vật, Cá nhân, Hotline và nút Trailer 60s). |
+| 6 | **`dossier.html`** | Web App / A4 | Mã nguồn Hồ Sơ Mời Tài Trợ 10 trang A4 chuẩn (đã tích hợp nút xem Trailer 60s). |
+| 7 | **`_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`** | Thư mục Backup | Bộ sao lưu toàn vẹn chứa đầy đủ mã nguồn HTML, tài nguyên `assets/` và toàn bộ tệp PDF/PNG. |
+| 8 | **`QUY_TRINH_TO_CHUC_SU_KIEN_VA_THIET_KE_LANDING_PAGE_CHUAN.md`** | Markdown | Master SOP quy trình chuẩn 6 giai đoạn tổ chức sự kiện và xây dựng tài liệu cho Báo Lao Động. |
+| 9 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
 
 ---
 
