@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trailer 60s Siêu Căng (Fast-Cut) - Giải Golf Báo Lao Động Open 2026</title>
+  <title>Trailer 60s Nhạc Điện Ảnh Hoành Tráng - Giải Golf Báo Lao Động Open 2026</title>
   
   <!-- Tailwind CSS & Lucide Icons -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -71,7 +71,7 @@
       animation: zoomPunch 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     @keyframes zoomPunch {
-      0% { transform: scale(1.22) rotate(1deg); filter: contrast(1.15) brightness(1.2); }
+      0% { transform: scale(1.24) rotate(1deg); filter: contrast(1.15) brightness(1.2); }
       100% { transform: scale(1.02) rotate(0deg); filter: contrast(1) brightness(1); }
     }
 
@@ -79,16 +79,16 @@
       animation: panLeft 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     }
     @keyframes panLeft {
-      0% { transform: scale(1.15) translateX(3%); }
-      100% { transform: scale(1.04) translateX(-2%); }
+      0% { transform: scale(1.16) translateX(3.5%); }
+      100% { transform: scale(1.03) translateX(-2%); }
     }
 
     .pan-slide-right {
       animation: panRight 2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     }
     @keyframes panRight {
-      0% { transform: scale(1.15) translateX(-3%); }
-      100% { transform: scale(1.04) translateX(2%); }
+      0% { transform: scale(1.16) translateX(-3.5%); }
+      100% { transform: scale(1.03) translateX(2%); }
     }
 
     .zoom-in-fast {
@@ -96,14 +96,14 @@
     }
     @keyframes zoomInFast {
       0% { transform: scale(1); }
-      100% { transform: scale(1.2); }
+      100% { transform: scale(1.22); }
     }
 
     .rotate-tilt-zoom {
       animation: rotateTiltZoom 2s cubic-bezier(0.1, 0.9, 0.2, 1) forwards;
     }
     @keyframes rotateTiltZoom {
-      0% { transform: scale(1.18) rotate(-1.5deg); }
+      0% { transform: scale(1.2) rotate(-1.5deg); }
       100% { transform: scale(1.03) rotate(0.5deg); }
     }
 
@@ -111,41 +111,32 @@
       animation: hyperZoom 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     @keyframes hyperZoom {
-      0% { transform: scale(1.3); filter: blur(4px); }
-      30% { filter: blur(0px); }
-      100% { transform: scale(1.05); }
+      0% { transform: scale(1.32); filter: blur(5px); }
+      25% { filter: blur(0px); }
+      100% { transform: scale(1.04); }
     }
 
     /* Text Glows */
     .glow-gold {
-      text-shadow: 0 0 30px rgba(223, 190, 121, 0.9), 0 0 60px rgba(197, 160, 89, 0.5);
+      text-shadow: 0 0 35px rgba(223, 190, 121, 0.95), 0 0 70px rgba(197, 160, 89, 0.6);
     }
     .glow-white {
-      text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.95);
     }
 
     .text-gold-gradient {
-      background: linear-gradient(135deg, #FFF8E7 0%, #DFBE79 40%, #C5A059 70%, #9E7D3B 100%);
+      background: linear-gradient(135deg, #FFF9EB 0%, #DFBE79 40%, #C5A059 70%, #9E7D3B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     /* Flash Transitions on Beat */
     .flash-active {
-      animation: flashPulse 0.3s ease-out;
+      animation: flashPulse 0.28s ease-out;
     }
     @keyframes flashPulse {
-      0% { opacity: 0.95; transform: scale(1.06); }
+      0% { opacity: 0.95; transform: scale(1.08); }
       100% { opacity: 0; transform: scale(1); }
-    }
-
-    /* Gold Burst Ring on Major Transitions */
-    .gold-burst {
-      animation: goldBurstPulse 0.5s cubic-bezier(0.1, 0.8, 0.2, 1);
-    }
-    @keyframes goldBurstPulse {
-      0% { transform: scale(0.6); opacity: 1; }
-      100% { transform: scale(1.8); opacity: 0; }
     }
 
     /* Shimmer Effect */
@@ -160,9 +151,9 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: linear-gradient(60deg, transparent, rgba(255,255,255,0.45), transparent);
+      background: linear-gradient(60deg, transparent, rgba(255,255,255,0.5), transparent);
       transform: rotate(30deg);
-      animation: shimmerMove 2.5s infinite;
+      animation: shimmerMove 2.2s infinite;
     }
     @keyframes shimmerMove {
       0% { transform: translateX(-100%) rotate(30deg); }
@@ -171,11 +162,24 @@
 
     /* Kinetic Typography Slide-Up */
     .kinetic-text {
-      animation: kineticSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: kineticSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
     @keyframes kineticSlideUp {
-      0% { opacity: 0; transform: translateY(18px) scale(0.96); }
+      0% { opacity: 0; transform: translateY(20px) scale(0.95); }
       100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Equalizer Bar Animation */
+    .eq-bar {
+      display: inline-block;
+      width: 3px;
+      background: #DFBE79;
+      border-radius: 2px;
+      animation: eqPulse 1s ease-in-out infinite alternate;
+    }
+    @keyframes eqPulse {
+      0% { height: 4px; }
+      100% { height: 18px; }
     }
   </style>
 </head>
@@ -189,11 +193,11 @@
       </a>
       <div class="flex items-center gap-2">
         <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
-        <span class="text-xs font-bold uppercase tracking-widest text-slate-200">TRAILER 60S • 26 FAST-CUTS CINEMATIC</span>
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-200">TRAILER 60S • EPIC ORCHESTRAL SOUNDTRACK</span>
       </div>
     </div>
 
-    <!-- Right Controls: Aspect Ratio, Voice-off & Video Record -->
+    <!-- Right Controls: Aspect Ratio, Music Mode & Video Record -->
     <div class="flex flex-wrap items-center gap-2">
       
       <!-- 16:9 vs 9:16 Toggle -->
@@ -212,16 +216,10 @@
         <button id="btnPaceFast" onclick="setPacing(1.25)" class="px-2 py-1.5 rounded-lg font-bold text-royal-gold hover:text-white transition-all">1.25x Dồn Dập</button>
       </div>
 
-      <!-- Voice-Off Male Toggle -->
-      <button id="btnVoiceToggle" onclick="toggleVoiceOff()" class="px-3 py-1.5 rounded-xl bg-amber-950/80 border border-royal-gold/50 hover:bg-amber-900 text-royal-goldLight text-xs font-bold transition-all flex items-center gap-1.5 shadow">
-        <i id="voiceIcon" data-lucide="mic" class="w-4 h-4 text-royal-gold"></i>
-        <span id="voiceLabel">Giọng Nam: BẬT</span>
-      </button>
-
-      <!-- Sound FX Toggle -->
-      <button id="btnAudioToggle" onclick="toggleAudioEngine()" class="px-3 py-1.5 rounded-xl bg-emerald-950/80 border border-emerald-500/50 hover:bg-emerald-900 text-emerald-300 text-xs font-bold transition-all flex items-center gap-1.5">
-        <i id="audioIcon" data-lucide="volume-2" class="w-4 h-4 text-emerald-400"></i>
-        <span id="audioLabel">Beat SFX: BẬT</span>
+      <!-- Epic Music Engine Toggle -->
+      <button id="btnMusicToggle" onclick="toggleEpicMusic()" class="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-700 to-amber-900 border border-royal-gold/60 text-amber-100 text-xs font-bold transition-all flex items-center gap-1.5 shadow-lg shadow-amber-950/50 hover:brightness-110">
+        <i id="musicIcon" data-lucide="music" class="w-4 h-4 text-royal-goldLight"></i>
+        <span id="musicLabel">Nhạc Hoành Tráng: BẬT</span>
       </button>
 
       <!-- Record & Download Video Button -->
@@ -291,15 +289,17 @@
         <!-- Gold / White Flash on Cut -->
         <div id="flashOverlay" class="absolute inset-0 bg-white pointer-events-none opacity-0 z-30"></div>
 
-        <!-- Subtitles Bar with Voice Wave Indicator -->
+        <!-- Live Epic Music Visualizer Wave Bar -->
         <div class="absolute bottom-3 left-4 right-4 z-30 text-center pointer-events-none">
-          <div class="inline-flex items-center gap-2 bg-black/85 backdrop-blur-md px-4 py-1.5 rounded-full border border-royal-gold/40 text-xs sm:text-sm font-semibold text-royal-goldLight shadow-2xl">
-            <span id="voiceWaveIcon" class="flex items-center gap-0.5">
-              <span class="w-1 h-3 bg-royal-gold rounded-full animate-bounce"></span>
-              <span class="w-1 h-4 bg-royal-goldLight rounded-full animate-pulse"></span>
-              <span class="w-1 h-2 bg-royal-gold rounded-full animate-bounce"></span>
-            </span>
-            <span id="subtitlesBox">Chào mừng đến với Giải Golf Báo Lao Động Open 2026</span>
+          <div class="inline-flex items-center gap-3 bg-black/85 backdrop-blur-md px-4 py-1.5 rounded-full border border-royal-gold/50 text-xs font-semibold text-royal-goldLight shadow-2xl">
+            <div class="flex items-end gap-1 h-4">
+              <span class="eq-bar" style="animation-duration: 0.4s; height: 12px;"></span>
+              <span class="eq-bar" style="animation-duration: 0.7s; height: 16px;"></span>
+              <span class="eq-bar" style="animation-duration: 0.5s; height: 8px;"></span>
+              <span class="eq-bar" style="animation-duration: 0.9s; height: 14px;"></span>
+              <span class="eq-bar" style="animation-duration: 0.6s; height: 10px;"></span>
+            </div>
+            <span id="musicTrackTitle" class="tracking-wider uppercase font-bold text-amber-200">🎵 EPIC CINEMATIC SYMPHONY • HANS ZIMMER STYLE (126 BPM)</span>
           </div>
         </div>
 
@@ -374,11 +374,11 @@
       Ban Biên Tập Báo Lao Động • Văn phòng đại diện TP.HCM và Đông Nam Bộ
     </div>
     <div class="text-slate-400">
-      Động cơ 26 Ảnh Dồn Dập (Fast-Cut 1.8s) • Voice-Off Nam Trầm Hùng & Hiệu Ứng Âm Thanh Cinematic
+      Động cơ 26 Ảnh Dồn Dập (Fast-Cut 1.8s) • Dàn Nhạc Giao Hưởng Điện Ảnh (Epic Orchestral Brass, Strings & Taiko)
     </div>
   </footer>
 
-  <!-- ================= FAST-CUT & VOICE ENGINE JAVASCRIPT ================= -->
+  <!-- ================= FAST-CUT & EPIC ORCHESTRAL MUSIC JAVASCRIPT ================= -->
   <script>
     lucide.createIcons();
 
@@ -394,9 +394,7 @@
         title: 'Nơi Bản Lĩnh Hòa Cùng <br/><span class="text-gold-gradient italic font-normal">Vị Thế Tinh Hoa</span>',
         desc: 'Đấu trường thể thao danh giá quy tụ các nhà lãnh đạo và doanh nhân hàng đầu toàn quốc.',
         scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
-        category: 'SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN 2026',
-        subtitle: 'Nơi bản lĩnh thể thao hòa cùng khát vọng bứt phá...',
-        voiceLine: 'Nơi bản lĩnh thể thao hòa cùng khát vọng bứt phá!'
+        category: 'SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN 2026'
       },
       {
         start: 2.2,
@@ -407,9 +405,7 @@
         title: 'Khoảnh Khắc Bùng Nổ <br/><span class="text-gold-gradient">Tốc Độ & Độ Chuẩn Xác</span>',
         desc: 'Từng cú đánh là bản lĩnh kiên định và ý chí chinh phục đỉnh cao.',
         scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
-        category: 'FAIR-PLAY • BẢN LĨNH TIÊN PHONG',
-        subtitle: 'Nơi những giá trị tinh hoa được tôn vinh trên từng đường bóng...',
-        voiceLine: 'Nơi những giá trị tinh hoa được tôn vinh trên từng đường bóng!'
+        category: 'FAIR-PLAY • BẢN LĨNH TIÊN PHONG'
       },
       {
         start: 4.2,
@@ -420,9 +416,7 @@
         title: 'Khát Vọng Vươn Tầm <br/><span class="text-gold-gradient">Đỉnh Cao Tỏa Sáng</span>',
         desc: 'Sân chơi thể thao văn minh, khẳng định thương hiệu và kết nối tương lai.',
         scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
-        category: 'BÁO LAO ĐỘNG CHỦ TRÌ TỔ CHỨC',
-        subtitle: 'Khát vọng vươn tầm, đỉnh cao tỏa sáng...',
-        voiceLine: null
+        category: 'BÁO LAO ĐỘNG CHỦ TRÌ TỔ CHỨC'
       },
       {
         start: 6.2,
@@ -433,9 +427,7 @@
         title: 'Bản Lĩnh Vượt Chông Gai <br/><span class="text-gold-gradient">Thần Thái Thép</span>',
         desc: 'Sức mạnh tinh thần và sự quyết đoán tạo nên những pha cứu bóng ngoạn mục.',
         scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
-        category: 'KỸ THUẬT & TINH THẦN ĐẤU SĨ',
-        subtitle: 'Bản lĩnh vượt qua mọi thử thách trên sân đấu...',
-        voiceLine: null
+        category: 'KỸ THUẬT & TINH THẦN ĐẤU SĨ'
       },
       {
         start: 8.2,
@@ -446,9 +438,7 @@
         title: 'Tinh Thần Thể Thao <br/><span class="text-gold-gradient">Chuẩn Mực & Sang Trọng</span>',
         desc: 'Sự tĩnh lặng tập trung và cảm giác bóng hoàn hảo trên mặt cỏ Green tiêu chuẩn PGA.',
         scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
-        category: 'GREEN CHUẨN MỰC THẾ GIỚI',
-        subtitle: 'Khẳng định vị thế trên từng đường gạt bóng quyết định!',
-        voiceLine: null
+        category: 'GREEN CHUẨN MỰC THẾ GIỚI'
       },
 
       // ================= SCENE 2: 10s - 25s (Đấu Trường TSN & 144 Golfer - 7 Cắt Dồn Dập) =================
@@ -461,9 +451,7 @@
         title: 'Sân Golf Tân Sơn Nhất <br/><span class="text-gold-gradient">Quy Mô Bậc Nhất TP.HCM</span>',
         desc: '36 hố golf chuẩn quốc tế được bảo dưỡng tỉ mỉ cùng hệ thống Night Golf rực rỡ.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'ĐƠN VỊ PHỐI HỢP: SÂN GOLF TÂN SƠN NHẤT',
-        subtitle: 'Chào đón 144 Golfer tài năng tại Sân Golf Tân Sơn Nhất...',
-        voiceLine: 'Chào đón 144 Golfer tài năng tại Sân Golf Tân Sơn Nhất!'
+        category: 'ĐƠN VỊ PHỐI HỢP: SÂN GOLF TÂN SƠN NHẤT'
       },
       {
         start: 12.2,
@@ -474,9 +462,7 @@
         title: '144 Golfer Lãnh Đạo <br/><span class="text-gold-gradient">Xuất Phát Đồng Loạt 12:00</span>',
         desc: 'Thi đấu thể thức System 36 kịch tính tranh tài qua 04 Bảng đấu A, B, C và Bảng Nữ.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'SYSTEM 36 (04 BẢNG ĐẤU: A, B, C & LADY FLIGHT)',
-        subtitle: 'Đấu trường 36 hố tiêu chuẩn quốc tế kịch tính và danh giá bậc nhất TP.HCM...',
-        voiceLine: 'Đấu trường 36 hố kịch tính và danh giá bậc nhất Thành phố Hồ Chí Minh!'
+        category: 'SYSTEM 36 (04 BẢNG ĐẤU: A, B, C & LADY FLIGHT)'
       },
       {
         start: 14.4,
@@ -487,9 +473,7 @@
         title: 'Thiên Nhiên Hòa Quyện <br/><span class="text-gold-gradient">Đẳng Cấp Thượng Lưu</span>',
         desc: 'Không gian mở khoáng đạt, cảnh quan cây xanh và hồ nước tuyệt mỹ.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'KHÔNG GIAN NGHỈ DƯỠNG & THI ĐẤU',
-        subtitle: 'Cảnh quan tuyệt mỹ tạo nên nguồn cảm hứng bất tận...',
-        voiceLine: null
+        category: 'KHÔNG GIAN NGHỈ DƯỠNG & THI ĐẤU'
       },
       {
         start: 16.5,
@@ -500,9 +484,7 @@
         title: 'Chiến Thuật Thi Đấu <br/><span class="text-gold-gradient">Cảm Xúc Bùng Nổ</span>',
         desc: 'Đòi hỏi sự tính toán chiến thuật chuẩn xác và khả năng điều khiển bóng bậc thầy.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: '18 HỐ SHOTGUN KỊCH TÍNH',
-        subtitle: 'Mỗi cú đánh là một quyết định chiến thuật đỉnh cao!',
-        voiceLine: null
+        category: '18 HỐ SHOTGUN KỊCH TÍNH'
       },
       {
         start: 18.6,
@@ -513,9 +495,7 @@
         title: 'Bảng Nữ Tinh Tế <br/><span class="text-gold-gradient">Duyên Dáng & Quyết Đoán</span>',
         desc: 'Sân chơi đẳng cấp tôn vinh nét đẹp và kỹ thuật thi đấu điêu luyện của các nữ Golfer.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'CÚP VÀNG NHẤT, NHÌ, BA BẢNG NỮ',
-        subtitle: 'Sự tỏa sáng của các bóng hồng Golfer tài năng!',
-        voiceLine: null
+        category: 'CÚP VÀNG NHẤT, NHÌ, BA BẢNG NỮ'
       },
       {
         start: 20.8,
@@ -526,9 +506,7 @@
         title: 'Cuộc Đua Ngôi Vô Địch <br/><span class="text-gold-gradient">Từng Điểm Gậy Kịch Tính</span>',
         desc: 'Hàng trăm golfer nỗ lực ghi birdie và eagle để chạm tay vào chiếc cúp vô địch.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'BEST GROSS CHAMPIONSHIP',
-        subtitle: 'Tranh tài quyết liệt cho chiếc cúp Best Gross danh giá...',
-        voiceLine: null
+        category: 'BEST GROSS CHAMPIONSHIP'
       },
       {
         start: 23.0,
@@ -539,9 +517,7 @@
         title: 'Khoảnh Khắc Lịch Sử <br/><span class="text-gold-gradient">Lưu Dấu Vinh Quang</span>',
         desc: 'Khép lại 18 hố đấu đầy cảm xúc để bước vào đêm tiệc vinh danh rực rỡ.',
         scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
-        category: 'HÀNH TRÌNH CHINH PHỤC 18 HỐ',
-        subtitle: 'Khép lại vòng đấu để bước vào đêm tiệc vinh quang!',
-        voiceLine: null
+        category: 'HÀNH TRÌNH CHINH PHỤC 18 HỐ'
       },
 
       // ================= SCENE 3: 25s - 40s (HIO Xe Sang & Gala Dinner - 6 Cắt Dồn Dập) =================
@@ -554,9 +530,7 @@
         title: 'Săn Xe Sang Tiền Tỷ <br/><span class="text-gold-gradient">Tại Các Hố Par 3</span>',
         desc: 'Cơ hội ghi điểm Hole-in-One lịch sử và rinh về xe ô tô hạng sang Mercedes-Benz cùng hiện vật giá trị.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'XE SANG & HIỆN VẬT CAO CẤP HỐ PAR 3',
-        subtitle: 'Cơ hội chạm tay vào giải thưởng Hole-in-One xe sang tiền tỷ...',
-        voiceLine: 'Cơ hội chạm tay vào giải thưởng Hole-in-One xe sang tiền tỷ!'
+        category: 'XE SANG & HIỆN VẬT CAO CẤP HỐ PAR 3'
       },
       {
         start: 27.5,
@@ -567,9 +541,7 @@
         title: 'Một Cú Đánh Định Mệnh <br/><span class="text-gold-gradient">Vỡ Òa Cảm Xúc Chiến Thắng</span>',
         desc: 'Tâm điểm thu hút mọi ánh nhìn và sự hồi hộp của tất cả các golfer tham dự.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'PAR 3 HOLE-IN-ONE CHALLENGE',
-        subtitle: 'Khoảnh khắc một cú gậy vào thẳng lỗ golf...',
-        voiceLine: null
+        category: 'PAR 3 HOLE-IN-ONE CHALLENGE'
       },
       {
         start: 30.0,
@@ -580,9 +552,7 @@
         title: '18 Cúp Vô Địch <br/><span class="text-gold-gradient">Mạ Vàng Tinh Xảo</span>',
         desc: 'Hệ thống giải chính, giải kỹ thuật Nearest to Pin, Longest Drive và Nearest to Line.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'BEST GROSS CHAMPION & GIẢI KỸ THUẬT',
-        subtitle: '18 Cúp danh giá mạ vàng trao tận tay nhà vô địch...',
-        voiceLine: null
+        category: 'BEST GROSS CHAMPION & GIẢI KỸ THUẬT'
       },
       {
         start: 32.5,
@@ -593,9 +563,7 @@
         title: 'Đêm Gala Trao Giải <br/><span class="text-gold-gradient">Nâng Ly Chúc Mừng Chiến Thắng</span>',
         desc: 'Không gian tiệc sang trọng, âm nhạc nghệ thuật và nâng ly sâm panh kết nối doanh nhân.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'ẨM THỰC THƯỢNG HẠNG & TRAO GIẢI TRANG TRỌNG',
-        subtitle: 'Cùng Đêm tiệc Gala Dinner kết nối mạng lưới doanh nhân hàng đầu cả nước...',
-        voiceLine: 'Cùng Đêm tiệc Gala Dinner kết nối mạng lưới doanh nhân hàng đầu cả nước!'
+        category: 'ẨM THỰC THƯỢNG HẠNG & TRAO GIẢI TRANG TRỌNG'
       },
       {
         start: 35.0,
@@ -606,9 +574,7 @@
         title: 'Khoảnh Khắc Tôn Vinh <br/><span class="text-gold-gradient">Rạng Rỡ & Đầy Cảm Xúc</span>',
         desc: 'Trao cúp vinh quang, quà tặng Lucky Draw giá trị cao và tri ân các nhà tài trợ.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'LUCKY DRAW & TRI ÂN NHÀ TÀI TRỢ',
-        subtitle: 'Tôn vinh những màn trình diễn xuất sắc nhất!',
-        voiceLine: null
+        category: 'LUCKY DRAW & TRI ÂN NHÀ TÀI TRỢ'
       },
       {
         start: 37.5,
@@ -619,9 +585,7 @@
         title: 'Đêm Hội Ngộ Tinh Hoa <br/><span class="text-gold-gradient">Tỏa Sáng Thành Công</span>',
         desc: 'Nơi khởi nguồn những cơ hội hợp tác chiến lược giữa các tập đoàn hàng đầu.',
         scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
-        category: 'KẾT NỐI DOANH NGHIỆP C-LEVEL',
-        subtitle: 'Đêm hội ngộ của những thương hiệu uy tín...',
-        voiceLine: null
+        category: 'KẾT NỐI DOANH NGHIỆP C-LEVEL'
       },
 
       // ================= SCENE 4: 40s - 50s (Đồng Hành Doanh Nghiệp & Bảng Vàng - 5 Cắt Dồn Dập) =================
@@ -634,9 +598,7 @@
         title: 'Lan Tỏa Thương Hiệu <br/><span class="text-gold-gradient">07 Không Gian Đồng Hành</span>',
         desc: 'Quyền lợi độc quyền: Top Banner Laodong.vn, Tuyến bài PR, Photo Wall và Booth Activation.',
         scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
-        category: 'BẢO TRỢ TRUYỀN THÔNG ĐA NỀN TẢNG',
-        subtitle: 'Khẳng định vị thế thương hiệu trên hệ sinh thái 2.5 tỷ lượt xem...',
-        voiceLine: 'Khẳng định vị thế thương hiệu trên hệ sinh thái 2.5 tỷ lượt xem!'
+        category: 'BẢO TRỢ TRUYỀN THÔNG ĐA NỀN TẢNG'
       },
       {
         start: 42.0,
@@ -647,9 +609,7 @@
         title: 'Vinh Danh Bảng Vàng <br/><span class="text-gold-gradient">Lưu Dấu Danh Vị Trang Trọng</span>',
         desc: '01 Suất thi đấu COC trọn gói và in Họ Tên trang trọng trên Backdrop Bảng Vàng tại sảnh Clubhouse.',
         scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
-        category: '01 SUẤT COC TRỌN GÓI & VINH DANH CLUBHOUSE',
-        subtitle: 'Lưu dấu danh vị trang trọng trên Bảng Vàng danh dự sự kiện...',
-        voiceLine: 'Và lưu dấu danh vị trang trọng trên Bảng Vàng danh dự sự kiện!'
+        category: '01 SUẤT COC TRỌN GÓI & VINH DANH CLUBHOUSE'
       },
       {
         start: 44.0,
@@ -660,9 +620,7 @@
         title: 'Trải Nghiệm Sản Phẩm <br/><span class="text-gold-gradient">Tới 144 Golfer Lãnh Đạo</span>',
         desc: 'Đưa sản phẩm vào 100% túi quà Welcome Kit và phục vụ độc quyền trên sân/tiệc Gala.',
         scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
-        category: 'TIẾP NHẬN TỪ 30 TRIỆU ĐỒNG',
-        subtitle: 'Quảng bá sản phẩm trực tiếp đến cộng đồng tinh hoa...',
-        voiceLine: null
+        category: 'TIẾP NHẬN TỪ 30 TRIỆU ĐỒNG'
       },
       {
         start: 46.0,
@@ -673,9 +631,7 @@
         title: 'Mạng Lưới Lãnh Đạo <br/><span class="text-gold-gradient">Hợp Tác Bền Vững</span>',
         desc: 'Cơ hội giao lưu kinh doanh, mở rộng quan hệ đối tác trong môi trường thể thao đỉnh cao.',
         scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
-        category: 'MẠNG LƯỚI DOANH NHÂN TOÀN QUỐC',
-        subtitle: 'Kiến tạo cơ hội hợp tác kinh doanh bền vững...',
-        voiceLine: null
+        category: 'MẠNG LƯỚI DOANH NHÂN TOÀN QUỐC'
       },
       {
         start: 48.0,
@@ -686,9 +642,7 @@
         title: 'Uy Tín Vượt Thời Gian <br/><span class="text-gold-gradient">Đồng Hành Phát Triển</span>',
         desc: 'Khẳng định trách nhiệm xã hội và tinh thần đồng hành cùng cộng đồng người lao động cả nước.',
         scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
-        category: 'TRÁCH NHIỆM XÃ HỘI & VĂN HÓA DOANH NGHIỆP',
-        subtitle: 'Khẳng định uy tín và tinh thần trách nhiệm xã hội!',
-        voiceLine: null
+        category: 'TRÁCH NHIỆM XÃ HỘI & VĂN HÓA DOANH NGHIỆP'
       },
 
       // ================= SCENE 5: 50s - 60s (Outro & Hotline 24/7 - 3 Cắt Đỉnh Cao) =================
@@ -701,9 +655,7 @@
         title: 'GIẢI GOLF BÁO LAO ĐỘNG <br/><span class="text-gold-gradient italic font-normal">OPEN 2026</span>',
         desc: 'Đấu trường thể thao danh giá 2026 đang mở cổng đăng ký!',
         scene: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ',
-        category: 'TIẾP NHẬN ĐĂNG KÝ & TÀI TRỢ',
-        subtitle: 'Giải Golf Báo Lao Động Open 2026 • Ngày 07 tháng 11 năm 2026 tại Sân Golf Tân Sơn Nhất...',
-        voiceLine: 'Giải Golf Báo Lao Động Open 2026. Ngày 07 tháng 11 năm 2026 tại Sân Golf Tân Sơn Nhất!'
+        category: 'TIẾP NHẬN ĐĂNG KÝ & TÀI TRỢ'
       },
       {
         start: 53.5,
@@ -714,9 +666,7 @@
         title: 'Khẳng Định Bản Lĩnh <br/><span class="text-gold-gradient">Tỏa Sáng Đỉnh Cao</span>',
         desc: 'Số lượng vé giới hạn 144 Golfer. Hãy liên hệ ngay hôm nay để giữ chỗ thi đấu và vị trí tài trợ!',
         scene: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ',
-        category: 'GIỚI HẠN 144 GOLFER TRANH TÀI',
-        subtitle: 'Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!',
-        voiceLine: 'Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!'
+        category: 'GIỚI HẠN 144 GOLFER TRANH TÀI'
       },
       {
         start: 57.0,
@@ -727,9 +677,7 @@
         title: 'KẾT NỐI BAN TỔ CHỨC <br/><span class="text-gold-gradient">laodong.vn/golf2026</span>',
         desc: 'Doanh nghiệp: 090 5567395 (Mr. Văn) • Cá nhân: 0908221195 (Mrs. Thuỳ) • Golfer: 0901338910 (Mr. Vũ)',
         scene: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ',
-        category: 'BÁO LAO ĐỘNG • VĂN PHÒNG ĐẠI DIỆN TP.HCM & ĐÔNG NAM BỘ',
-        subtitle: 'Hotline 24/7: 090 5567395 • 0908221195 • 0901338910 • laodong.vn/golf2026',
-        voiceLine: null
+        category: 'BÁO LAO ĐỘNG • VĂN PHÒNG ĐẠI DIỆN TP.HCM & ĐÔNG NAM BỘ'
       }
     ];
 
@@ -737,57 +685,215 @@
     let currentSecond = 0;
     let isPlaying = false;
     let playInterval = null;
-    let isAudioEnabled = true;
-    let isVoiceEnabled = true;
+    let isMusicEnabled = true;
     let currentCutIndex = -1;
     let playbackPacing = 1.0;
 
-    // Web Audio Synthesizer Engine (Cinematic 808 Sub-bass, Snare, & Sweeps)
+    // ================= EPIC ORCHESTRAL SYNTHESIZER ENGINE =================
+    // Hans Zimmer / Two Steps From Hell style: D minor, 126 BPM, Driving Strings, Epic Brass, Thunderous Taiko
     let audioCtx = null;
+    let masterGain = null;
+    let musicTimer = null;
+    let musicStep = 0;
+
     function initAudioContext() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.85, audioCtx.currentTime);
+        masterGain.connect(audioCtx.destination);
       }
       if (audioCtx.state === 'suspended') {
         audioCtx.resume();
       }
     }
 
-    function playCinematicKick(freq = 150, decay = 0.7) {
-      if (!isAudioEnabled) return;
-      initAudioContext();
+    // Taiko / Epic Timpani Drum (Deep cinematic impact)
+    function playTaikoHit(time, intensity = 1.0) {
+      if (!isMusicEnabled || !audioCtx) return;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(28, audioCtx.currentTime + decay);
-        
-        gain.gain.setValueAtTime(0.9, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + decay);
-        
+        osc.frequency.setValueAtTime(140 * intensity, time);
+        osc.frequency.exponentialRampToValueAtTime(26, time + 0.8);
+
+        gain.gain.setValueAtTime(1.0 * intensity, time);
+        gain.gain.exponentialRampToValueAtTime(0.001, time + 0.8);
+
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + decay);
+        gain.connect(masterGain);
+        osc.start(time);
+        osc.stop(time + 0.8);
       } catch (e) {}
     }
 
-    function playSnareHit() {
-      if (!isAudioEnabled) return;
-      initAudioContext();
+    // Snare / Orchestral Rim Clack
+    function playOrchestralSnare(time, intensity = 0.5) {
+      if (!isMusicEnabled || !audioCtx) return;
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.type = 'triangle';
-        osc.frequency.setValueAtTime(260, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.35, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+        osc.frequency.setValueAtTime(280, time);
+        gain.gain.setValueAtTime(0.45 * intensity, time);
+        gain.gain.exponentialRampToValueAtTime(0.01, time + 0.14);
+
         osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start();
-        osc.stop(audioCtx.currentTime + 0.1);
+        gain.connect(masterGain);
+        osc.start(time);
+        osc.stop(time + 0.14);
       } catch (e) {}
+    }
+
+    // Driving Spiccato Strings Note (Hans Zimmer Arp)
+    function playStringSpiccato(freq, time, dur = 0.11) {
+      if (!isMusicEnabled || !audioCtx) return;
+      try {
+        const osc = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, time);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(1600, time);
+        filter.frequency.exponentialRampToValueAtTime(400, time + dur);
+
+        gain.gain.setValueAtTime(0.28, time);
+        gain.gain.exponentialRampToValueAtTime(0.005, time + dur);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(masterGain);
+
+        osc.start(time);
+        osc.stop(time + dur);
+      } catch (e) {}
+    }
+
+    // Epic Brass / Horn Fanfare (Soaring heroic melody)
+    function playEpicBrass(freq, time, dur = 0.55) {
+      if (!isMusicEnabled || !audioCtx) return;
+      try {
+        const osc1 = audioCtx.createOscillator();
+        const osc2 = audioCtx.createOscillator();
+        const filter = audioCtx.createBiquadFilter();
+        const gain = audioCtx.createGain();
+
+        osc1.type = 'sawtooth';
+        osc2.type = 'sawtooth';
+        osc1.frequency.setValueAtTime(freq, time);
+        osc2.frequency.setValueAtTime(freq * 1.006, time); // Detune for rich ensemble
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(800, time);
+        filter.frequency.exponentialRampToValueAtTime(2400, time + 0.12);
+        filter.frequency.exponentialRampToValueAtTime(700, time + dur);
+
+        gain.gain.setValueAtTime(0.01, time);
+        gain.gain.linearRampToValueAtTime(0.42, time + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.005, time + dur);
+
+        osc1.connect(filter);
+        osc2.connect(filter);
+        filter.connect(gain);
+        gain.connect(masterGain);
+
+        osc1.start(time);
+        osc2.start(time);
+        osc1.stop(time + dur);
+        osc2.stop(time + dur);
+      } catch (e) {}
+    }
+
+    // Cinematic Whoosh & Sub-Bass Drop (Major Cut Transitions)
+    function playTransitionImpact() {
+      if (!isMusicEnabled || !audioCtx) return;
+      initAudioContext();
+      const now = audioCtx.currentTime;
+      playTaikoHit(now, 1.25);
+      
+      // Cymbal / Noise Swell
+      try {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(880, now);
+        osc.frequency.exponentialRampToValueAtTime(60, now + 0.6);
+        gain.gain.setValueAtTime(0.2, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 0.6);
+      } catch(e) {}
+    }
+
+    // Epic Music Sequencer Loop (126 BPM)
+    // Musical Progression: Dm -> F -> C -> Bb -> A (Heroic Theme)
+    const stringsScale = [
+      146.83, 174.61, 220.00, 293.66, 349.23, 440.00, // D3, F3, A3, D4, F4, A4
+      130.81, 164.81, 196.00, 261.63, 329.63, 392.00, // C3, E3, G3, C4, E4, G4
+      116.54, 146.83, 174.61, 233.08, 293.66, 349.23  // Bb2, D3, F3, Bb3, D4, F4
+    ];
+
+    const brassMelody = [
+      { beat: 0, freq: 293.66, dur: 0.6 },  // D4
+      { beat: 4, freq: 349.23, dur: 0.6 },  // F4
+      { beat: 8, freq: 440.00, dur: 0.8 },  // A4
+      { beat: 12, freq: 523.25, dur: 0.7 }, // C5
+      { beat: 16, freq: 587.33, dur: 1.1 }, // D5 (Heroic peak)
+      { beat: 22, freq: 523.25, dur: 0.5 }, // C5
+      { beat: 24, freq: 466.16, dur: 0.8 }, // Bb4
+      { beat: 28, freq: 440.00, dur: 1.0 }  // A4
+    ];
+
+    function startMusicEngine() {
+      if (musicTimer) clearInterval(musicTimer);
+      initAudioContext();
+
+      const stepDuration = (60 / 126) / 4; // 16th note at 126 BPM = ~119ms
+      musicStep = 0;
+
+      musicTimer = setInterval(() => {
+        if (!isPlaying || !isMusicEnabled || !audioCtx) return;
+        const now = audioCtx.currentTime;
+
+        // 1. Percussion Layer
+        const beat16 = musicStep % 16;
+        if (beat16 === 0 || beat16 === 8) {
+          playTaikoHit(now, beat16 === 0 ? 1.0 : 0.75);
+        }
+        if (beat16 === 4 || beat16 === 12) {
+          playOrchestralSnare(now, 0.6);
+        }
+
+        // 2. Fast Ostinato Strings Layer (Driving 16th pulse)
+        const chordOffset = Math.floor((musicStep % 64) / 16);
+        let noteIndex = (musicStep % 6);
+        if (chordOffset === 1) noteIndex += 6;
+        if (chordOffset === 2) noteIndex += 12;
+        const freq = stringsScale[noteIndex % stringsScale.length];
+        playStringSpiccato(freq, now, 0.1);
+
+        // 3. Brass Fanfare Melody Layer
+        const loop32 = musicStep % 32;
+        const brassNote = brassMelody.find(b => b.beat === loop32);
+        if (brassNote) {
+          playEpicBrass(brassNote.freq, now, brassNote.dur);
+        }
+
+        musicStep++;
+      }, 119);
+    }
+
+    function stopMusicEngine() {
+      if (musicTimer) {
+        clearInterval(musicTimer);
+        musicTimer = null;
+      }
     }
 
     function triggerCutFlash() {
@@ -795,26 +901,6 @@
       flash.classList.remove('flash-active');
       void flash.offsetWidth;
       flash.classList.add('flash-active');
-    }
-
-    // Speech Synthesis for Deep Male Voice
-    function speakMaleVoice(text) {
-      if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
-      window.speechSynthesis.cancel(); // cancel previous utterance
-
-      const utter = new SpeechSynthesisUtterance(text);
-      utter.lang = 'vi-VN';
-      utter.rate = 0.98; // crisp, authoritative pace
-      utter.pitch = 0.82; // deeper male resonance
-
-      // Select male/deep voice if available
-      const voices = window.speechSynthesis.getVoices();
-      const viVoice = voices.find(v => v.lang.includes('vi') || v.name.toLowerCase().includes('vietnam') || v.name.toLowerCase().includes('nam'));
-      if (viVoice) {
-        utter.voice = viVoice;
-      }
-
-      window.speechSynthesis.speak(utter);
     }
 
     // Toggle Play/Pause
@@ -838,6 +924,8 @@
         currentCutIndex = -1;
       }
 
+      startMusicEngine();
+
       const stepTime = 120; // ms
       playInterval = setInterval(() => {
         currentSecond += (stepTime / 1000) * playbackPacing;
@@ -852,7 +940,7 @@
     function pauseVideo() {
       isPlaying = false;
       clearInterval(playInterval);
-      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      stopMusicEngine();
       document.getElementById('btnCenterPlay').classList.remove('hidden');
       document.getElementById('bottomPlayIcon').setAttribute('data-lucide', 'play');
       lucide.createIcons();
@@ -886,7 +974,7 @@
       currentCutIndex = -1;
       updateTimeline();
       triggerCutFlash();
-      playCinematicKick(160, 0.8);
+      playTransitionImpact();
     }
 
     function jumpToSecond(sec) {
@@ -894,11 +982,11 @@
       currentCutIndex = -1;
       updateTimeline();
       triggerCutFlash();
-      playCinematicKick(160, 0.8);
+      playTransitionImpact();
       if (!isPlaying) playVideo();
     }
 
-    // Update Timeline, Cuts, Kinetic Typography & Voice
+    // Update Timeline, Cuts & Kinetic Typography
     function updateTimeline() {
       // Progress Bar width
       const progressPercent = (currentSecond / TOTAL_DURATION) * 100;
@@ -932,7 +1020,7 @@
 
         // 2. Trigger Flash & Impact SFX
         triggerCutFlash();
-        playCinematicKick(160, 0.6);
+        playTransitionImpact();
 
         // 3. Update Text Overlays with Kinetic Animation
         const textContainer = document.getElementById('mainTextContainer');
@@ -946,17 +1034,6 @@
         document.getElementById('sceneCategoryTag').textContent = curCut.category;
         document.getElementById('sceneIndicator').innerHTML = 
           `<span class="w-2 h-2 rounded-full bg-royal-gold animate-ping"></span> <span>${curCut.scene} • CẮT #${activeIndex + 1}/26 (${Math.floor(curCut.start)}s - ${Math.floor(curCut.end)}s)</span>`;
-        document.getElementById('subtitlesBox').textContent = curCut.subtitle;
-
-        // 4. Trigger Deep Male Voice-over if available on this cut
-        if (isPlaying && curCut.voiceLine) {
-          speakMaleVoice(curCut.voiceLine);
-        }
-      } else {
-        // Snare rhythmic beat on half seconds
-        if (Math.floor(currentSecond * 2) % 2 === 0 && Math.abs((currentSecond * 2) % 1) < 0.2) {
-          playSnareHit();
-        }
       }
     }
 
@@ -977,39 +1054,19 @@
       }
     }
 
-    // Toggle Voice-Off
-    function toggleVoiceOff() {
-      isVoiceEnabled = !isVoiceEnabled;
-      const label = document.getElementById('voiceLabel');
-      const icon = document.getElementById('voiceIcon');
-      const wave = document.getElementById('voiceWaveIcon');
-
-      if (isVoiceEnabled) {
-        label.textContent = "Giọng Nam: BẬT";
-        icon.setAttribute('data-lucide', 'mic');
-        wave.classList.remove('hidden');
-        speakMaleVoice("Giọng đọc nam truyền cảm hứng đã sẵn sàng!");
+    // Toggle Epic Music
+    function toggleEpicMusic() {
+      isMusicEnabled = !isMusicEnabled;
+      const label = document.getElementById('musicLabel');
+      const icon = document.getElementById('musicIcon');
+      if (isMusicEnabled) {
+        label.textContent = "Nhạc Hoành Tráng: BẬT";
+        icon.setAttribute('data-lucide', 'music');
+        if (isPlaying) startMusicEngine();
       } else {
-        label.textContent = "Giọng Nam: TẮT";
-        icon.setAttribute('data-lucide', 'mic-off');
-        wave.classList.add('hidden');
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
-      }
-      lucide.createIcons();
-    }
-
-    // Toggle Audio FX
-    function toggleAudioEngine() {
-      isAudioEnabled = !isAudioEnabled;
-      const label = document.getElementById('audioLabel');
-      const icon = document.getElementById('audioIcon');
-      if (isAudioEnabled) {
-        label.textContent = "Beat SFX: BẬT";
-        icon.setAttribute('data-lucide', 'volume-2');
-        playCinematicKick(160, 0.8);
-      } else {
-        label.textContent = "Beat SFX: TẮT";
+        label.textContent = "Nhạc Hoành Tráng: TẮT";
         icon.setAttribute('data-lucide', 'volume-x');
+        stopMusicEngine();
       }
       lucide.createIcons();
     }
@@ -1043,7 +1100,7 @@
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026_60s_FastCut.webm';
+            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026_EpicMusic.webm';
             document.body.appendChild(a);
             a.click();
             setTimeout(() => {
@@ -1070,13 +1127,6 @@
           mediaRecorder.stop();
         }
       }
-    }
-
-    // Initialize voices
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.onvoiceschanged = () => {
-        window.speechSynthesis.getVoices();
-      };
     }
 
     // Initial render
