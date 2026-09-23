@@ -99,18 +99,29 @@
       border-radius: 4px;
     }
     
-    /* Enforce Full Desktop 1440px View in Print / PDF Export */
+    /* Enforce Full Desktop View Perfectly Scaled to A4 Page (No Clipping) */
     @media print {
       @page {
-        size: 1440px auto;
+        size: A4 portrait;
         margin: 0;
       }
-      html, body {
-        min-width: 1440px !important;
-        width: 1440px !important;
+      html {
+        width: 1400px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #faf9f5 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+      }
+      body {
+        width: 1400px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
         background-color: #faf9f5 !important;
+        zoom: 0.565 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        overflow-x: hidden !important;
       }
       .hidden.xl\:flex {
         display: flex !important;
