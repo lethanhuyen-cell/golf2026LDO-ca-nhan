@@ -99,40 +99,35 @@
       border-radius: 4px;
     }
     
-    /* Clean Full-Bleed Desktop View (No Excess Whitespace) */
+    /* Clean A4 Multi-page Print View */
     @media print {
       @page {
-        size: 1280px auto;
-        margin: 0;
+        size: A4 portrait;
+        margin: 8mm 6mm;
       }
-      html {
-        width: 1280px !important;
+      html, body {
+        width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
         background-color: #faf9f5 !important;
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-      }
-      body {
-        width: 1280px !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        background-color: #faf9f5 !important;
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        overflow-x: hidden !important;
+        overflow-x: visible !important;
       }
       .max-w-7xl {
-        max-width: 1220px !important;
+        max-width: 100% !important;
         width: 100% !important;
         margin: 0 auto !important;
-        padding-left: 16px !important;
-        padding-right: 16px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
       }
       section {
-        padding-top: 24px !important;
-        padding-bottom: 24px !important;
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
         page-break-inside: avoid !important;
+      }
+      .no-print {
+        display: none !important;
       }
       .hidden.xl\:flex {
         display: flex !important;
@@ -155,17 +150,23 @@
       .lg\:col-span-5 {
         grid-column: span 5 / span 5 !important;
       }
-      .lg\:col-span-6 {
-        grid-column: span 6 / span 6 !important;
+      .lg\:col-span-8 {
+        grid-column: span 8 / span 8 !important;
       }
       .lg\:col-span-4 {
         grid-column: span 4 / span 4 !important;
+      }
+      .lg\:col-span-6 {
+        grid-column: span 6 / span 6 !important;
       }
       .lg\:grid-cols-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
       }
       .md\:grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+      .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
       }
       .md\:grid-cols-12 {
         grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
