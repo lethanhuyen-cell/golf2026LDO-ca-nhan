@@ -44,21 +44,17 @@
 ---
 
 ### 🎬 C. Động Cơ Trailer 60s Fast-Cut Điện Ảnh (`trailer.html`)
-1. **Nâng Cấp 26 Cắt Ảnh Dồn Dập (Fast-Cut 1.8s – 2.2s/cảnh)**:
-   - Tăng cường số lượng ảnh thể thao 8K siêu nét từ 16 lên 26 bức ảnh dồn dập, đa dạng góc máy:
-     * Cú đánh bùng nổ văng giọt sương mai (`golf_driver_explosion_strike.jpg`)
-     * Cú cứu cát bunker đóng băng hàng ngàn hạt cát trên không trung (`golf_bunker_splash_action.jpg`)
-     * Săn xe sang Hole-in-One trên thảm đỏ Par 3 (`golf_hio_luxury_car_podium.jpg`)
-     * Đại tiệc Gala Dinner nâng ly sâm panh hoàng kim (`golf_gala_champagne_toast.jpg`)
-     * Toàn cảnh fairway, hồ nước, bảng nữ Lady Flight, phòng VIP Clubhouse...
-2. **Kỹ Xảo Chuyển Cảnh Rhythmic & Kinetic Typography**:
-   - Tích hợp 6 kiểu chuyển động máy quay: `hyper-zoom-in`, `zoom-punch`, `pan-slide-left`, `pan-slide-right`, `rotate-tilt-zoom`, `zoom-in-fast`.
-   - Hiệu ứng lóe sáng vàng/trắng (flash pulse) và rung chấn sub-bass 808 trên từng nhịp cắt.
+1. **Nâng Cấp Dàn Nhạc Giao Hưởng Điện Ảnh Hoành Tráng (Epic Orchestral Symphony - Hans Zimmer Style)**:
+   - **Tắt hoàn toàn Voice-off đọc thoại**, đưa âm nhạc điện ảnh hoành tráng, bi tráng và uy lực lên làm chủ đạo tuyệt đối.
+   - **Đa tầng âm thanh giao hưởng (Web Audio API Synthesizer)**:
+     * **Trống sấm Taiko & Timpani Orchestral**: Dội âm thanh uy lực trên các nhịp đập chính và các cú chuyển cảnh lịch sử.
+     * **Đàn dây Spiccato Strings Arpeggio (126 BPM)**: Dồn dập theo phong cách *Hans Zimmer / Two Steps From Hell*, tạo cảm giác căng thẳng, hồi hộp và bùng nổ.
+     * **Kèn đồng Brass & French Horns Fanfare**: Tấu giai điệu vinh quang hào hùng theo chuẩn Major thể thao đỉnh cao.
+     * **Hiệu ứng Risers & 808 Sub-Bass Drops**: Bùng nổ lóe sáng trên 26 cú cắt ảnh dồn dập.
+2. **26 Cắt Ảnh Thể Thao 8K Dồn Dập (Fast-Cut 1.8s – 2.2s/cảnh)**:
+   - Tích hợp 6 kỹ xảo chuyển động: `hyper-zoom-in`, `zoom-punch`, `pan-slide-left`, `pan-slide-right`, `rotate-tilt-zoom`, `zoom-in-fast`.
    - Nút chọn tốc độ chuyển cảnh: **1.0x Chuẩn** & **1.25x Dồn Dập Siêu Căng**.
-3. **Voice-Off Giọng Nam Trầm Hùng & Hiệu Ứng Âm Thanh (Web Audio API)**:
-   - Giọng đọc nam truyền cảm hứng đồng bộ tự động từng phân cảnh.
-   - Hiệu ứng âm thanh điện ảnh: Trống Kick Sub-bass 808, Snare nhịp phách, sóng âm visualizer.
-4. **Tính Năng Xuất Video & Đổi Khung Hình**:
+3. **Tính Năng Xuất Video & Đổi Khung Hình**:
    - Chuyển đổi linh hoạt **16:9 Cinema Wide** (Màn hình LED, YouTube) và **9:16 Mobile Story** (TikTok, Reels, Shorts).
    - Nút **Xuất Video (MP4/WebM)** ghi hình 1-click trực tiếp từ trình duyệt.
 
