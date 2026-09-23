@@ -12,7 +12,7 @@
   <!-- Google Fonts: Playfair Display & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,400;1,700&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -57,7 +57,7 @@
       user-select: none;
     }
 
-    /* Cinematic Aspect Ratio Box */
+    /* Aspect Ratio Box */
     .aspect-16-9 {
       aspect-ratio: 16 / 9;
     }
@@ -66,362 +66,235 @@
       max-height: 85vh;
     }
 
-    /* Ken Burns Smooth Camera Moves */
-    @keyframes kenburns-1 {
-      0% { transform: scale(1) translate(0, 0); }
-      100% { transform: scale(1.18) translate(-1%, -1.5%); }
+    /* Rhythmic Camera Cuts & Ken Burns */
+    .zoom-punch {
+      animation: zoomPunch 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
-    @keyframes kenburns-2 {
-      0% { transform: scale(1.15) translate(-2%, 1%); }
-      100% { transform: scale(1.02) translate(1%, -1%); }
-    }
-    @keyframes kenburns-3 {
-      0% { transform: scale(1.03) translate(1.5%, 1.5%); }
-      100% { transform: scale(1.22) translate(-2%, -2%); }
-    }
-    @keyframes kenburns-4 {
-      0% { transform: scale(1.18) translate(0, -2%); }
-      100% { transform: scale(1.05) translate(0, 1%); }
-    }
-    @keyframes kenburns-5 {
-      0% { transform: scale(1.05) translate(0, 0); }
-      100% { transform: scale(1.14) translate(0, -1%); }
+    @keyframes zoomPunch {
+      0% { transform: scale(1.15) rotate(0.5deg); }
+      100% { transform: scale(1.02) rotate(0deg); }
     }
 
-    .kb-1 { animation: kenburns-1 12s ease-out forwards; }
-    .kb-2 { animation: kenburns-2 16s ease-out forwards; }
-    .kb-3 { animation: kenburns-3 16s ease-out forwards; }
-    .kb-4 { animation: kenburns-4 12s ease-out forwards; }
-    .kb-5 { animation: kenburns-5 12s ease-out forwards; }
+    .pan-slide-left {
+      animation: panLeft 3s ease-out forwards;
+    }
+    @keyframes panLeft {
+      0% { transform: scale(1.12) translateX(2%); }
+      100% { transform: scale(1.03) translateX(-1.5%); }
+    }
 
-    /* Cinematic Text Glow */
+    .pan-slide-right {
+      animation: panRight 3s ease-out forwards;
+    }
+    @keyframes panRight {
+      0% { transform: scale(1.12) translateX(-2%); }
+      100% { transform: scale(1.03) translateX(1.5%); }
+    }
+
+    .zoom-in-fast {
+      animation: zoomInFast 2.5s ease-out forwards;
+    }
+    @keyframes zoomInFast {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.18); }
+    }
+
+    /* Text Glows */
     .glow-gold {
-      text-shadow: 0 0 25px rgba(223, 190, 121, 0.6), 0 0 50px rgba(197, 160, 89, 0.3);
+      text-shadow: 0 0 30px rgba(223, 190, 121, 0.8), 0 0 60px rgba(197, 160, 89, 0.4);
     }
     .glow-white {
-      text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      text-shadow: 0 0 25px rgba(255, 255, 255, 0.85);
     }
 
-    /* Gold Gradient Text */
     .text-gold-gradient {
       background: linear-gradient(135deg, #FFF6D6 0%, #DFBE79 40%, #C5A059 70%, #9E7D3B 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Light Flares & Film Grain */
-    .film-grain {
-      background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 0);
-      background-size: 4px 4px;
+    /* Flash Transitions on Beat */
+    .flash-active {
+      animation: flashPulse 0.35s ease-out;
+    }
+    @keyframes flashPulse {
+      0% { opacity: 0.95; transform: scale(1.05); }
+      100% { opacity: 0; transform: scale(1); }
     }
 
-    .shimmer-bar {
-      background: linear-gradient(90deg, transparent, rgba(223, 190, 121, 0.8), transparent);
-      animation: shimmer 2.5s infinite;
+    /* Shimmer Effect */
+    .shimmer-badge {
+      position: relative;
+      overflow: hidden;
     }
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      100% { transform: translateX(100%); }
+    .shimmer-badge::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, transparent, rgba(255,255,255,0.4), transparent);
+      transform: rotate(30deg);
+      animation: shimmerMove 3s infinite;
     }
-
-    /* Flash overlay for beat drops */
-    .flash-screen {
-      animation: flashAnim 0.4s ease-out;
-    }
-    @keyframes flashAnim {
-      0% { opacity: 0.85; }
-      100% { opacity: 0; }
+    @keyframes shimmerMove {
+      0% { transform: translateX(-100%) rotate(30deg); }
+      100% { transform: translateX(100%) rotate(30deg); }
     }
   </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between p-4 sm:p-6 lg:p-8">
+<body class="min-h-screen flex flex-col justify-between p-3 sm:p-5 lg:p-6">
 
   <!-- ================= TOP HEADER CONTROLS ================= -->
-  <header class="max-w-6xl w-full mx-auto flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-white/10 z-20">
+  <header class="max-w-6xl w-full mx-auto flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-white/10 z-20">
     <div class="flex items-center gap-3">
       <a href="index.html" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-all border border-white/10">
         <i data-lucide="arrow-left" class="w-4 h-4 text-royal-gold"></i> Về Landing Page
       </a>
       <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-pulse"></span>
-        <span class="text-xs font-bold uppercase tracking-widest text-slate-300">TRAILER 60S • CINEMATIC PROMO</span>
+        <span class="w-2.5 h-2.5 rounded-full bg-red-600 animate-ping"></span>
+        <span class="text-xs font-bold uppercase tracking-widest text-slate-200">TRAILER 60S • FAST-CUT CINEMATIC</span>
       </div>
     </div>
 
-    <!-- Aspect Ratio Toggle & Recording -->
-    <div class="flex items-center gap-2.5">
-      <div class="bg-black/50 p-1 rounded-xl border border-white/10 flex items-center gap-1 text-xs">
-        <button id="btnAspect169" onclick="setAspectRatio('16:9')" class="px-3 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all">
+    <!-- Right Controls: Aspect Ratio, Voice-off & Video Record -->
+    <div class="flex flex-wrap items-center gap-2">
+      
+      <!-- 16:9 vs 9:16 Toggle -->
+      <div class="bg-black/60 p-1 rounded-xl border border-white/10 flex items-center gap-1 text-xs">
+        <button id="btnAspect169" onclick="setAspectRatio('16:9')" class="px-2.5 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all">
           <i data-lucide="monitor" class="w-3.5 h-3.5 inline mr-1"></i> 16:9 Cinema
         </button>
-        <button id="btnAspect916" onclick="setAspectRatio('9:16')" class="px-3 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all">
-          <i data-lucide="smartphone" class="w-3.5 h-3.5 inline mr-1"></i> 9:16 TikTok / Reels
+        <button id="btnAspect916" onclick="setAspectRatio('9:16')" class="px-2.5 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all">
+          <i data-lucide="smartphone" class="w-3.5 h-3.5 inline mr-1"></i> 9:16 TikTok
         </button>
       </div>
 
-      <button id="btnAudioToggle" onclick="toggleAudioEngine()" class="px-3 py-1.5 rounded-xl bg-emerald-950/80 border border-emerald-500/50 hover:bg-emerald-900 text-emerald-300 text-xs font-bold transition-all flex items-center gap-1.5">
-        <i id="audioIcon" data-lucide="volume-2" class="w-4 h-4 text-royal-gold"></i>
-        <span id="audioLabel">Âm Thanh: BẬT</span>
+      <!-- Voice-Off Male Toggle -->
+      <button id="btnVoiceToggle" onclick="toggleVoiceOff()" class="px-3 py-1.5 rounded-xl bg-amber-950/80 border border-royal-gold/50 hover:bg-amber-900 text-royal-goldLight text-xs font-bold transition-all flex items-center gap-1.5 shadow">
+        <i id="voiceIcon" data-lucide="mic" class="w-4 h-4 text-royal-gold"></i>
+        <span id="voiceLabel">Giọng Nam (Voice-off): BẬT</span>
       </button>
 
+      <!-- Sound FX Toggle -->
+      <button id="btnAudioToggle" onclick="toggleAudioEngine()" class="px-3 py-1.5 rounded-xl bg-emerald-950/80 border border-emerald-500/50 hover:bg-emerald-900 text-emerald-300 text-xs font-bold transition-all flex items-center gap-1.5">
+        <i id="audioIcon" data-lucide="volume-2" class="w-4 h-4 text-emerald-400"></i>
+        <span id="audioLabel">Beat SFX: BẬT</span>
+      </button>
+
+      <!-- Record & Download Video Button -->
       <button id="btnRecordVideo" onclick="toggleRecording()" class="px-3.5 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5">
-        <i data-lucide="video" class="w-4 h-4"></i>
-        <span id="recordLabel">Xuất Video (MP4/WebM)</span>
+        <i data-lucide="download" class="w-4 h-4"></i>
+        <span id="recordLabel">Xuất Video (MP4)</span>
       </button>
     </div>
   </header>
 
-  <!-- ================= MAIN TRAILER PLAYER ================= -->
-  <main class="my-auto py-4 flex flex-col items-center justify-center w-full">
+  <!-- ================= MAIN CINEMATIC SCREEN ================= -->
+  <main class="my-auto py-2 flex flex-col items-center justify-center w-full">
     
-    <!-- Player Container -->
     <div id="playerWrapper" class="relative w-full max-w-5xl aspect-16-9 bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 border-royal-gold/50 transition-all duration-500 flex items-center justify-center">
       
-      <!-- Video Stage (Canvas/Layers) -->
+      <!-- Video Stage -->
       <div id="videoStage" class="absolute inset-0 w-full h-full overflow-hidden">
 
-        <!-- ================= SCENE 1: 00s - 10s (BẢN LĨNH & VỊ THẾ) ================= -->
-        <div id="scene1" class="scene-layer absolute inset-0 transition-opacity duration-1000 opacity-100 z-10">
-          <img src="assets/images/hero_golf_sports_dynamic.jpg" class="absolute inset-0 w-full h-full object-cover object-center kb-1" alt="Bản lĩnh Báo Lao Động" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/50 to-transparent"></div>
-          <div class="absolute inset-0 bg-radial from-transparent via-black/40 to-black/80"></div>
+        <!-- Background Slideshow Layer (Fast-cut images) -->
+        <div id="slideImageContainer" class="absolute inset-0 w-full h-full">
+          <img id="bgSlideImage" src="assets/images/hero_golf_sports_dynamic.jpg" class="w-full h-full object-cover object-center zoom-punch" alt="Trailer visual" />
+        </div>
 
-          <!-- Scene 1 Content -->
-          <div class="relative z-10 h-full flex flex-col justify-between p-6 sm:p-12">
+        <!-- Dark Gradient Overlay for High Contrast -->
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/95 via-charcoal-950/40 to-black/60 pointer-events-none"></div>
+        <div class="absolute inset-0 bg-radial from-transparent via-transparent to-black/80 pointer-events-none"></div>
+
+        <!-- Dynamic Overlay Elements & Typography -->
+        <div class="relative z-10 h-full flex flex-col justify-between p-6 sm:p-10 lg:p-12">
+          
+          <!-- Top Brand Tag -->
+          <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <img src="assets/images/logo_lao_dong_official.png" class="h-10 sm:h-12 w-auto object-contain drop-shadow-xl" alt="Báo Lao Động" />
-              <div class="h-6 w-px bg-royal-gold/60"></div>
-              <span class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] text-royal-gold">97 NĂM BẢN LĨNH VÀ UY TÍN (1929 - 2026)</span>
-            </div>
-
-            <div class="space-y-3 max-w-2xl">
-              <span class="px-3 py-1 rounded-full bg-royal-gold/20 border border-royal-gold/50 text-royal-goldLight text-[10px] sm:text-xs font-bold uppercase tracking-widest inline-block">
-                SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN 2026
-              </span>
-              <h1 class="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight glow-gold">
-                Nơi Bản Lĩnh Hòa Cùng <br/>
-                <span class="text-gold-gradient italic font-normal">Vị Thế Tinh Hoa</span>
-              </h1>
-              <p class="text-xs sm:text-sm text-slate-300 font-light max-w-lg leading-relaxed">
-                Đấu trường thể thao danh giá quy tụ các nhà lãnh đạo, doanh nhân và đối tác chiến lược trên toàn quốc.
-              </p>
-            </div>
-
-            <div class="text-[11px] text-slate-400 font-semibold tracking-wider">
-              BÁO LAO ĐỘNG CHỦ TRÌ TỔ CHỨC
-            </div>
-          </div>
-        </div>
-
-        <!-- ================= SCENE 2: 10s - 25s (ĐẤU TRƯỜNG TÂN SƠN NHẤT & 144 GOLFER) ================= -->
-        <div id="scene2" class="scene-layer absolute inset-0 transition-opacity duration-1000 opacity-0 z-10">
-          <img src="assets/images/tsn_course_fairway_panorama.jpg" class="absolute inset-0 w-full h-full object-cover object-center kb-2" alt="Sân Golf Tân Sơn Nhất" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent"></div>
-          <div class="absolute inset-0 bg-emerald-950/20"></div>
-
-          <!-- Scene 2 Content -->
-          <div class="relative z-10 h-full flex flex-col justify-between p-6 sm:p-12">
-            <div class="flex justify-between items-center">
-              <div class="flex items-center gap-2">
-                <i data-lucide="map-pin" class="w-5 h-5 text-royal-gold"></i>
-                <span class="text-xs sm:text-sm font-bold uppercase tracking-widest text-white">SÂN GOLF TÂN SƠN NHẤT • TP. HỒ CHÍ MINH</span>
-              </div>
-              <img src="assets/images/logo_tan_son_nhat.png" class="h-8 sm:h-10 w-auto object-contain bg-white/90 p-1 rounded-lg shadow" alt="Tân Sơn Nhất Golf Course" />
-            </div>
-
-            <div class="space-y-3 max-w-2xl">
-              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/80 border border-emerald-400/40 text-emerald-300 text-[10px] sm:text-xs font-bold uppercase tracking-widest">
-                <i data-lucide="trophy" class="w-3.5 h-3.5 text-royal-gold"></i> 36 HỐ PGA • HỆ THỐNG NIGHT GOLF ĐẲNG CẤP
-              </div>
-              <h2 class="font-serif-luxury text-3xl sm:text-5xl font-extrabold text-white leading-tight glow-white">
-                144 Golfer Tinh Hoa <br/>
-                <span class="text-gold-gradient">Tranh Tài 18 Hố Shotgun</span>
-              </h2>
-              
-              <!-- 4 Flights Badges -->
-              <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 text-center text-[10px] sm:text-xs font-bold">
-                <div class="p-2 rounded-xl bg-black/60 border border-white/20 text-emerald-300">BẢNG A (HDC 0-15)</div>
-                <div class="p-2 rounded-xl bg-black/60 border border-white/20 text-blue-300">BẢNG B (HDC 16-28)</div>
-                <div class="p-2 rounded-xl bg-black/60 border border-white/20 text-purple-300">BẢNG C (HDC 29+)</div>
-                <div class="p-2 rounded-xl bg-black/60 border border-white/20 text-rose-300">BẢNG NỮ (LADY FLIGHT)</div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-400 font-semibold tracking-wider">
-              THỂ THỨC SYSTEM 36 • XUẤT PHÁT ĐỒNG LOẠT 12:00
-            </div>
-          </div>
-        </div>
-
-        <!-- ================= SCENE 3: 25s - 40s (GIẢI THƯỞNG & ĐÊM GALA) ================= -->
-        <div id="scene3" class="scene-layer absolute inset-0 transition-opacity duration-1000 opacity-0 z-10">
-          <img src="assets/images/golf_hole_in_one.jpg" class="absolute inset-0 w-full h-full object-cover object-center kb-3" alt="Hole in One xe sang" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/60 to-black/40"></div>
-
-          <!-- Scene 3 Content -->
-          <div class="relative z-10 h-full flex flex-col justify-between p-6 sm:p-12">
-            <div class="flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-red-600 text-white text-[10px] sm:text-xs font-extrabold uppercase tracking-widest animate-bounce">
-                GIẢI THƯỞNG HOLE-IN-ONE CỰC KHỦNG
+              <img src="assets/images/logo_lao_dong_official.png" class="h-9 sm:h-11 w-auto object-contain drop-shadow-2xl" alt="Báo Lao Động" />
+              <div class="h-5 w-px bg-royal-gold/60"></div>
+              <span id="topBrandTag" class="text-[10px] sm:text-xs font-extrabold uppercase tracking-[0.25em] text-royal-goldLight drop-shadow">
+                97 NĂM BẢN LĨNH & UY TÍN (1929 - 2026)
               </span>
             </div>
-
-            <div class="space-y-3 max-w-2xl">
-              <h2 class="font-serif-luxury text-3xl sm:text-5xl font-extrabold text-white leading-tight glow-gold">
-                Săn Xe Sang Tiền Tỷ <br/>
-                <span class="text-gold-gradient">& 18 Cúp Vô Địch Danh Giá</span>
-              </h2>
-              
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-xs">
-                <div class="p-3 rounded-xl bg-black/70 border border-royal-gold/40 space-y-0.5">
-                  <div class="text-royal-gold font-bold text-[11px] uppercase">Hole-In-One Par 3</div>
-                  <div class="text-white font-extrabold text-sm">Xe Sang Tiền Tỷ</div>
-                </div>
-                <div class="p-3 rounded-xl bg-black/70 border border-royal-gold/40 space-y-0.5">
-                  <div class="text-emerald-400 font-bold text-[11px] uppercase">Giải Kỹ Thuật</div>
-                  <div class="text-white font-extrabold text-sm">Near Pin & Long Drive</div>
-                </div>
-                <div class="p-3 rounded-xl bg-black/70 border border-royal-gold/40 space-y-0.5">
-                  <div class="text-royal-goldLight font-bold text-[11px] uppercase">Gala Dinner 18:30</div>
-                  <div class="text-white font-extrabold text-sm">Tiệc Tối Tri Ân VIP</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-400 font-semibold tracking-wider">
-              VINH DANH NHÀ VÔ ĐỊCH BEST GROSS & LUCKY DRAW HẤP DẪN
-            </div>
+            <img src="assets/images/logo_tan_son_nhat.png" class="h-7 sm:h-9 w-auto object-contain bg-white/95 px-2 py-0.5 rounded-lg shadow-md" alt="Tân Sơn Nhất" />
           </div>
+
+          <!-- Center Dynamic Text / Lower Thirds -->
+          <div id="mainTextContainer" class="space-y-2.5 max-w-3xl">
+            <div id="badgeTag" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-royal-gold/20 border border-royal-gold/50 text-royal-goldLight text-[10px] sm:text-xs font-bold uppercase tracking-widest shimmer-badge">
+              ⭐ SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN 2026
+            </div>
+            
+            <h1 id="mainTitle" class="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.15] glow-gold">
+              Nơi Bản Lĩnh Hòa Cùng <br/>
+              <span class="text-gold-gradient italic font-normal">Vị Thế Tinh Hoa</span>
+            </h1>
+
+            <p id="mainDescription" class="text-xs sm:text-sm text-slate-200 font-medium max-w-xl leading-relaxed drop-shadow">
+              Đấu trường thể thao danh giá quy tụ các nhà lãnh đạo, doanh nhân và đối tác chiến lược trên toàn quốc.
+            </p>
+
+            <!-- Dynamic Highlights Box (changes per scene) -->
+            <div id="highlightsBox" class="pt-2"></div>
+          </div>
+
+          <!-- Bottom Footer Info inside Player -->
+          <div class="flex items-center justify-between text-[11px] font-semibold text-slate-300">
+            <span id="sceneCategoryTag" class="uppercase tracking-widest text-royal-gold">BÁO LAO ĐỘNG CHỦ TRÌ TỔ CHỨC</span>
+            <span class="text-slate-400">📅 07.11.2026 • ⛳ SÂN GOLF TÂN SƠN NHẤT</span>
+          </div>
+
         </div>
 
-        <!-- ================= SCENE 4: 40s - 50s (ĐỒNG HÀNH DOANH NGHIỆP & CÁ NHÂN) ================= -->
-        <div id="scene4" class="scene-layer absolute inset-0 transition-opacity duration-1000 opacity-0 z-10">
-          <img src="assets/images/golf_vip_clubhouse_hospitality.jpg" class="absolute inset-0 w-full h-full object-cover object-center kb-4" alt="VIP Clubhouse Networking" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/70 to-black/50"></div>
-
-          <!-- Scene 4 Content -->
-          <div class="relative z-10 h-full flex flex-col justify-between p-6 sm:p-12">
-            <div class="flex items-center gap-2 text-royal-gold text-xs font-bold uppercase tracking-widest">
-              <i data-lucide="shield" class="w-4 h-4"></i> HỆ THỐNG QUYỀN LỢI ĐỒNG HÀNH TOÀN DIỆN
-            </div>
-
-            <div class="space-y-3 max-w-2xl">
-              <h2 class="font-serif-luxury text-3xl sm:text-5xl font-extrabold text-white leading-tight glow-white">
-                Lan Tỏa Thương Hiệu <br/>
-                <span class="text-gold-gradient">Cùng Báo Lao Động</span>
-              </h2>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                <div class="p-3.5 rounded-xl bg-black/70 border border-royal-gold/40 space-y-1">
-                  <div class="text-royal-gold text-xs font-bold uppercase">Hồ Sơ Mời Tài Trợ Doanh Nghiệp</div>
-                  <p class="text-[11px] text-slate-300">07 không gian thương hiệu độc quyền • Tuyến bài PR Laodong.vn tiếp cận 2.5 tỷ lượt xem/năm.</p>
-                </div>
-                <div class="p-3.5 rounded-xl bg-black/70 border border-royal-gold/40 space-y-1">
-                  <div class="text-royal-goldLight text-xs font-bold uppercase">Gói Đồng Hành Cá Nhân (20 Triệu)</div>
-                  <p class="text-[11px] text-slate-300">01 Suất thi đấu COC trọn gói & Vinh danh Họ & Tên trang trọng trên Backdrop Bảng Vàng.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="text-[11px] text-slate-400 font-semibold tracking-wider">
-              HỢP ĐỒNG PHÁP LÝ CHẶT CHẼ • MEDIA REPORT BÁO CÁO NGHIỆM THU
-            </div>
-          </div>
-        </div>
-
-        <!-- ================= SCENE 5: 50s - 60s (OUTRO & CALL TO ACTION) ================= -->
-        <div id="scene5" class="scene-layer absolute inset-0 transition-opacity duration-1000 opacity-0 z-10">
-          <img src="assets/images/dossier_cover_tan_son_nhat.jpg" class="absolute inset-0 w-full h-full object-cover object-center kb-5" alt="Giải Golf Báo Lao Động Open 2026" />
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/80 to-black/70"></div>
-
-          <!-- Scene 5 Content -->
-          <div class="relative z-10 h-full flex flex-col justify-between items-center text-center p-6 sm:p-10">
-            <div class="flex items-center gap-4">
-              <img src="assets/images/logo_lao_dong_official.png" class="h-10 sm:h-12 w-auto object-contain" alt="Báo Lao Động" />
-              <img src="assets/images/logo_tan_son_nhat.png" class="h-8 sm:h-10 w-auto object-contain bg-white/90 p-1 rounded-lg" alt="Sân Golf Tân Sơn Nhất" />
-            </div>
-
-            <div class="space-y-2 max-w-2xl">
-              <span class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-royal-gold block">
-                GIẢI ĐẤU DANH GIÁ • THƯƠNG HIỆU UY TÍN
-              </span>
-              <h1 class="font-serif-luxury text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight glow-gold">
-                GIẢI GOLF BÁO LAO ĐỘNG <br/>
-                <span class="text-gold-gradient italic font-normal">OPEN 2026</span>
-              </h1>
-              <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-royal-gold/40 text-royal-goldLight text-xs sm:text-sm font-bold">
-                📅 07.11.2026 • ⛳ SÂN GOLF TÂN SƠN NHẤT, TP.HCM
-              </div>
-            </div>
-
-            <!-- 3 Direct Hotlines -->
-            <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-left">
-              <div class="p-2.5 rounded-xl bg-black/80 border border-white/20">
-                <span class="text-[9px] uppercase text-royal-gold block font-bold">Tài Trợ Doanh Nghiệp</span>
-                <strong class="text-white text-xs block mt-0.5">090 5567395</strong>
-                <span class="text-[10px] text-slate-400">Mr. Đăng Văn</span>
-              </div>
-              <div class="p-2.5 rounded-xl bg-black/80 border border-royal-gold/50">
-                <span class="text-[9px] uppercase text-royal-goldLight block font-bold">Đồng Hành Cá Nhân</span>
-                <strong class="text-white text-xs block mt-0.5">0908221195</strong>
-                <span class="text-[10px] text-slate-400">Mrs. Thanh Thuỳ</span>
-              </div>
-              <div class="p-2.5 rounded-xl bg-black/80 border border-emerald-500/50">
-                <span class="text-[9px] uppercase text-emerald-400 block font-bold">Đăng Ký Golfer</span>
-                <strong class="text-white text-xs block mt-0.5">0901338910</strong>
-                <span class="text-[10px] text-slate-400">Mr. Thanh Vũ</span>
-              </div>
-            </div>
-
-            <div class="text-xs text-slate-400">
-              Cổng thông tin giải đấu: <span class="text-royal-gold font-bold">https://laodong.vn/golf2026</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Flash Effect Container -->
+        <!-- Gold / White Flash on Cut -->
         <div id="flashOverlay" class="absolute inset-0 bg-white pointer-events-none opacity-0 z-30"></div>
 
-        <!-- Floating Particles & Vignette Overlay -->
-        <div class="absolute inset-0 bg-radial from-transparent via-transparent to-black/60 pointer-events-none z-20"></div>
-
-        <!-- Subtitles Bar -->
-        <div class="absolute bottom-4 left-6 right-6 z-30 text-center pointer-events-none">
-          <div id="subtitlesBox" class="inline-block bg-black/75 backdrop-blur-md px-4 py-1.5 rounded-xl border border-white/20 text-xs sm:text-sm font-semibold text-royal-goldLight shadow-2xl transition-all duration-300">
-            Chào mừng đến với Giải Golf Báo Lao Động Open 2026
+        <!-- Subtitles Bar with Voice Wave Indicator -->
+        <div class="absolute bottom-3 left-4 right-4 z-30 text-center pointer-events-none">
+          <div class="inline-flex items-center gap-2 bg-black/85 backdrop-blur-md px-4 py-1.5 rounded-full border border-royal-gold/40 text-xs sm:text-sm font-semibold text-royal-goldLight shadow-2xl">
+            <span id="voiceWaveIcon" class="flex items-center gap-0.5">
+              <span class="w-1 h-3 bg-royal-gold rounded-full animate-bounce"></span>
+              <span class="w-1 h-4 bg-royal-goldLight rounded-full animate-pulse"></span>
+              <span class="w-1 h-2 bg-royal-gold rounded-full animate-bounce"></span>
+            </span>
+            <span id="subtitlesBox">Chào mừng đến với Giải Golf Báo Lao Động Open 2026</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Play/Pause Big Center Overlay (When Paused) -->
+      <!-- Play/Pause Big Center Button -->
       <button id="btnCenterPlay" onclick="togglePlayPause()" class="absolute z-40 w-20 h-20 rounded-full bg-royal-gold/90 hover:bg-royal-gold text-charcoal-950 flex items-center justify-center shadow-2xl transition-transform hover:scale-110 active:scale-95">
         <i id="centerPlayIcon" data-lucide="play" class="w-10 h-10 ml-1 fill-current"></i>
       </button>
 
     </div>
 
-    <!-- ================= BOTTOM TIMELINE & CONTROLS ================= -->
-    <div class="max-w-5xl w-full mx-auto mt-4 bg-black/60 backdrop-blur-xl p-4 rounded-2xl border border-white/10 space-y-3">
+    <!-- ================= BOTTOM TIMELINE & NAVIGATION ================= -->
+    <div class="max-w-5xl w-full mx-auto mt-3.5 bg-black/60 backdrop-blur-xl p-3 sm:p-4 rounded-2xl border border-white/10 space-y-2.5">
       
-      <!-- Progress Bar (Scrubber) -->
+      <!-- Progress Bar (Scrubber) with 16 Photo Segment Marks -->
       <div class="relative w-full h-3 bg-white/10 rounded-full overflow-hidden cursor-pointer group" onclick="seekVideo(event)">
         <!-- Scene Marker Segments -->
         <div class="absolute inset-0 flex">
-          <div class="w-[16.66%] border-r border-white/20 h-full" title="00-10s: Vị thế & Bản lĩnh"></div>
-          <div class="w-[25%] border-r border-white/20 h-full" title="10-25s: Đấu trường TSN"></div>
-          <div class="w-[25%] border-r border-white/20 h-full" title="25-40s: Đại giải thưởng & Gala"></div>
-          <div class="w-[16.66%] border-r border-white/20 h-full" title="40-50s: Đồng hành"></div>
+          <div class="w-[16.66%] border-r border-white/30 h-full" title="00-10s: Vị Thế & Bản Lĩnh"></div>
+          <div class="w-[25%] border-r border-white/30 h-full" title="10-25s: Đấu Trường 36 Hố"></div>
+          <div class="w-[25%] border-r border-white/30 h-full" title="25-40s: HIO Xe Sang & Gala"></div>
+          <div class="w-[16.66%] border-r border-white/30 h-full" title="40-50s: Đồng Hành & Bảng Vàng"></div>
           <div class="w-[16.68%] h-full" title="50-60s: Outro & Hotline"></div>
         </div>
         <!-- Active Bar -->
         <div id="progressBar" class="h-full bg-gradient-to-r from-emerald-600 via-royal-gold to-royal-goldLight w-0 transition-all duration-100 relative">
-          <div class="absolute right-0 top-0 bottom-0 w-2 bg-white shadow-lg"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-2.5 bg-white shadow-lg"></div>
         </div>
       </div>
 
       <!-- Control Bar Row -->
-      <div class="flex items-center justify-between gap-4 text-xs">
+      <div class="flex flex-wrap items-center justify-between gap-3 text-xs">
         
         <!-- Left: Play/Pause/Restart -->
         <div class="flex items-center gap-2">
@@ -432,23 +305,23 @@
             <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
           </button>
           <div class="font-mono font-bold text-slate-300 ml-2">
-            <span id="currentTimeDisplay" class="text-royal-gold">00:00</span> / <span class="text-slate-400">01:00</span>
+            <span id="currentTimeDisplay" class="text-royal-gold font-bold">00:00</span> / <span class="text-slate-400">01:00</span>
           </div>
         </div>
 
-        <!-- Center: Current Scene Title -->
-        <div id="sceneIndicator" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-royal-goldLight text-[11px] font-semibold">
+        <!-- Center: Current Scene Title & Cut Counter -->
+        <div id="sceneIndicator" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-royal-goldLight text-[11px] font-semibold">
           <span class="w-2 h-2 rounded-full bg-royal-gold animate-ping"></span>
-          PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH (00s - 10s)
+          <span>PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH (00s - 10s)</span>
         </div>
 
-        <!-- Right: Jump to Scene Buttons -->
+        <!-- Right: Fast Jump Buttons -->
         <div class="flex items-center gap-1 text-[11px]">
-          <button onclick="jumpToSecond(0)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">P1</button>
-          <button onclick="jumpToSecond(10)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">P2</button>
-          <button onclick="jumpToSecond(25)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">P3</button>
-          <button onclick="jumpToSecond(40)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">P4</button>
-          <button onclick="jumpToSecond(50)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">P5</button>
+          <button onclick="jumpToSecond(0)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">0s</button>
+          <button onclick="jumpToSecond(10)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">10s</button>
+          <button onclick="jumpToSecond(25)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">25s</button>
+          <button onclick="jumpToSecond(40)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">40s</button>
+          <button onclick="jumpToSecond(50)" class="px-2 py-1 rounded bg-white/5 hover:bg-white/10 text-slate-300">50s</button>
         </div>
 
       </div>
@@ -458,83 +331,250 @@
   </main>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="max-w-6xl w-full mx-auto pt-3 border-t border-white/10 text-center text-[11px] text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
+  <footer class="max-w-6xl w-full mx-auto pt-2 border-t border-white/10 text-center text-[11px] text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
     <div>
       Ban Biên Tập Báo Lao Động • Văn phòng đại diện TP.HCM và Đông Nam Bộ
     </div>
     <div class="text-slate-500">
-      Âm thanh Epic Orchestral Synthesis & Motion Typography Engine
+      Động cơ Chuyển ảnh Dồn dập (Fast-Cut) & Giọng Đọc Nam Trầm Hùng
     </div>
   </footer>
 
-  <!-- ================= CINEMATIC ENGINE JAVASCRIPT ================= -->
+  <!-- ================= FAST-CUT & VOICE ENGINE JAVASCRIPT ================= -->
   <script>
     lucide.createIcons();
 
-    // Timeline Configuration (60 seconds total)
+    // 16 Fast-cut Photo Timeline (60 seconds total)
+    const fastCutTimeline = [
+      // SCENE 1: 00s - 10s (Vị Thế & Bản Lĩnh)
+      {
+        start: 0,
+        end: 3.5,
+        img: 'assets/images/golf_impact_action.jpg',
+        anim: 'zoom-punch',
+        badge: '⭐ 97 NĂM BẢN LĨNH BÁO LAO ĐỘNG (1929 - 2026)',
+        title: 'Nơi Bản Lĩnh Hòa Cùng <br/><span class="text-gold-gradient italic font-normal">Vị Thế Tinh Hoa</span>',
+        desc: 'Đấu trường thể thao danh giá quy tụ các nhà lãnh đạo, doanh nhân hàng đầu toàn quốc.',
+        scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
+        category: 'SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN 2026',
+        subtitle: 'Nơi bản lĩnh thể thao hòa cùng khát vọng bứt phá...',
+        voiceLine: 'Nơi bản lĩnh thể thao hòa cùng khát vọng bứt phá. Nơi những giá trị tinh hoa được tôn vinh trên từng đường bóng!'
+      },
+      {
+        start: 3.5,
+        end: 7,
+        img: 'assets/images/hero_golf_sports_dynamic.jpg',
+        anim: 'pan-slide-left',
+        badge: '🏆 GIẢI GOLF BÁO LAO ĐỘNG OPEN 2026',
+        title: 'Khát Vọng Vươn Tầm <br/><span class="text-gold-gradient">Đỉnh Cao Tỏa Sáng</span>',
+        desc: 'Sân chơi thể thao văn minh, khẳng định vị thế và kiến tạo các giá trị bền vững.',
+        scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
+        category: 'BÁO LAO ĐỘNG CHỦ TRÌ TỔ CHỨC',
+        subtitle: 'Nơi những giá trị tinh hoa được tôn vinh trên từng đường bóng!',
+        voiceLine: null
+      },
+      {
+        start: 7,
+        end: 10,
+        img: 'assets/images/golf_putting_green_luxury.jpg',
+        anim: 'zoom-in-fast',
+        badge: '⛳ BẢN LĨNH TRÊN TỪNG ĐƯỜNG GẠT BÓNG',
+        title: 'Tinh Thần Thể Thao <br/><span class="text-gold-gradient">Chuẩn Mực & Đẳng Cấp</span>',
+        desc: 'Trải nghiệm chất lượng thi đấu đỉnh cao và không gian giao lưu danh giá.',
+        scene: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH',
+        category: 'FAIR-PLAY • PHONG CÁCH CHUẨN MỰC',
+        subtitle: 'Khẳng định vị thế và bản lĩnh trên từng cú swing!',
+        voiceLine: null
+      },
+
+      // SCENE 2: 10s - 25s (Đấu Trường TSN & 144 Golfer)
+      {
+        start: 10,
+        end: 13.5,
+        img: 'assets/images/tsn_course_fairway_panorama.jpg',
+        anim: 'zoom-punch',
+        badge: '⛳ ĐẤU TRƯỜNG 36 HỐ TIÊU CHUẨN PGA',
+        title: 'Sân Golf Tân Sơn Nhất <br/><span class="text-gold-gradient">Quy Mô Đỉnh Cao TP.HCM</span>',
+        desc: 'Sở hữu 36 hố tiêu chuẩn quốc tế và hệ thống Night Golf chiếu sáng hiện đại bậc nhất.',
+        scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
+        category: 'ĐƠN VỊ PHỐI HỢP: SÂN GOLF TÂN SƠN NHẤT',
+        subtitle: 'Chào đón 144 Golfer tài năng tại Sân Golf Tân Sơn Nhất...',
+        voiceLine: 'Chào đón 144 Golfer tài năng tại Sân Golf Tân Sơn Nhất. Đấu trường 36 hố tiêu chuẩn quốc tế kịch tính và danh giá bậc nhất Thành phố Hồ Chí Minh!'
+      },
+      {
+        start: 13.5,
+        end: 17,
+        img: 'assets/images/golfer_action.jpg',
+        anim: 'pan-slide-right',
+        badge: '🏌️ 144 GOLFER TRANH TÀI 18 HỐ SHOTGUN',
+        title: '144 Golfer Tinh Hoa <br/><span class="text-gold-gradient">Xuất Phát Đồng Loạt 12:00</span>',
+        desc: 'Thi đấu thể thức System 36 kịch tính tranh tài qua 04 Bảng đấu A, B, C và Bảng Nữ.',
+        scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
+        category: 'SYSTEM 36 (04 BẢNG ĐẤU: A, B, C & LADY FLIGHT)',
+        subtitle: 'Đấu trường 36 hố tiêu chuẩn quốc tế kịch tính và danh giá bậc nhất TP.HCM!',
+        voiceLine: null
+      },
+      {
+        start: 17,
+        end: 21,
+        img: 'assets/images/tsn_course_greens_water.jpg',
+        anim: 'zoom-in-fast',
+        badge: '🌟 FAIRWAY XANH MƯỚT & HỒ NƯỚC THÁCH THỨC',
+        title: 'Bẫy Cát & Thách Thức <br/><span class="text-gold-gradient">Cảm Xúc Thăng Hoa</span>',
+        desc: 'Địa hình sân golf mang lại những trải nghiệm thi đấu đầy bất ngờ và lôi cuốn.',
+        scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
+        category: '18 HỐ SHOTGUN KỊCH TÍNH',
+        subtitle: 'Tranh tài quyết liệt cho chiếc cúp Best Gross danh giá!',
+        voiceLine: null
+      },
+      {
+        start: 21,
+        end: 25,
+        img: 'assets/images/golf_lady_flight_swing.jpg',
+        anim: 'pan-slide-left',
+        badge: '🌸 LADY FLIGHT 2026 - TÔN VINH NỮ GOLFER',
+        title: 'Bảng Nữ Tinh Tế <br/><span class="text-gold-gradient">Duyên Dáng & Quyết Đoán</span>',
+        desc: 'Sân chơi đẳng cấp tôn vinh nét đẹp và kỹ thuật thi đấu điêu luyện của các nữ Golfer.',
+        scene: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT',
+        category: 'CÚP VÀNG NHẤT, NHÌ, BA BẢNG NỮ',
+        subtitle: 'Sự tỏa sáng của các bóng hồng Golfer tài năng!',
+        voiceLine: null
+      },
+
+      // SCENE 3: 25s - 40s (Đại Giải Thưởng & Đêm Gala)
+      {
+        start: 25,
+        end: 29,
+        img: 'assets/images/golf_hole_in_one.jpg',
+        anim: 'zoom-punch',
+        badge: '🚗 GIẢI THƯỞNG HOLE-IN-ONE CỰC KHỦNG',
+        title: 'Săn Xe Sang Tiền Tỷ <br/><span class="text-gold-gradient">Tại Các Hố Par 3</span>',
+        desc: 'Cơ hội ghi điểm Hole-in-One lịch sử và rinh về xe ô tô hạng sang cùng các hiện vật đắt giá.',
+        scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
+        category: 'XE SANG & HIỆN VẬT CAO CẤP HỐ PAR 3',
+        subtitle: 'Cơ hội chạm tay vào giải thưởng Hole-in-One xe sang tiền tỷ...',
+        voiceLine: 'Cơ hội chạm tay vào giải thưởng Hole-in-One xe sang tiền tỷ, cùng Đêm tiệc Gala Dinner kết nối mạng lưới doanh nhân hàng đầu cả nước!'
+      },
+      {
+        start: 29,
+        end: 33,
+        img: 'assets/images/golf_equipment_trophy_banner.jpg',
+        anim: 'pan-slide-right',
+        badge: '🏆 18 CÚP VÔ ĐỊCH MẠ VÀNG DANH GIÁ',
+        title: '18 Cúp Vô Địch <br/><span class="text-gold-gradient">Tôn Vinh Vị Vua Best Gross</span>',
+        desc: 'Hệ thống giải chính, giải kỹ thuật Nearest to Pin, Longest Drive và Nearest to Line.',
+        scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
+        category: 'BEST GROSS CHAMPION & GIẢI KỸ THUẬT',
+        subtitle: '18 Cúp danh giá mạ vàng trao tận tay nhà vô địch!',
+        voiceLine: null
+      },
+      {
+        start: 33,
+        end: 37,
+        img: 'assets/images/golf_trophy_gala.jpg',
+        anim: 'zoom-punch',
+        badge: '🍾 ĐÊM TIỆC GALA DINNER 18:30 HOÀNG KIM',
+        title: 'Đêm Gala Trao Giải <br/><span class="text-gold-gradient">Lung Linh & Sang Trọng</span>',
+        desc: 'Ẩm thực 5 sao, pháo hoa sân khấu, vinh danh nhà vô địch và bốc thăm Lucky Draw.',
+        scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
+        category: 'ẨM THỰC THƯỢNG HẠNG & TRAO GIẢI TRANG TRỌNG',
+        subtitle: 'Cùng Đêm tiệc Gala Dinner kết nối mạng lưới doanh nhân hàng đầu cả nước!',
+        voiceLine: null
+      },
+      {
+        start: 37,
+        end: 40,
+        img: 'assets/images/tsn_clubhouse_night.jpg',
+        anim: 'pan-slide-left',
+        badge: '✨ CLUBHOUSE TÂN SƠN NHẤT RỰC RỠ VỀ ĐÊM',
+        title: 'Không Gian Đêm Hội <br/><span class="text-gold-gradient">Tỏa Sáng Thành Công</span>',
+        desc: 'Nơi kết nối và lưu giữ những khoảnh khắc vinh quang của các nhà lãnh đạo.',
+        scene: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA',
+        category: 'KẾT NỐI DOANH NGHIỆP C-LEVEL',
+        subtitle: 'Đêm hội ngộ của những thương hiệu uy tín!',
+        voiceLine: null
+      },
+
+      // SCENE 4: 40s - 50s (Đồng Hành Doanh Nghiệp & Cá Nhân)
+      {
+        start: 40,
+        end: 43.5,
+        img: 'assets/images/golf_vip_clubhouse_hospitality.jpg',
+        anim: 'zoom-punch',
+        badge: '🛡️ HỆ SINH THÁI 2.5 TỶ LƯỢT XEM BÁO LAO ĐỘNG',
+        title: 'Lan Tỏa Thương Hiệu <br/><span class="text-gold-gradient">07 Không Gian Đồng Hành</span>',
+        desc: 'Quyền lợi độc quyền: Top Banner Laodong.vn, Tuyến bài PR, Photo Wall và Booth Activation.',
+        scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
+        category: 'BẢO TRỢ TRUYỀN THÔNG ĐA NỀN TẢNG',
+        subtitle: 'Khẳng định vị thế thương hiệu trên hệ sinh thái 2.5 tỷ lượt xem...',
+        voiceLine: 'Khẳng định vị thế thương hiệu trên hệ sinh thái 2.5 tỷ lượt xem, và lưu dấu danh vị trang trọng trên Bảng Vàng danh dự sự kiện!'
+      },
+      {
+        start: 43.5,
+        end: 47,
+        img: 'assets/images/golf_networking.jpg',
+        anim: 'pan-slide-right',
+        badge: '🤝 GÓI ĐỒNG HÀNH CÁ NHÂN (20 TRIỆU / SUẤT)',
+        title: 'Vinh Danh Bảng Vàng <br/><span class="text-gold-gradient">Lưu Dấu Danh Vị Trang Trọng</span>',
+        desc: '01 Suất thi đấu COC trọn gói và in Họ Tên trang trọng trên Backdrop Bảng Vàng tại sảnh Clubhouse.',
+        scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
+        category: '01 SUẤT COC TRỌN GÓI & VINH DANH CLUBHOUSE',
+        subtitle: 'Lưu dấu danh vị trang trọng trên Bảng Vàng danh dự sự kiện!',
+        voiceLine: null
+      },
+      {
+        start: 47,
+        end: 50,
+        img: 'assets/images/tsn_clubhouse_restaurant.jpg',
+        anim: 'zoom-in-fast',
+        badge: '🎁 ĐỐI TÁC TÀI TRỢ HIỆN VẬT (TỪ 30 TRIỆU)',
+        title: 'Trải Nghiệm Sản Phẩm <br/><span class="text-gold-gradient">Tới 144 Golfer Lãnh Đạo</span>',
+        desc: 'Đưa sản phẩm vào 100% túi quà Welcome Kit và phục vụ độc quyền trên sân/tiệc Gala.',
+        scene: 'PHÂN CẢNH 4: ĐỒNG HÀNH & BẢNG VÀNG',
+        category: 'TIẾP NHẬN TỪ 30 TRIỆU ĐỒNG',
+        subtitle: 'Quảng bá sản phẩm trực tiếp đến cộng đồng tinh hoa!',
+        voiceLine: null
+      },
+
+      // SCENE 5: 50s - 60s (Outro & Hotline 24/7)
+      {
+        start: 50,
+        end: 55,
+        img: 'assets/images/dossier_cover_tan_son_nhat.jpg',
+        anim: 'zoom-punch',
+        badge: '📅 THỨ BẢY, 07.11.2026 • SÂN GOLF TÂN SƠN NHẤT',
+        title: 'GIẢI GOLF BÁO LAO ĐỘNG <br/><span class="text-gold-gradient italic font-normal">OPEN 2026</span>',
+        desc: 'Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!',
+        scene: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ',
+        category: 'TIẾP NHẬN THÔNG TIN 24/7',
+        subtitle: 'Giải Golf Báo Lao Động Open 2026 • Ngày 07 tháng 11 năm 2026',
+        voiceLine: 'Giải Golf Báo Lao Động Open 2026. Ngày 07 tháng 11 năm 2026 tại Sân Golf Tân Sơn Nhất. Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!'
+      },
+      {
+        start: 55,
+        end: 60,
+        img: 'assets/images/dossier_cover_tan_son_nhat.jpg',
+        anim: 'pan-slide-left',
+        badge: '📞 HOTLINE LIÊN HỆ BAN TỔ CHỨC (24/7)',
+        title: 'KẾT NỐI BAN TỔ CHỨC <br/><span class="text-gold-gradient">laodong.vn/golf2026</span>',
+        desc: 'Doanh nghiệp: 090 5567395 (Mr. Văn) • Cá nhân: 0908221195 (Mrs. Thuỳ) • Golfer: 0901338910 (Mr. Vũ)',
+        scene: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ',
+        category: 'BÁO LAO ĐỘNG • VĂN PHÒNG ĐẠI DIỆN TP.HCM & ĐÔNG NAM BỘ',
+        subtitle: 'Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!',
+        voiceLine: null
+      }
+    ];
+
     const TOTAL_DURATION = 60; // 60s
     let currentSecond = 0;
     let isPlaying = false;
     let playInterval = null;
     let isAudioEnabled = true;
+    let isVoiceEnabled = true;
+    let currentCutIndex = -1;
 
-    // Scenes and Subtitles Script
-    const scenesConfig = [
-      {
-        id: 'scene1',
-        start: 0,
-        end: 10,
-        name: 'PHÂN CẢNH 1: VỊ THẾ & BẢN LĨNH (00s - 10s)',
-        subtitles: [
-          { t: 0, text: 'Nơi bản lĩnh thể thao hòa cùng khát vọng bứt phá...' },
-          { t: 5, text: 'Nơi những giá trị tinh hoa được tôn vinh trên từng đường bóng!' }
-        ]
-      },
-      {
-        id: 'scene2',
-        start: 10,
-        end: 25,
-        name: 'PHÂN CẢNH 2: ĐẤU TRƯỜNG TÂN SƠN NHẤT & 144 GOLFER (10s - 25s)',
-        subtitles: [
-          { t: 10, text: 'Chào đón 144 Golfer tài năng tại Sân Golf Tân Sơn Nhất...' },
-          { t: 16, text: 'Đấu trường 36 hố tiêu chuẩn quốc tế kịch tính và danh giá bậc nhất TP.HCM!' }
-        ]
-      },
-      {
-        id: 'scene3',
-        start: 25,
-        end: 40,
-        name: 'PHÂN CẢNH 3: ĐẠI GIẢI THƯỞNG & ĐÊM GALA (25s - 40s)',
-        subtitles: [
-          { t: 25, text: 'Cơ hội chạm tay vào giải thưởng Hole-in-One xe sang tiền tỷ...' },
-          { t: 32, text: 'Cùng Đêm tiệc Gala Dinner kết nối mạng lưới doanh nhân hàng đầu cả nước!' }
-        ]
-      },
-      {
-        id: 'scene4',
-        start: 40,
-        end: 50,
-        name: 'PHÂN CẢNH 4: ĐỒNG HÀNH DOANH NGHIỆP & CÁ NHÂN (40s - 50s)',
-        subtitles: [
-          { t: 40, text: 'Khẳng định vị thế thương hiệu trên hệ sinh thái 2.5 tỷ lượt xem...' },
-          { t: 45, text: 'Lưu dấu danh vị trang trọng trên Bảng Vàng danh dự sự kiện!' }
-        ]
-      },
-      {
-        id: 'scene5',
-        start: 50,
-        end: 60,
-        name: 'PHÂN CẢNH 5: KÊU GỌI ĐĂNG KÝ & HOTLINE 24/7 (50s - 60s)',
-        subtitles: [
-          { t: 50, text: 'Giải Golf Báo Lao Động Open 2026 • Ngày 07.11.2026 tại Sân Golf Tân Sơn Nhất' },
-          { t: 55, text: 'Đăng ký tham gia ngay hôm nay để khẳng định bản lĩnh đỉnh cao!' }
-        ]
-      }
-    ];
-
-    // Web Audio Synthesizer for Epic Cinematic Sounds
+    // Web Audio Synthesizer Engine
     let audioCtx = null;
-
     function initAudioContext() {
       if (!audioCtx) {
         audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -544,7 +584,7 @@
       }
     }
 
-    function playCinematicImpact(freq = 120, decay = 1.2) {
+    function playCinematicKick(freq = 130, decay = 0.8) {
       if (!isAudioEnabled) return;
       initAudioContext();
       try {
@@ -552,45 +592,63 @@
         const gain = audioCtx.createGain();
         osc.type = 'sine';
         osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + decay);
+        osc.frequency.exponentialRampToValueAtTime(25, audioCtx.currentTime + decay);
         
-        gain.gain.setValueAtTime(0.7, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.85, audioCtx.currentTime);
         gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + decay);
         
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.start();
         osc.stop(audioCtx.currentTime + decay);
-      } catch (e) {
-        console.log('Audio synthesis error:', e);
-      }
+      } catch (e) {}
     }
 
-    function playSnareBeat() {
+    function playSnareHit() {
       if (!isAudioEnabled) return;
       initAudioContext();
       try {
         const osc = audioCtx.createOscillator();
         const gain = audioCtx.createGain();
         osc.type = 'triangle';
-        osc.frequency.setValueAtTime(220, audioCtx.currentTime);
-        gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.15);
+        osc.frequency.setValueAtTime(240, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.12);
         osc.connect(gain);
         gain.connect(audioCtx.destination);
         osc.start();
-        osc.stop(audioCtx.currentTime + 0.15);
+        osc.stop(audioCtx.currentTime + 0.12);
       } catch (e) {}
     }
 
-    function triggerFlash() {
+    function triggerCutFlash() {
       const flash = document.getElementById('flashOverlay');
-      flash.classList.remove('flash-screen');
-      void flash.offsetWidth; // trigger reflow
-      flash.classList.add('flash-screen');
+      flash.classList.remove('flash-active');
+      void flash.offsetWidth;
+      flash.classList.add('flash-active');
     }
 
-    // Play / Pause Toggle
+    // Speech Synthesis for Deep Male Voice
+    function speakMaleVoice(text) {
+      if (!isVoiceEnabled || !('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel(); // cancel previous utterance
+
+      const utter = new SpeechSynthesisUtterance(text);
+      utter.lang = 'vi-VN';
+      utter.rate = 0.95; // deliberate, authoritative pace
+      utter.pitch = 0.82; // deeper male resonance
+
+      // Select male/deep voice if available
+      const voices = window.speechSynthesis.getVoices();
+      const viVoice = voices.find(v => v.lang.includes('vi') || v.name.toLowerCase().includes('vietnam') || v.name.toLowerCase().includes('nam'));
+      if (viVoice) {
+        utter.voice = viVoice;
+      }
+
+      window.speechSynthesis.speak(utter);
+    }
+
+    // Toggle Play/Pause
     function togglePlayPause() {
       if (isPlaying) {
         pauseVideo();
@@ -606,25 +664,25 @@
       document.getElementById('bottomPlayIcon').setAttribute('data-lucide', 'pause');
       lucide.createIcons();
 
-      playCinematicImpact(140, 1.5);
-
       if (currentSecond >= TOTAL_DURATION) {
         currentSecond = 0;
+        currentCutIndex = -1;
       }
 
       playInterval = setInterval(() => {
-        currentSecond += 0.2;
+        currentSecond += 0.15;
         if (currentSecond >= TOTAL_DURATION) {
           currentSecond = TOTAL_DURATION;
           pauseVideo();
         }
         updateTimeline();
-      }, 200);
+      }, 150);
     }
 
     function pauseVideo() {
       isPlaying = false;
       clearInterval(playInterval);
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
       document.getElementById('btnCenterPlay').classList.remove('hidden');
       document.getElementById('bottomPlayIcon').setAttribute('data-lucide', 'play');
       lucide.createIcons();
@@ -632,6 +690,7 @@
 
     function restartVideo() {
       currentSecond = 0;
+      currentCutIndex = -1;
       updateTimeline();
       playVideo();
     }
@@ -641,72 +700,75 @@
       const clickX = event.clientX - rect.left;
       const ratio = clickX / rect.width;
       currentSecond = Math.min(TOTAL_DURATION, Math.max(0, ratio * TOTAL_DURATION));
+      currentCutIndex = -1;
       updateTimeline();
-      triggerFlash();
-      playCinematicImpact(100, 0.8);
+      triggerCutFlash();
+      playCinematicKick(140, 0.8);
     }
 
     function jumpToSecond(sec) {
       currentSecond = sec;
+      currentCutIndex = -1;
       updateTimeline();
-      triggerFlash();
-      playCinematicImpact(130, 1.0);
+      triggerCutFlash();
+      playCinematicKick(150, 0.9);
       if (!isPlaying) playVideo();
     }
 
-    // Update Visuals according to currentSecond
+    // Update Timeline, Cuts, Typography & Voice
     function updateTimeline() {
+      // Progress Bar width
       const progressPercent = (currentSecond / TOTAL_DURATION) * 100;
       document.getElementById('progressBar').style.width = progressPercent + '%';
 
-      // Format time display
+      // Time display
       const mins = Math.floor(currentSecond / 60);
       const secs = Math.floor(currentSecond % 60);
       document.getElementById('currentTimeDisplay').textContent = 
         String(mins).padStart(2, '0') + ':' + String(secs).padStart(2, '0');
 
-      // Determine active scene
-      let activeSceneIndex = 0;
-      for (let i = 0; i < scenesConfig.length; i++) {
-        if (currentSecond >= scenesConfig[i].start && currentSecond < scenesConfig[i].end) {
-          activeSceneIndex = i;
+      // Find active cut
+      let activeIndex = 0;
+      for (let i = 0; i < fastCutTimeline.length; i++) {
+        if (currentSecond >= fastCutTimeline[i].start && currentSecond < fastCutTimeline[i].end) {
+          activeIndex = i;
           break;
         }
-        if (currentSecond >= 50) activeSceneIndex = 4;
+        if (currentSecond >= 55) activeIndex = fastCutTimeline.length - 1;
       }
 
-      // Switch active layer opacity
-      scenesConfig.forEach((sc, idx) => {
-        const el = document.getElementById(sc.id);
-        if (idx === activeSceneIndex) {
-          el.style.opacity = '1';
-          el.style.pointerEvents = 'auto';
-        } else {
-          el.style.opacity = '0';
-          el.style.pointerEvents = 'none';
+      // Check if image cut transitioned!
+      if (activeIndex !== currentCutIndex) {
+        currentCutIndex = activeIndex;
+        const curCut = fastCutTimeline[activeIndex];
+
+        // 1. Swap image with animation
+        const imgEl = document.getElementById('bgSlideImage');
+        imgEl.className = 'w-full h-full object-cover object-center ' + curCut.anim;
+        imgEl.src = curCut.img;
+
+        // 2. Trigger Flash & Impact SFX
+        triggerCutFlash();
+        playCinematicKick(150, 0.7);
+
+        // 3. Update Text Overlays
+        document.getElementById('badgeTag').innerHTML = curCut.badge;
+        document.getElementById('mainTitle').innerHTML = curCut.title;
+        document.getElementById('mainDescription').innerHTML = curCut.desc;
+        document.getElementById('sceneCategoryTag').textContent = curCut.category;
+        document.getElementById('sceneIndicator').innerHTML = 
+          `<span class="w-2 h-2 rounded-full bg-royal-gold animate-ping"></span> <span>${curCut.scene} (${Math.floor(curCut.start)}s - ${Math.floor(curCut.end)}s)</span>`;
+        document.getElementById('subtitlesBox').textContent = curCut.subtitle;
+
+        // 4. Trigger Deep Male Voice-over if available on this cut
+        if (isPlaying && curCut.voiceLine) {
+          speakMaleVoice(curCut.voiceLine);
         }
-      });
-
-      // Update Scene Title Indicator
-      document.getElementById('sceneIndicator').innerHTML = 
-        `<span class="w-2 h-2 rounded-full bg-royal-gold animate-ping"></span> ${scenesConfig[activeSceneIndex].name}`;
-
-      // Update Subtitles
-      const curScene = scenesConfig[activeSceneIndex];
-      let currentSubtitleText = curScene.subtitles[0].text;
-      for (let s of curScene.subtitles) {
-        if (currentSecond >= s.t) {
-          currentSubtitleText = s.text;
+      } else {
+        // Snare rhythmic beat on half seconds
+        if (Math.floor(currentSecond * 2) % 2 === 0 && Math.abs((currentSecond * 2) % 1) < 0.25) {
+          playSnareHit();
         }
-      }
-      document.getElementById('subtitlesBox').textContent = currentSubtitleText;
-
-      // Periodic rhythmic impact on scene transition
-      if (Math.abs(currentSecond - 10) < 0.25 || Math.abs(currentSecond - 25) < 0.25 || Math.abs(currentSecond - 40) < 0.25 || Math.abs(currentSecond - 50) < 0.25) {
-        triggerFlash();
-        playCinematicImpact(160, 1.2);
-      } else if (Math.floor(currentSecond) % 2 === 0 && Math.abs(currentSecond % 1) < 0.2) {
-        playSnareBeat();
       }
     }
 
@@ -718,33 +780,53 @@
 
       if (ratio === '16:9') {
         wrapper.className = "relative w-full max-w-5xl aspect-16-9 bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 border-royal-gold/50 transition-all duration-500 flex items-center justify-center";
-        btn169.className = "px-3 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
-        btn916.className = "px-3 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
+        btn169.className = "px-2.5 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
+        btn916.className = "px-2.5 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
       } else {
         wrapper.className = "relative w-full max-w-sm aspect-9-16 bg-black rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl border-2 border-royal-gold/50 transition-all duration-500 flex items-center justify-center";
-        btn916.className = "px-3 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
-        btn169.className = "px-3 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
+        btn916.className = "px-2.5 py-1.5 rounded-lg font-bold bg-royal-gold text-charcoal-950 shadow transition-all";
+        btn169.className = "px-2.5 py-1.5 rounded-lg font-bold text-slate-300 hover:text-white transition-all";
       }
     }
 
-    // Audio Engine Toggle
+    // Toggle Voice-Off
+    function toggleVoiceOff() {
+      isVoiceEnabled = !isVoiceEnabled;
+      const label = document.getElementById('voiceLabel');
+      const icon = document.getElementById('voiceIcon');
+      const wave = document.getElementById('voiceWaveIcon');
+
+      if (isVoiceEnabled) {
+        label.textContent = "Giọng Nam: BẬT";
+        icon.setAttribute('data-lucide', 'mic');
+        wave.classList.remove('hidden');
+        speakMaleVoice("Giọng đọc nam truyền cảm hứng đã sẵn sàng!");
+      } else {
+        label.textContent = "Giọng Nam: TẮT";
+        icon.setAttribute('data-lucide', 'mic-off');
+        wave.classList.add('hidden');
+        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      }
+      lucide.createIcons();
+    }
+
+    // Toggle Audio FX
     function toggleAudioEngine() {
       isAudioEnabled = !isAudioEnabled;
       const label = document.getElementById('audioLabel');
       const icon = document.getElementById('audioIcon');
       if (isAudioEnabled) {
-        label.textContent = "Âm Thanh: BẬT";
+        label.textContent = "Beat SFX: BẬT";
         icon.setAttribute('data-lucide', 'volume-2');
-        initAudioContext();
-        playCinematicImpact(120, 0.8);
+        playCinematicKick(140, 0.8);
       } else {
-        label.textContent = "Âm Thanh: TẮT";
+        label.textContent = "Beat SFX: TẮT";
         icon.setAttribute('data-lucide', 'volume-x');
       }
       lucide.createIcons();
     }
 
-    // One-Click Video Recording using MediaRecorder API
+    // MediaRecorder Video Export
     let mediaRecorder = null;
     let recordedChunks = [];
     let isRecording = false;
@@ -773,7 +855,7 @@
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026.webm';
+            a.download = 'Trailer_Golf_Bao_Lao_Dong_Open_2026_60s.webm';
             document.body.appendChild(a);
             a.click();
             setTimeout(() => {
@@ -782,18 +864,18 @@
             }, 100);
             
             isRecording = false;
-            label.textContent = "Xuất Video (MP4/WebM)";
+            label.textContent = "Xuất Video (MP4)";
             btn.className = "px-3.5 py-1.5 rounded-xl bg-red-600 hover:bg-red-700 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5";
           };
 
           mediaRecorder.start();
           isRecording = true;
-          label.textContent = "Đang Ghi... Bấm để Dừng & Tải";
+          label.textContent = "Đang Ghi... Bấm Dừng";
           btn.className = "px-3.5 py-1.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shadow-lg transition-all flex items-center gap-1.5 animate-pulse";
 
           restartVideo();
         } catch (err) {
-          alert("Hướng dẫn ghi video: Trình duyệt sẽ yêu cầu chọn tab 'Trailer 60s - Giải Golf Báo Lao Động Open 2026' để ghi hình với chất lượng HD mượt mà nhất!");
+          alert("Hướng dẫn xuất video: Bạn vui lòng chọn tab 'Trailer 60s' trong cửa sổ chia sẻ màn hình để ghi trọn vẹn 60 giây phim chất lượng cao!");
         }
       } else {
         if (mediaRecorder) {
@@ -802,7 +884,14 @@
       }
     }
 
-    // Auto update initial state
+    // Initialize voices
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        window.speechSynthesis.getVoices();
+      };
+    }
+
+    // Initial render
     updateTimeline();
   </script>
 </body>
