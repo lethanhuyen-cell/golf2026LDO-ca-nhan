@@ -9,12 +9,14 @@
 ## 📌 1. TỔNG HỢP CÁC KẾT QUẢ ĐÃ ĐẠT ĐƯỢC
 
 ### ⛳ A. Landing Page Sự Kiện (index.html)
+- **Đồng hồ đếm ngược thời gian thực (Countdown Timer)**: Tích hợp widget đếm ngược Ngày / Giờ / Phút / Giây chuẩn xác đến giờ Shotgun ngày thi đấu **07.11.2026 12:00:00**.
 - **Logo Báo Lao Động chuẩn**: Đã đưa logo chính thức của Báo Lao Động lên thanh điều hướng (Navbar), Header và Footer.
 - **Thời gian & Địa điểm chính thức**: Cập nhật thống nhất **Thứ Bảy, 07.11.2026** tại **Sân Golf Tân Sơn Nhất, TP. Hồ Chí Minh** (thay vì viết tắt TSN).
 - **Thông tin liên hệ Hotline chuẩn**:
   - **Tiểu Ban Chuyên Môn & Golfer**: `0901338910 - Mr. Thanh Vũ` (Email: `golf@laodong.vn`)
   - **Tiểu Ban Tài Trợ & Đối Ngoại**: `090 5567395 - Mr. Đăng Văn` (Email: `taitro@laodong.vn`)
 - **Phân cấp danh vị**: Đổi danh vị gói 50 triệu thành **Nhà Tài Trợ Đồng** (Bronze Sponsor).
+- **Mã nguồn Git**: Đã khởi tạo Git repository và tạo bản commit sạch sẽ sẵn sàng push lên GitHub / Vercel.
 
 ### 📑 B. Quyển Hồ Sơ Mời Tài Trợ 12 Trang (dossier.html)
 - **Trang 1 (Bìa)**: Đưa logo Báo Lao Động chính thức lên đầu trang; bỏ dòng chữ *"OFFICIAL DOSSIER 2026 / Bảo mật & Trân trọng kính gửi"*; cập nhật ngày **07.11.2026** và ghi rõ **Sân Golf Tân Sơn Nhất**.
