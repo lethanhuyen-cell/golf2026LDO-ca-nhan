@@ -44,22 +44,16 @@
 ---
 
 ### 🎬 C. Động Cơ Trailer 60s Fast-Cut Điện Ảnh (`trailer.html`)
-1. **Nâng Cấp Khúc Ca Khai Mạc Giải Thể Thao Đỉnh Cao (Grand Sports Opening Fanfare & Marching Cadence)**:
-   - **Phong cách**: Nhạc hiệu khai mạc giải đấu tầm cỡ quốc tế (*PGA Tour, Olympic Fanfare, Ryder Cup, Champions League*).
-   - **Tầng âm sắc thể thao chân thực (Web Audio API Synthesizer)**:
-     * **Kèn Trumpet & Brass Khải Hoàn**: Tấu giai điệu vinh quang hào sảng (*Motif: G4 -> C5 -> E5 -> G5 -> C6*), mang lại khí thế hừng hực và tự hào.
-     * **Trống diễu hành Snare Cadence & Rolls**: Tiếng gõ nhịp diễu hành dồn dập, giòn giã chuẩn tinh thần thể thao Olympic.
-     * **Trống Timpani & Chũm chọe Cymbal Crash**: Đập vang dội trên từng nhịp phách và cú chuyển cảnh 8K.
-     * **Kèn French Horns trầm ấm**: Tạo lớp hòa âm đệm dày dặn, uy nghi và danh giá.
-   - **2 Chế độ nhạc thể thao tùy chọn**:
-     * 🏆 **Khai Mạc PGA / Olympic (Fanfare & March)**
-     * ⚡ **Sân Vận Động Sôi Động (Stadium Beat)**
+1. **Chế Độ Thuần Hình Ảnh Điện Ảnh (Pure Visual Cinematic - Không Nhạc & Không Voice-off)**:
+   - **Tắt hoàn toàn mọi âm thanh và nhạc nền**: Trả về không gian trình diễn hình ảnh thể thao 8K sạch sẽ, tinh gọn, mượt mà và không tiếng ồn.
+   - **Tiện ích mở rộng**: Tích hợp sẵn nút **"Gắn file nhạc (MP3 tùy chọn)"** để người dùng có thể tự tải và lồng bất kỳ bản nhạc bản quyền/yêu thích nào từ máy tính vào trailer khi cần.
 2. **26 Cắt Ảnh Thể Thao 8K Dồn Dập (Fast-Cut 1.8s – 2.2s/cảnh)**:
-   - 6 kỹ xảo chuyển động máy quay kết hợp hiệu ứng rung chấn và flash lóe sáng.
+   - 26 hình ảnh thể thao chất lượng cao: Cú vung gậy Driver bùng nổ sương mai, cứu cát bunker đỉnh cao, xe sang HIO thảm đỏ, đêm Gala vinh quang nâng ly sâm panh, toàn cảnh Sân Golf Tân Sơn Nhất.
+   - 6 kỹ xảo chuyển động máy quay kết hợp hiệu ứng lóe sáng flash transition.
    - Nút chọn tốc độ chuyển cảnh: **1.0x Chuẩn** & **1.25x Dồn Dập Siêu Căng**.
 3. **Tính Năng Xuất Video & Đổi Khung Hình**:
    - Chuyển đổi linh hoạt **16:9 Cinema Wide** (Màn hình LED, YouTube) và **9:16 Mobile Story** (TikTok, Reels, Shorts).
-   - Nút **Xuất Video (MP4/WebM)** ghi hình 1-click trực tiếp từ trình duyệt.
+   - Nút **Xuất Video (MP4/WebM)** ghi hình 1-click trực tiếp từ trình duyệt phục vụ công tác dựng hậu kỳ hoặc đăng tải truyền thông.
 
 ---
 
