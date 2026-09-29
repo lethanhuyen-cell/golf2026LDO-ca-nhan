@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "giai-golf-bao-lao-dong-2026",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    {
+      "src": "/trailer",
+      "dest": "/trailer.html"
+    },
+    {
+      "src": "/dossier",
+      "dest": "/dossier.html"
+    },
+    {
+      "src": "/dossier-ca-nhan",
+      "dest": "/dossier_ca_nhan.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
