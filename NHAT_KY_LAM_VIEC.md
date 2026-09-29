@@ -69,16 +69,34 @@
 | 6 | **`dossier.html`** | Web App / A4 | Mã nguồn Hồ Sơ Mời Tài Trợ 10 trang A4 chuẩn (đã tích hợp nút xem Trailer 60s). |
 | 7 | **`_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`** | Thư mục Backup | Bộ sao lưu toàn vẹn chứa đầy đủ mã nguồn HTML, tài nguyên `assets/` và toàn bộ tệp PDF/PNG. |
 | 8 | **`QUY_TRINH_TO_CHUC_SU_KIEN_VA_THIET_KE_LANDING_PAGE_CHUAN.md`** | Markdown | Master SOP quy trình chuẩn 6 giai đoạn tổ chức sự kiện và xây dựng tài liệu cho Báo Lao Động. |
-| 9 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
+| 9 | **`dossier_ca_nhan.html`** | Web App / A4 | Hồ Sơ Mời Tài Trợ Cá Nhân chuyên biệt 4 trang A4 (Gói Đồng Hành Cá Nhân 20 triệu VNĐ, Bảng Vàng Danh Dự 3D, tối ưu không gian 100%). |
+| 10 | **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (7.6 MB) | Bản xuất in PDF chất lượng cao **4 trang A4 chuẩn (`kMDItemNumberOfPages = 4`)**, màu sắc Major rực rỡ, sắc nét. |
+| 11 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
 
 ---
 
-## 🔒 3. CAM KẾT CHẤT LƯỢNG & BẢO MẬT
+## 💎 3. BỘ HỒ SƠ TÀI TRỢ CÁ NHÂN (4 TRANG A4 CHUYÊN BIỆT)
+1. **Trang 1 - Bìa Tươi Sáng & Mạnh Mẽ**:
+   - Tông màu xanh Emerald Major (`#0A693B` ➔ `#004D2C`) kết hợp tia sáng Champagne Gold Sunburst và ảnh cú swing Driver uy lực.
+   - Nhấn mạnh thông điệp *Gói Đồng Hành Cá Nhân & Quyền Lợi Golfer Danh Dự*.
+2. **Trang 2 - Thư Mời & Hệ Sinh Thái Báo Lao Động**:
+   - Thư ngỏ trân trọng từ TM. Ban Biên Tập Báo Lao Động.
+   - Phối cảnh sân 36 hố Tân Sơn Nhất và hạ tầng truyền thông 2.5 tỷ lượt view/năm.
+3. **Trang 3 - Gói Cá Nhân & Bảng Vàng Danh Dự 3D**:
+   - Gói 20.000.000 VNĐ / Suất (01 Slot thi đấu VIP + Bảng Vàng + Bộ Quà Tặng 8 Triệu + Gala Dinner).
+   - **Mockup 3D Bảng Vàng Danh Dự mạ vàng** đặt trang trọng tại sảnh Clubhouse.
+   - Cơ cấu 4 bảng đấu System 36 và Giải thưởng Hole-in-One xe sang tiền tỷ.
+4. **Trang 4 - Lịch Trình & Kênh Liên Hệ Chuyên Trách**:
+   - Lịch trình 4 chặng thi đấu và đêm Gala vinh danh.
+   - 2 Hotline 24/7 chuyên trách: **Mrs. Thanh Thuỳ (0908 221 195)** & **Mr. Thanh Vũ (0901 338 910)**.
+
+---
+
+## 🔒 4. CAM KẾT CHẤT LƯỢNG & BẢO MẬT
 - ✅ **Chuẩn nhận diện**: Sử dụng chuẩn xác tên đơn vị phối hợp *"Sân Golf Tân Sơn Nhất"*.
 - ✅ **Bảo mật**: Tuyệt đối không để lộ email công khai trên các ấn phẩm tiếp thị đối ngoại, thông tin được định tuyến qua 3 đầu mối hotline 24/7.
 - ✅ **Tính sẵn sàng**: Toàn bộ mã nguồn, tài nguyên ảnh 8K, tài liệu và PDF đã được kiểm tra nghiêm ngặt, sao lưu đa tầng và sẵn sàng phục vụ công tác truyền thông, kêu gọi tài trợ.
 
-
-## 💾 3. THÔNG TIN SAO LƯU & QUẢN TRỊ MÃ NGUỒN
+## 💾 5. THÔNG TIN SAO LƯU & QUẢN TRỊ MÃ NGUỒN
 - **Thư mục sao lưu**: `_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`
 - **Lịch sử Git**: Tất cả các bước chỉnh sửa, tối ưu và xuất bản đã được commit vào nhánh `main` với các thông điệp rõ ràng, sẵn sàng triển khai hoặc bàn giao cho đối tác.

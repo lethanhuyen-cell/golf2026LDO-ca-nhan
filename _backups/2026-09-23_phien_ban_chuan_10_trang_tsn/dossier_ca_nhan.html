@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư Mời & Hồ Sơ Đồng Hành Cá Nhân - Giải Golf Báo Lao Động Open 2026</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            masters: {
+              green: '#004d2c',
+              deep: '#00331e',
+              emerald: '#056839',
+              dark: '#002415',
+              surface: '#f4f7f5'
+            },
+            royal: {
+              gold: '#C5A059',
+              goldLight: '#E2C792',
+              goldDark: '#9E7D3B',
+              bronze: '#8C6239'
+            },
+            laodong: {
+              crimson: '#BE1E2D',
+              red: '#DA251D',
+              darkRed: '#8B0000'
+            },
+            charcoal: {
+              900: '#111827',
+              800: '#1F2937',
+              700: '#374151',
+              500: '#6B7280',
+              300: '#D1D5DB',
+              100: '#F3F4F6'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #cbd5e1;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .font-serif-luxury {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .page-sheet {
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      box-shadow: 0 12px 36px rgba(0,0,0,0.2);
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 28px 14px 28px;
+      overflow: hidden;
+    }
+    @media print {
+      body {
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-sheet {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        width: 100% !important;
+        height: 100vh !important;
+        min-height: 100vh !important;
+        max-height: 100vh !important;
+        padding: 20px 28px 14px 28px !important;
+      }
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #FFFDEB 0%, #FFE28A 30%, #DFBE79 70%, #C5A059 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-card-shimmer {
+      background: linear-gradient(145deg, rgba(255,255,255,0.96) 0%, rgba(254,249,235,0.98) 100%);
+      border: 1.5px solid #DFBE79;
+      box-shadow: 0 6px 20px rgba(197, 160, 89, 0.12);
+    }
+  </style>
+</head>
+<body class="selection:bg-masters-green selection:text-white antialiased py-6">
+
+  <!-- ================= TOP FLOATING TOOLBAR (NO PRINT) ================= -->
+  <div class="no-print fixed top-4 right-4 z-50 flex items-center gap-3 bg-white/95 backdrop-blur-md p-2.5 rounded-2xl shadow-2xl border border-slate-200">
+    <a href="index.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-charcoal-700 hover:bg-slate-100 transition-colors">
+      <i data-lucide="arrow-left" class="w-4 h-4 text-royal-gold"></i> Về Landing Page
+    </a>
+    <span class="text-slate-300">|</span>
+    <a href="dossier.html" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold text-masters-green hover:bg-emerald-50 transition-colors">
+      <i data-lucide="file-text" class="w-4 h-4"></i> Hồ Sơ Doanh Nghiệp (10 Trang)
+    </a>
+    <span class="text-slate-300">|</span>
+    <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold uppercase tracking-wider text-white bg-royal-goldDark hover:bg-amber-800 shadow-md transition-all">
+      <i data-lucide="printer" class="w-4 h-4 text-royal-goldLight"></i> In / Xuất PDF Cá Nhân (3 Trang)
+    </button>
+  </div>
+
+  <!-- CONTAINER OF 3 PAGES -->
+  <div class="max-w-[210mm] mx-auto">
+
+    <!-- ================= PAGE 1: COVER PAGE (TƯƠI SÁNG, MẠNH MẼ, HOÀNG KIM) ================= -->
+    <div class="page-sheet text-white relative" style="background: radial-gradient(circle at 75% 15%, #0A693B 0%, #004D2C 45%, #002B19 100%);">
+      
+      <!-- Background Luxury Radiant Sunburst & Light Effects -->
+      <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-amber-400/25 via-transparent to-black/35 pointer-events-none"></div>
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-emerald-400/15 rounded-full blur-3xl pointer-events-none"></div>
+      
+      <!-- Top Header Bar -->
+      <div class="relative z-10 flex justify-between items-center border-b border-royal-gold/40 pb-2">
+        <div class="flex items-center gap-3">
+          <div class="bg-white/95 px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-2">
+            <img src="assets/images/logo_lao_dong_official.png" alt="Báo Lao Động" class="h-8 w-auto object-contain" />
+          </div>
+          <div class="h-6 w-px bg-royal-gold/50"></div>
+          <div class="bg-white/90 px-2.5 py-1 rounded-lg shadow-sm">
+            <img src="assets/images/logo_tan_son_nhat.png" alt="Sân Golf Tân Sơn Nhất" class="h-5 w-auto object-contain" />
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/30 to-amber-600/30 text-amber-200 border border-royal-gold/60 text-[10px] font-extrabold uppercase tracking-widest shadow-md backdrop-blur-md">
+            ⭐ HỒ SƠ ĐỒNG HÀNH CÁ NHÂN 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- Center Hero Visual & Titles -->
+      <div class="relative z-10 flex-1 flex flex-col justify-between py-2 space-y-2.5">
+        
+        <!-- Main Title Group -->
+        <div class="space-y-1">
+          <div class="inline-flex items-center gap-2 px-3 py-0.5 rounded-full bg-black/40 border border-royal-gold/50 text-royal-goldLight text-[10.5px] font-bold uppercase tracking-[0.2em] backdrop-blur-md shadow-sm">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300"></i> THƯ MỜI GOLFER DANH DỰ • GÓI ĐỒNG HÀNH CÁ NHÂN
+          </div>
+          
+          <h1 class="font-serif-luxury text-4xl sm:text-5xl font-black text-white leading-[1.12] drop-shadow-md pt-0.5">
+            GIẢI GOLF BÁO LAO ĐỘNG <br/>
+            <span class="italic font-normal gold-gradient-text" style="text-shadow: 0 0 25px rgba(223, 190, 121, 0.4);">
+              OPEN 2026
+            </span>
+          </h1>
+
+          <p class="text-xs sm:text-[13px] text-emerald-100 max-w-xl leading-relaxed font-normal">
+            Nơi Bản Lĩnh Thể Thao Hòa Cùng Vị Thế Tinh Hoa • Lưu Dấu Danh Vị Trang Trọng Trên Bảng Vàng Danh Dự Tại Sân Golf Tân Sơn Nhất.
+          </p>
+        </div>
+
+        <!-- Vibrant Visual Centerpiece -->
+        <div class="rounded-2xl overflow-hidden shadow-2xl border-2 border-royal-gold/60 h-76 relative group">
+          <img src="assets/images/golf_driver_explosion_strike.jpg" alt="Giải Golf Báo Lao Động Open 2026 - Cú Swing Bùng Nổ" class="w-full h-full object-cover object-center brightness-105 contrast-105" />
+          <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950/90 via-charcoal-950/20 to-transparent"></div>
+          
+          <!-- Top Badge on Photo -->
+          <div class="absolute top-3 right-3 bg-red-600/95 backdrop-blur-md text-white px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider shadow-lg border border-white/20 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span> SỰ KIỆN THỂ THAO ĐỈNH CAO THƯỜNG NIÊN
+          </div>
+
+          <!-- Bottom Badges on Cover -->
+          <div class="absolute bottom-3 left-4 right-4 flex justify-between items-end text-white text-xs">
+            <div class="space-y-0.5 bg-black/65 backdrop-blur-md px-3.5 py-2 rounded-xl border border-white/15">
+              <span class="text-royal-goldLight font-bold uppercase block text-[10px] tracking-wider">THỜI GIAN & ĐỊA ĐIỂM THI ĐẤU</span>
+              <strong class="text-sm font-serif-luxury text-white">Thứ Bảy, 07.11.2026 • Sân Golf Tân Sơn Nhất (TP.HCM)</strong>
+            </div>
+            <div class="text-right bg-gradient-to-r from-amber-600/85 to-amber-800/85 backdrop-blur-md px-3.5 py-2 rounded-xl border border-royal-goldLight/40 shadow-lg">
+              <span class="text-amber-100 font-bold uppercase block text-[9.5px] tracking-wider">HẠNG MỤC DANH DỰ</span>
+              <strong class="text-xs sm:text-sm font-extrabold text-white">Gói Đồng Hành Cá Nhân (20 Tr)</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Vibrant Gold Highlights Badges -->
+        <div class="grid grid-cols-3 gap-2.5 text-center text-xs">
+          <div class="bg-white/15 backdrop-blur-md p-2.5 rounded-xl border border-royal-gold/40 shadow-sm flex flex-col justify-center">
+            <span class="text-[9.5px] uppercase text-amber-300 block font-extrabold">⛳ Suất Thi Đấu</span>
+            <strong class="text-white text-xs mt-0.5 font-bold">01 Suất COC Trọn Gói</strong>
+            <span class="text-[9px] text-emerald-200 mt-0.5">Green fee, Caddy, Buggy & Gala</span>
+          </div>
+
+          <div class="bg-white/15 backdrop-blur-md p-2.5 rounded-xl border border-royal-gold/40 shadow-sm flex flex-col justify-center">
+            <span class="text-[9.5px] uppercase text-amber-300 block font-extrabold">🏆 Vinh Danh Trang Trọng</span>
+            <strong class="text-white text-xs mt-0.5 font-bold">Bảng Vàng Sảnh Clubhouse</strong>
+            <span class="text-[9px] text-emerald-200 mt-0.5">Khắc Họ Tên vị trí trung tâm</span>
+          </div>
+
+          <div class="bg-white/15 backdrop-blur-md p-2.5 rounded-xl border border-royal-gold/40 shadow-sm flex flex-col justify-center">
+            <span class="text-[9.5px] uppercase text-amber-300 block font-extrabold">🍾 Dạ Tiệc 5 Sao & HIO</span>
+            <strong class="text-white text-xs mt-0.5 font-bold">Gala & Săn Xe Sang</strong>
+            <span class="text-[9px] text-emerald-200 mt-0.5">Giao lưu 144 Doanh nhân VIP</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="relative z-10 pt-2 border-t border-white/20 flex justify-between items-center text-[11px] text-emerald-200">
+        <div>Báo Lao Động • Văn phòng đại diện TP.HCM và Đông Nam Bộ</div>
+        <div class="font-bold text-amber-300">Trang 01 / 03</div>
+      </div>
+    </div>
+
+    <!-- ================= PAGE 2: THƯ MỜI & VỊ THẾ BÁO LAO ĐỘNG - SÂN TSN ================= -->
+    <div class="page-sheet bg-white text-charcoal-900 relative">
+      <div class="flex justify-between items-center border-b border-slate-200 pb-2 text-xs font-semibold text-charcoal-500">
+        <div class="flex items-center gap-3">
+          <img src="assets/images/logo_lao_dong_official.png" alt="Báo Lao Động" class="h-6 w-auto object-contain" />
+          <span class="text-charcoal-700 font-bold uppercase tracking-wider text-[11px]">THƯ MỜI GOLFER DANH DỰ</span>
+        </div>
+        <span>HỒ SƠ ĐỒNG HÀNH CÁ NHÂN</span>
+      </div>
+
+      <div class="flex-1 flex flex-col justify-between py-2 space-y-2.5">
+        
+        <!-- Header -->
+        <div class="text-center max-w-xl mx-auto">
+          <div class="inline-flex items-center gap-2 text-[10.5px] font-bold uppercase tracking-[0.2em] text-royal-goldDark mb-0.5">
+            <i data-lucide="mail-check" class="w-3.5 h-3.5 text-royal-gold"></i> THƯ MỜI THAM DỰ & ĐỒNG HÀNH CÁ NHÂN
+          </div>
+          <h2 class="font-serif-luxury text-2xl font-bold text-masters-dark">
+            Thư Ngỏ Ban Tổ Chức
+          </h2>
+          <div class="w-14 h-0.5 bg-royal-gold mx-auto mt-1"></div>
+        </div>
+
+        <!-- Letter Body -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs text-charcoal-800 leading-relaxed space-y-2 font-light">
+          <p class="font-bold text-charcoal-900 text-xs">
+            Kính gửi: Quý Golfer, Quý Doanh nhân và Khách mời Danh dự,
+          </p>
+          <p>
+            Trải qua chặng đường 97 năm đồng hành cùng sự phát triển của đất nước và người lao động (1929 - 2026), <strong>Báo Lao Động</strong> luôn tự hào giữ vững vị thế là cơ quan báo chí chính trị - xã hội uy tín hàng đầu. Nhằm tạo dựng một đấu trường thể thao văn minh, kết nối cộng đồng doanh nhân và golfer tinh hoa, Báo Lao Động trân trọng tổ chức <strong>Giải Golf Báo Lao Động Open 2026</strong> vào Thứ Bảy, <strong>07.11.2026</strong> tại <strong>Sân Golf Tân Sơn Nhất</strong>.
+          </p>
+          <p>
+            Ban Tổ Chức trân trọng kính mời Quý Golfer tham gia và đồng hành cùng giải đấu thông qua <strong>Gói Đồng Hành Cá Nhân (Personal Patron)</strong>. Sự góp mặt của Quý vị là nguồn động viên to lớn, cùng Báo Lao Động lan tỏa tinh thần thể thao cao thượng và trách nhiệm cộng đồng. Danh vị của Quý vị sẽ được lưu dấu trang trọng trên <strong>Bảng Vàng Danh Dự</strong> tại sảnh Clubhouse Tân Sơn Nhất.
+          </p>
+        </div>
+
+        <!-- Two Signature / Authority blocks -->
+        <div class="flex justify-between items-end text-xs border-y border-slate-100 py-1.5">
+          <div class="space-y-0.5">
+            <span class="text-[9.5px] uppercase font-bold text-charcoal-500 block">ĐẦU MỐI TIẾP NHẬN CÁ NHÂN (24/7)</span>
+            <strong class="text-amber-950 text-xs block font-bold">Mrs. Thanh Thuỳ – 0908221195</strong>
+            <p class="text-[9.5px] text-charcoal-500">Phụ trách Điều phối & Tiếp nhận Danh vị Bảng Vàng</p>
+          </div>
+
+          <div class="text-right space-y-0.5">
+            <div class="font-bold uppercase text-charcoal-900 text-[11px]">TM. BAN BIÊN TẬP BÁO LAO ĐỘNG</div>
+            <div class="text-[10px] text-charcoal-500 italic">Trưởng Ban Tổ Chức Giải</div>
+            <div class="font-bold text-masters-dark text-xs uppercase pt-0.5">BAN TỔ CHỨC GIẢI GOLF 2026</div>
+          </div>
+        </div>
+
+        <!-- VISUAL SECTION: ĐẤU TRƯỜNG TÂN SƠN NHẤT & HỆ SINH THÁI BÁO LAO ĐỘNG -->
+        <div class="p-3 rounded-xl bg-emerald-950/5 border border-emerald-700/30 space-y-2">
+          <div class="flex justify-between items-center">
+            <span class="text-[10px] font-bold uppercase text-emerald-800 tracking-wider flex items-center gap-1.5">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-masters-green"></i> QUY MÔ TỔ CHỨC & ĐẤU TRƯỜNG ĐẲNG CẤP
+            </span>
+            <span class="text-[9.5px] font-semibold text-charcoal-500">07.11.2026 • Sân Golf Tân Sơn Nhất</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2.5">
+            <div class="rounded-lg overflow-hidden h-24 border border-slate-200 relative shadow-sm">
+              <img src="assets/images/tsn_course_greens_water.jpg" alt="Đấu trường Sân Golf Tân Sơn Nhất" class="w-full h-full object-cover" />
+              <div class="absolute bottom-1 left-1.5 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded text-[8.5px] font-bold text-white">
+                36 Hố Tiêu Chuẩn PGA
+              </div>
+            </div>
+
+            <div class="rounded-lg overflow-hidden h-24 border border-slate-200 relative shadow-sm">
+              <img src="assets/images/tsn_clubhouse_night.jpg" alt="Clubhouse Tân Sơn Nhất Luxury" class="w-full h-full object-cover" />
+              <div class="absolute bottom-1 left-1.5 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded text-[8.5px] font-bold text-white">
+                Clubhouse 10.000m² Đẳng Cấp
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-3 gap-2 text-center text-xs pt-0.5">
+            <div class="bg-white p-1.5 rounded-lg border border-slate-200 shadow-xs">
+              <span class="text-[9px] uppercase text-charcoal-500 font-bold block">Độc giả</span>
+              <strong class="text-masters-green text-xs font-bold">2.5+ Tỷ View / Năm</strong>
+            </div>
+            <div class="bg-white p-1.5 rounded-lg border border-slate-200 shadow-xs">
+              <span class="text-[9px] uppercase text-charcoal-500 font-bold block">Uy tín</span>
+              <strong class="text-charcoal-900 text-xs font-bold">97 Năm Lịch Sử</strong>
+            </div>
+            <div class="bg-white p-1.5 rounded-lg border border-slate-200 shadow-xs">
+              <span class="text-[9px] uppercase text-charcoal-500 font-bold block">Khách mời</span>
+              <strong class="text-royal-goldDark text-xs font-bold">144 Golfer VIP</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-200 pt-2 flex justify-between text-[11px] text-charcoal-500">
+        <span>Giải Golf Báo Lao Động Open 2026</span>
+        <span>Trang 02 / 03</span>
+      </div>
+    </div>
+
+    <!-- ================= PAGE 3: GÓI CÁ NHÂN + BẢNG VÀNG 3D + SYSTEM 36 + LỊCH TRÌNH & HOTLINE 24/7 ================= -->
+    <div class="page-sheet bg-white text-charcoal-900 relative">
+      <div class="flex justify-between items-center border-b border-slate-200 pb-1.5 text-xs font-semibold text-charcoal-500">
+        <span class="text-royal-goldDark font-bold uppercase tracking-wider">ĐẶC QUYỀN ĐỒNG HÀNH, LỊCH TRÌNH & LIÊN HỆ 24/7</span>
+        <span>HỒ SƠ ĐỒNG HÀNH CÁ NHÂN</span>
+      </div>
+
+      <div class="flex-1 flex flex-col justify-between py-1.5 space-y-2">
+        
+        <!-- SECTION 1: GÓI ĐỒNG HÀNH CÁ NHÂN 20 TRIỆU -->
+        <div class="p-2.5 rounded-xl gold-card-shimmer space-y-1">
+          <div class="flex justify-between items-center">
+            <span class="px-2 py-0.5 rounded-full bg-royal-goldDark text-white text-[8.5px] font-extrabold uppercase tracking-widest shadow-xs">
+              ⭐ ĐẶC QUYỀN GÓI ĐỒNG HÀNH CÁ NHÂN
+            </span>
+            <span class="font-serif-luxury text-lg font-black text-royal-goldDark">20.000.000 ĐỒNG / SUẤT</span>
+          </div>
+
+          <div class="grid grid-cols-4 gap-1 text-center text-xs">
+            <div class="bg-white p-1 rounded-lg border border-amber-200 font-bold text-masters-green text-[10px]">⛳ 01 Suất Thi Đấu COC</div>
+            <div class="bg-white p-1 rounded-lg border border-amber-200 font-bold text-amber-900 text-[10px]">🏆 In Tên Bảng Vàng</div>
+            <div class="bg-white p-1 rounded-lg border border-amber-200 font-bold text-charcoal-900 text-[10px]">🍽️ Gala Dinner 5⭐</div>
+            <div class="bg-white p-1 rounded-lg border border-amber-200 font-bold text-slate-700 text-[10px]">🎁 Welcome Kit VIP</div>
+          </div>
+
+          <ul class="text-[10px] text-charcoal-800 space-y-0.5 pl-3 list-disc leading-tight">
+            <li><strong>Suất thi đấu COC trọn gói:</strong> Green fee 18 hố, Caddy, Buggy, ẩm thực sân và vé dự tiệc Gala Dinner.</li>
+            <li><strong>Lưu danh trên Bảng Vàng Danh Dự:</strong> Khắc Họ & Tên trang trọng trên Backdrop Bảng Vàng tại sảnh Clubhouse.</li>
+            <li><strong>Mở ngỏ mức đóng góp cao hơn:</strong> Tặng thêm vé dự Gala & nâng tỉ lệ kích thước Họ Tên trên Bảng Vàng (30Tr, 50Tr...).</li>
+          </ul>
+        </div>
+
+        <!-- SECTION 2: MOCKUP BẢNG VÀNG 3D ÁNH KIM -->
+        <div class="p-2 rounded-xl bg-gradient-to-r from-amber-950 via-amber-900 to-amber-950 text-white border border-royal-gold shadow-sm space-y-1">
+          <div class="flex justify-between items-center border-b border-royal-gold/40 pb-0.5">
+            <span class="text-royal-goldLight font-bold uppercase text-[9px] tracking-widest flex items-center gap-1">
+              <i data-lucide="sparkles" class="w-3 h-3 text-amber-300"></i> MÔ PHỎNG BẢNG VÀNG DANH DỰ (GOLDEN BOARD)
+            </span>
+            <span class="text-[8.5px] text-amber-200 bg-black/40 px-1.5 py-0.5 rounded border border-royal-gold/40">Sảnh Clubhouse TSN</span>
+          </div>
+
+          <div class="bg-black/50 p-1.5 rounded-lg border border-royal-gold/30 text-center space-y-1">
+            <div class="font-serif-luxury text-[11px] font-bold gold-gradient-text tracking-wider uppercase">
+              BẢNG VÀNG VINH DANH CÁC NHÀ ĐỒNG HÀNH DANH DỰ 2026
+            </div>
+            
+            <div class="grid grid-cols-3 gap-1 text-[9px] text-amber-100 font-semibold">
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER NGUYỄN VĂN A</div>
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER TRẦN THỊ B</div>
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER LÊ HOÀNG C</div>
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER PHẠM MINH D</div>
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER HOÀNG ANH E</div>
+              <div class="bg-amber-900/50 py-1 rounded border border-royal-gold/30">🎖️ GOLFER VŨ THÀNH F</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 3: SYSTEM 36 & LỊCH TRÌNH 4 BƯỚC -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <!-- Bảng Đấu System 36 -->
+          <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+            <div class="flex justify-between items-center">
+              <span class="text-[9px] font-bold uppercase text-masters-dark tracking-wider flex items-center gap-1">
+                <i data-lucide="trophy" class="w-3 h-3 text-royal-gold"></i> BẢNG ĐẤU & GIẢI THƯỞNG
+              </span>
+              <span class="text-[8.5px] font-bold text-red-600 bg-red-50 px-1.5 py-0.2 rounded border border-red-200">HIO XE SANG</span>
+            </div>
+            <div class="grid grid-cols-2 gap-1 text-center text-[9px]">
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-charcoal-500 block font-semibold">BẢNG A • HDC 00-15</span>
+                <strong class="text-masters-green">Cúp Nhất, Nhì, Ba</strong>
+              </div>
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-charcoal-500 block font-semibold">BẢNG B • HDC 16-28</span>
+                <strong class="text-masters-green">Cúp Nhất, Nhì, Ba</strong>
+              </div>
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-charcoal-500 block font-semibold">BẢNG C • HDC 29-36</span>
+                <strong class="text-masters-green">Cúp Nhất, Nhì, Ba</strong>
+              </div>
+              <div class="p-1 rounded bg-pink-50 border border-pink-200">
+                <span class="text-pink-700 block font-semibold">LADY • HDC 00-36</span>
+                <strong class="text-pink-800">Cúp Nhất, Nhì, Ba</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lịch Trình Sự Kiện 07.11.2026 -->
+          <div class="p-2 rounded-xl bg-slate-50 border border-slate-200 space-y-1">
+            <div class="flex justify-between items-center">
+              <span class="text-[9px] font-bold uppercase text-masters-dark tracking-wider flex items-center gap-1">
+                <i data-lucide="calendar" class="w-3 h-3 text-royal-gold"></i> LỊCH TRÌNH THI ĐẤU
+              </span>
+              <span class="text-[8.5px] font-bold text-masters-green">07.11.2026</span>
+            </div>
+            <div class="grid grid-cols-2 gap-1 text-center text-[9px]">
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-emerald-700 font-bold block">10:00 – 11:30</span>
+                <strong class="text-charcoal-900">Check-in & Buffet</strong>
+              </div>
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-amber-600 font-bold block">11:30 – 12:00</span>
+                <strong class="text-charcoal-900">Lễ Khai Mạc</strong>
+              </div>
+              <div class="p-1 rounded bg-white border border-slate-200">
+                <span class="text-emerald-700 font-bold block">12:00 – 17:30</span>
+                <strong class="text-charcoal-900">Shotgun 18 Hố</strong>
+              </div>
+              <div class="p-1 rounded bg-purple-50 border border-purple-200">
+                <span class="text-purple-700 font-bold block">18:30 – 21:00</span>
+                <strong class="text-purple-900">Gala & Trao Giải</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 4: 2 HOTLINES 24/7 CHUYÊN TRÁCH -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+          <!-- Hotline Cá Nhân (Chính) -->
+          <div class="p-2 rounded-xl bg-gradient-to-r from-amber-500/15 to-amber-700/15 border-1.5 border-royal-gold space-y-0.5 shadow-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-[8.5px] font-extrabold uppercase text-royal-goldDark block">TIỂU BAN ĐỒNG HÀNH CÁ NHÂN & BẢNG VÀNG</span>
+              <span class="text-[8px] font-extrabold bg-red-600 text-white px-1.5 py-0.2 rounded uppercase">HOTLINE 24/7</span>
+            </div>
+            <div class="text-sm font-black text-amber-950">Mrs. Thanh Thuỳ – 0908221195</div>
+            <p class="text-[9.5px] text-charcoal-600 leading-tight">
+              Tiếp nhận đăng ký cá nhân, thông tin Họ Tên hiển thị trên Bảng Vàng và điều phối quyền lợi thi đấu.
+            </p>
+          </div>
+
+          <!-- Hotline Chuyên Môn Golfer -->
+          <div class="p-2 rounded-xl bg-emerald-50 border border-emerald-300 space-y-0.5 shadow-xs">
+            <div class="flex items-center justify-between">
+              <span class="text-[8.5px] font-extrabold uppercase text-emerald-800 block">TIỂU BAN CHUYÊN MÔN & KỸ THUẬT GOLFER</span>
+              <span class="text-[8px] font-extrabold bg-emerald-700 text-white px-1.5 py-0.2 rounded uppercase">HOTLINE 24/7</span>
+            </div>
+            <div class="text-sm font-black text-emerald-950">Mr. Thanh Vũ – 0901338910</div>
+            <p class="text-[9.5px] text-charcoal-600 leading-tight">
+              Tiếp nhận thông tin Handicap VGA, xếp flight thi đấu và giải đáp điều lệ chuyên môn 18 hố.
+            </p>
+          </div>
+        </div>
+
+        <!-- SECTION 5: ĐỊA CHỈ & THÔNG TIN TIẾP NHẬN -->
+        <div class="p-2 rounded-lg bg-slate-50 border border-slate-200 text-[9.5px] text-charcoal-700 space-y-0.5">
+          <div class="flex justify-between items-center text-[9.5px] font-bold text-masters-dark border-b border-slate-200 pb-0.5">
+            <span>THÔNG TIN TIẾP NHẬN ĐĂNG KÝ (GIỚI HẠN 144 GOLFER)</span>
+            <span class="text-royal-goldDark">https://laodong.vn/golf2026</span>
+          </div>
+          <div class="flex justify-between items-center text-[9px] pt-0.5">
+            <span>• <strong>Địa chỉ tiếp nhận:</strong> VPĐD Báo Lao Động tại TP.HCM (198 Nguyễn Thị Minh Khai, P. Xuân Hoà, TP.HCM).</span>
+            <span class="italic text-charcoal-500 font-serif-luxury">"Báo Lao Động trân trọng cảm ơn sự đồng hành của Quý Golfer!"</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-slate-200 pt-1.5 flex justify-between text-[10.5px] text-charcoal-500">
+        <span>Giải Golf Báo Lao Động Open 2026</span>
+        <span class="font-bold text-masters-green">Trang 03 / 03 (Trang Cuối)</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
