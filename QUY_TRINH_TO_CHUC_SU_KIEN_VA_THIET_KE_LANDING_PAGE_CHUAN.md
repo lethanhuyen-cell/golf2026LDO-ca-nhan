@@ -88,12 +88,23 @@ Xây dựng tài liệu Dossier độc lập gồm 12 trang chuẩn khổ A4:
 
 ---
 
+---
+
+## 🛑 NGUYÊN TẮC BẤT DI BẤT DỊCH: BẢO MẬT DỰ TOÁN & TÀI CHÍNH NỘI BỘ
+> [!CAUTION]
+> **TUYỆT ĐỐI KHÔNG BAO GIỜ ĐẨY SỐ LIỆU DỰ TOÁN THU - CHI NỘI BỘ LÊN CÁC GIAO DIỆN WEB CÔNG KHAI HOẶC REPOSITORY MẠNG (GITHUB/VERCEL).**
+> - Toàn bộ các tệp Tờ trình Dự toán, Bảng bóc tách chi phí, Thuế, Hoa hồng, Thù lao Hội đồng/Khách mời (`DU_TOAN*`, `du_toan*`, `*budget*`) **chỉ được lưu trữ cục bộ (Local Only)** trên máy tính phục vụ công tác in ấn, trình duyệt nội bộ Ban Biên tập.
+> - Tệp `.gitignore` phải luôn kích hoạt chặn 100% các tệp dự toán để đảm bảo an toàn tài chính tuyệt đối.
+
+---
+
 ## 📋 CHECKLIST KIỂM SOÁT CHẤT LƯỢNG TRƯỚC KHI BÀN GIAO
 
+- [x] **BẢO MẬT TÀI CHÍNH**: Tuyệt đối không đưa số liệu dự toán thu - chi nội bộ lên web công khai/GitHub.
 - [x] Đã xóa bỏ toàn bộ bảng giá tài trợ công khai trên Landing Page (đã chuyển vào Dossier).
 - [x] Đã đồng bộ chính xác ngày, địa điểm và quy mô theo kế hoạch mới nhất.
 - [x] Đã gỡ bỏ chữ "Nghiệp dư" ở tiêu đề chính và thay "144 Golfer" bằng "Dành cho các golfer không chuyên".
 - [x] Đã tích hợp đầy đủ 11 Điều khoản Điều lệ chính thức có nút chuyển đổi xem.
 - [x] 100% hình ảnh nhân vật AI là người Châu Á với trang phục chuẩn mực thi đấu và giao lưu.
 - [x] Giao diện đã được tối ưu khoảng trắng, hiển thị gọn gàng, giảm thao tác cuộn chuột.
-- [x] Đã xuất bản thành công 2 tệp PDF chất lượng cao vào thư mục dự án.
+- [x] Đã xuất bản thành công các tệp PDF chất lượng cao vào thư mục dự án.
