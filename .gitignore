@@ -3,3 +3,12 @@
 ~$*
 .gemini/
 scratch/
+
+# Internal Confidential Financial Documents (KHÔNG ĐẨY LÊN MẠNG)
+DU_TOAN*
+du_toan*
+*du_toan*
+*dutoan*
+*budget*
+_backups/**/DU_TOAN*
+_backups/**/du_toan*
