@@ -1,102 +1,78 @@
-# NHẬT KÝ PHIÊN LÀM VIỆC (SESSION LOG & MASTER HANDOVER)
-**Dự Án**: Giải Golf Báo Lao Động Open 2026 & Quy Trình Tổ Chức Sự Kiện Chuẩn  
-**Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (VPĐD TP.HCM và Đông Nam Bộ)  
-**Thời Gian Cập Nhật**: Ngày 23/09/2026 (20:10 GMT+7)  
-**Phiên Bản Bàn Giao**: `v1.2.0-tsn-10pages-patron-inkind-official`  
-**Trạng Thái Bàn Giao**: Hoàn tất 100% các cập nhật mới nhất, tối ưu khoảng trắng trang, đồng bộ gói Cá nhân & Hiện vật, xuất bản toàn bộ PDF chuẩn in và sao lưu an toàn.
+# NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
+**Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
+**Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
+**Thời Điểm Ghi Nhận**: Ngày 07/10/2026 – 20:05  
+**Trạng Thái Đóng Gói**: Đã hoàn tất 100% việc **dời lịch tổ chức sang Thứ Bảy, ngày 14.11.2026**, đồng bộ toàn bộ mã nguồn, nội dung, đồng hồ đếm ngược, kịch bản trình chiếu và xuất bản lại toàn bộ các ấn bản PDF in ấn chất lượng cao.
 
 ---
 
-## 📌 1. TỔNG HỢP CÁC NỘI DUNG NÂNG CẤP & CẬP NHẬT MỚI NHẤT
+## 📌 1. TỔNG HỢP CÁC NỘI DUNG ĐÃ HOÀN TẤT TRONG PHIÊN
 
-### ⛳ A. Landing Page Sự Kiện (`index.html`)
-1. **Khối Đối Tác Tài Trợ Hiện Vật & Dịch Vụ Đồng Hành (Official In-Kind Partner)**:
-   - Tiếp nhận từ: **30.000.000 VNĐ** (Nước khoáng/điện giải, áo/mũ, rượu Gala, quà Door Gift, voucher nghỉ dưỡng, Lucky Draw).
-   - Quyền lợi: 100% (144) Túi quà Golfer; 01-02 vé VIP dự Gala; Tri ân sân khấu & Kỷ niệm chương; Logo trên Cổng thông tin và Backdrop. *(Không bao gồm suất thi đấu Golfer)*.
-2. **Khối Gói Đồng Hành Cá Nhân (Personal Supporter)**:
-   - Định mức: **20.000.000 VNĐ / Suất**.
-   - Quyền lợi: 01 Suất thi đấu COC trọn gói (Green fee, caddy, buggy, ẩm thực sân, vé dự Gala Dinner) & Vinh danh Họ & Tên trên Backdrop Bảng Vàng tại sảnh Clubhouse *(Ngân sách lớn hơn hiển thị size chữ lớn hơn theo tỉ lệ tương ứng)*.
-   - **Hotline tiếp nhận riêng:** `Mrs. Thanh Thuỳ – 0908221195`.
-3. **Form Tiếp Nhận Hồ Sơ & Đăng Ký**:
-   - Tích hợp các checkbox chọn nhanh: *Gói Đồng Hành Cá Nhân (20 Tr/suất)* và *Đối Tác Hiện Vật & Dịch Vụ (Từ 30 Tr)*.
-4. **Bản Quyền & Thông Tin Chân Trang**:
-   - Cập nhật chuẩn xác: *"Thiết kế & Vận hành bởi Văn phòng Đại diện TPHCM và Đông Nam Bộ - Báo Lao Động"*.
-   - Bảo mật thông tin: Không để lộ email công khai trên toàn bộ giao diện, chỉ tiếp nhận qua Hotline 24/7.
+### 📅 A. Đồng Bộ Lịch Trình Tổ Chức Mới (14.11.2026)
+- **Thời gian tổ chức chính thức**: **Thứ Bảy, 14.11.2026**.
+- **Địa điểm**: **Sân Golf Tân Sơn Nhất**, TP. Hồ Chí Minh.
+- **Khung giờ sự kiện**:
+  - `10:00 – 11:30`: Đón tiếp, Check-in nhận Welcome Kit & Thưởng thức Lunch Buffet tại Nhà hàng Clubhouse.
+  - `11:30 – 12:00`: Lễ Khai mạc chính thức của Ban Biên tập Báo Lao Động, chụp ảnh lưu niệm toàn thể Golfer & Khách mời.
+  - `12:00 – 17:30`: Xuất phát đồng loạt (**Shotgun 18 hố**) trên các đường golf tiêu chuẩn PGA.
+  - `18:00 – 20:30`: Dạ tiệc **Gala Dinner**, Vinh danh Trao giải, Tri ân các Nhà tài trợ và Bốc thăm may mắn.
 
 ---
 
-### 📑 B. Quyển Hồ Sơ Mời Tài Trợ Chuẩn 10 Trang (`dossier.html`)
-1. **Tối Ưu Giảm Khoảng Trắng Đầu & Cuối Mỗi Trang**:
-   - Chuẩn hóa padding khung trang A4 (`.page-sheet`): `padding: 24px 32px 18px 32px` cho cả màn hình và khi in ấn `@media print`.
-   - Giảm padding Header (`pb-2.5`) và Footer (`pt-2.5`), mở rộng diện tích nội dung và hình ảnh giúp toàn bộ 10 trang đầy đặn, sang trọng chuẩn tạp chí The Masters.
-2. **Cấu Trúc 10 Trang Hoàn Chỉnh**:
-   - **Trang 01 / 10**: Trang Bìa Luxury (Đại cảnh sân Tân Sơn Nhất, golfer Châu Á, skyline Sài Gòn).
-   - **Trang 02 / 10**: Thư Ngỏ Ban Tổ Chức (TM. Ban Biên Tập Báo Lao Động).
-   - **Trang 03 / 10**: Quy Mô & Lịch Trình Sự Kiện 07.11.2026.
-   - **Trang 04 / 10**: Sân Golf Tân Sơn Nhất (Phối hợp) & Hệ Sinh Thái Truyền Thông Báo Lao Động (Chủ trì).
-   - **Trang 05 / 10**: 07 Không Gian Thương Hiệu & Ma Trận 06 Cấp Tài Trợ.
-   - **Trang 06 / 10**: Gói Nhà Tài Trợ Chính (1 Tỷ) & Kim Cương (500 Triệu).
-   - **Trang 07 / 10**: Gói Bạch Kim (300 Triệu) & Vàng (200 Triệu).
-   - **Trang 08 / 10**: Gói Bạc (100 Triệu), Đồng (50 Triệu), **Gói Đồng Hành Cá Nhân (20 Triệu)** và **Đối Tác Hiện Vật (Từ 30 Triệu)**. Hotline tiếp nhận cá nhân: `Mrs. Thanh Thuỳ – 0908221195`.
-   - **Trang 09 / 10**: Tài Trợ Chuyên Biệt (HIO, Kỹ Thuật, Welcome Kit) & Nguyên Tắc Hợp Tác Nghiệm Thu.
-   - **Trang 10 / 10 (Trang Cuối)**: Đăng Ký, Đơn Vị Tổ Chức & Hotline 24/7 (`090 5567395 - Mr. Đăng Văn` & `0901338910 - Mr. Thanh Vũ`).
+### 💻 B. Danh Mục Các Ấn Phẩm Đã Được Cập Nhật & Xuất Bản
+
+1. **Website & Landing Page Chính Thức (`index.html`)**:
+   - Cập nhật Title, Meta SEO, Top Ticker `DỰ KIẾN: 14.11.2026`, Menu điều hướng `Lịch Trình 14.11`.
+   - Cập nhật Banner Hero, Huy hiệu ảnh sân Tân Sơn Nhất `Thứ Bảy, 14.11.2026`.
+   - **Đồng hồ đếm ngược (Countdown Timer)**: Tự động đếm chính xác đến `2026-11-14T12:00:00+07:00`.
+   - Điều lệ 11 Điều, Mục Đăng ký Golfer / Doanh nghiệp & Chân trang Footer.
+
+2. **Hồ Sơ Mời Tài Trợ Doanh Nghiệp (12 Trang Chuẩn In A4)**:
+   - File Web: `dossier.html`
+   - File PDF In ấn: **`Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`** (5.38 MB).
+   - Đồng bộ ngày ở Bìa chính, Thư ngỏ Ban Biên tập, Khung lịch trình Trang 3 và Bìa sau Trang 12.
+
+3. **Hồ Sơ Mời Tài Trợ Cá Nhân (3 Trang A4 Quiet Luxury - Độc Lập)**:
+   - File Web: `dossier_ca_nhan.html`
+   - File PDF In ấn: **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** (3.51 MB).
+   - Đồng bộ ngày ở Bìa 1, Thư mời Trang 2 và Khung lịch trình Trang 3.
+
+4. **Kịch Bản Video Trailer / Trình Chiếu (`trailer.html`)**:
+   - Cập nhật Phân cảnh 5 (Outro CTA) và thanh footer player sang `14.11.2026`.
+
+5. **Dự Toán Tài Chính Nội Bộ (Local Only - Bảo Mật Tuyệt Đối)**:
+   - File Excel: `DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.xlsx` (Phương án 5 VVIP HN).
+   - File Thuyết minh: `DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.md`.
+   - Được bảo vệ nghiêm ngặt bằng `.gitignore`, không đưa lên mạng công khai.
 
 ---
 
-### 🎬 C. Động Cơ Trailer 60s Fast-Cut Điện Ảnh (`trailer.html`)
-1. **Chế Độ Thuần Hình Ảnh Điện Ảnh (Pure Visual Cinematic - Không Nhạc & Không Voice-off)**:
-   - **Tắt hoàn toàn mọi âm thanh và nhạc nền**: Trả về không gian trình diễn hình ảnh thể thao 8K sạch sẽ, tinh gọn, mượt mà và không tiếng ồn.
-   - **Tiện ích mở rộng**: Tích hợp sẵn nút **"Gắn file nhạc (MP3 tùy chọn)"** để người dùng có thể tự tải và lồng bất kỳ bản nhạc bản quyền/yêu thích nào từ máy tính vào trailer khi cần.
-2. **26 Cắt Ảnh Thể Thao 8K Dồn Dập (Fast-Cut 1.8s – 2.2s/cảnh)**:
-   - 26 hình ảnh thể thao chất lượng cao: Cú vung gậy Driver bùng nổ sương mai, cứu cát bunker đỉnh cao, xe sang HIO thảm đỏ, đêm Gala vinh quang nâng ly sâm panh, toàn cảnh Sân Golf Tân Sơn Nhất.
-   - 6 kỹ xảo chuyển động máy quay kết hợp hiệu ứng lóe sáng flash transition.
-   - Nút chọn tốc độ chuyển cảnh: **1.0x Chuẩn** & **1.25x Dồn Dập Siêu Căng**.
-3. **Tính Năng Xuất Video & Đổi Khung Hình**:
-   - Chuyển đổi linh hoạt **16:9 Cinema Wide** (Màn hình LED, YouTube) và **9:16 Mobile Story** (TikTok, Reels, Shorts).
-   - Nút **Xuất Video (MP4/WebM)** ghi hình 1-click trực tiếp từ trình duyệt phục vụ công tác dựng hậu kỳ hoặc đăng tải truyền thông.
+## 📂 2. BẢNG DANH MỤC TỆP TIN DỰ ÁN HIỆN TẠI
+
+| STT | Tên Tệp Tin | Định Dạng | Mô Tả Chức Năng | Tình Trạng |
+|:---:|---|:---:|---|:---:|
+| 1 | **`index.html`** | Landing Page | Website chính thức sự kiện (Đã đồng bộ 14.11.2026) | ✅ Sẵn sàng |
+| 2 | **`dossier.html`** | Web / In A4 | Quyển Hồ sơ Doanh nghiệp 12 trang | ✅ Sẵn sàng |
+| 3 | **`Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`** | PDF (5.38 MB) | Bản xuất in PDF Hồ sơ Doanh nghiệp 12 trang | ✅ Đã xuất bản |
+| 4 | **`dossier_ca_nhan.html`** | Web / In A4 | Hồ sơ Cá nhân 3 trang A4 Quiet Luxury | ✅ Sẵn sàng |
+| 5 | **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (3.51 MB) | Bản xuất in PDF Hồ sơ Cá nhân 3 trang | ✅ Đã xuất bản |
+| 6 | **`trailer.html`** | Presentation | Kịch bản trình chiếu & Trailer video giải đấu | ✅ Sẵn sàng |
+| 7 | **`DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.xlsx`** | Excel (.xlsx) | Bảng dự toán 2 sheet (Phương án 5 VVIP Hà Nội) | 🔒 Local Only |
+| 8 | **`DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.md`** | Markdown | Thuyết minh dự toán chi tiết | 🔒 Local Only |
+| 9 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao dự án master | ✅ Đã cập nhật |
 
 ---
 
-## 📂 2. DANH MỤC CÁC TỆP TIN & ẤN PHẨM BÀN GIAO CHÍNH THỨC
+## 📋 3. KẾ HOẠCH CHO PHIÊN LÀM VIỆC TIẾP THEO
 
-| STT | Tên Tệp Tin | Định Dạng | Mô Tả & Tình Trạng |
-|:---:|---|:---:|---|
-| 1 | **`trailer.html`** | Web App / Video Engine | Trailer 60s **26 Cắt ảnh dồn dập (Fast-Cut)**, hiệu ứng âm thanh Sub-bass 808, Voice-off giọng nam trầm hùng, đổi khung hình 16:9 & 9:16, nút ghi video 1-click. |
-| 2 | **`HSTT_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (5.2 MB) | Bản xuất in PDF chất lượng cao **10 trang A4 chuẩn (`kMDItemNumberOfPages = 10`)**, tối ưu khoảng trắng, sắc nét từng trang. |
-| 3 | **`WEB_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.1 MB) | Bản PDF giao diện toàn bộ Landing Page chuẩn Desktop liền mạch, trọn vẹn, không bị vỡ bố cục. |
-| 4 | **`WEB_Golf_Bao_Lao_Dong_2026_FULL.png`** | PNG (4.7 MB) | Bản ảnh chụp toàn bộ chiều dài Landing Page ở độ phân giải siêu nét (1440px width). |
-| 5 | **`index.html`** | Web App | Mã nguồn Landing Page chính thức (đã tích hợp đầy đủ khối Hiện vật, Cá nhân, Hotline và nút Trailer 60s). |
-| 6 | **`dossier.html`** | Web App / A4 | Mã nguồn Hồ Sơ Mời Tài Trợ 10 trang A4 chuẩn (đã tích hợp nút xem Trailer 60s). |
-| 7 | **`_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`** | Thư mục Backup | Bộ sao lưu toàn vẹn chứa đầy đủ mã nguồn HTML, tài nguyên `assets/` và toàn bộ tệp PDF/PNG. |
-| 8 | **`QUY_TRINH_TO_CHUC_SU_KIEN_VA_THIET_KE_LANDING_PAGE_CHUAN.md`** | Markdown | Master SOP quy trình chuẩn 6 giai đoạn tổ chức sự kiện và xây dựng tài liệu cho Báo Lao Động. |
-| 9 | **`dossier_ca_nhan.html`** | Web App / A4 | Hồ Sơ Mời Tài Trợ Cá Nhân chuyên biệt 4 trang A4 (Gói Đồng Hành Cá Nhân 20 triệu VNĐ, Bảng Vàng Danh Dự 3D, tối ưu không gian 100%). |
-| 10 | **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (7.6 MB) | Bản xuất in PDF chất lượng cao **4 trang A4 chuẩn (`kMDItemNumberOfPages = 4`)**, màu sắc Major rực rỡ, sắc nét. |
-| 11 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao phiên làm việc chi tiết. |
+1. **Soạn thảo Thư Ngỏ & Thư Mời Bản Word / Email Template**:
+   - Soạn thư ngỏ gửi riêng cho Khách mời VVIP, Doanh nghiệp tài trợ và Hội viên Golfer.
+2. **Xây dựng Kịch Bản Điều Hành Khai Mạc & Gala (Run of Show)**:
+   - Chi tiết từng mốc thời gian, lời dẫn MC song ngữ/tiếng Việt, kịch bản trao giải thưởng và tri ân nhà tài trợ.
+3. **Mẫu Báo Cáo Nghiệm Thu Truyền Thông (Media Report)**:
+   - Thiết lập khung báo cáo hình ảnh bài báo, vị trí đặt logo, clip phát sóng sau giải.
+4. **Hợp Đồng Mẫu & Hồ Sơ Pháp Lý**:
+   - Rà soát các điều khoản hợp đồng tài trợ và thỏa thuận dịch vụ.
 
 ---
-
-## 💎 3. BỘ HỒ SƠ TÀI TRỢ CÁ NHÂN (4 TRANG A4 CHUYÊN BIỆT)
-1. **Trang 1 - Bìa Tươi Sáng & Mạnh Mẽ**:
-   - Tông màu xanh Emerald Major (`#0A693B` ➔ `#004D2C`) kết hợp tia sáng Champagne Gold Sunburst và ảnh cú swing Driver uy lực.
-   - Nhấn mạnh thông điệp *Gói Đồng Hành Cá Nhân & Quyền Lợi Golfer Danh Dự*.
-2. **Trang 2 - Thư Mời & Hệ Sinh Thái Báo Lao Động**:
-   - Thư ngỏ trân trọng từ TM. Ban Biên Tập Báo Lao Động.
-   - Phối cảnh sân 36 hố Tân Sơn Nhất và hạ tầng truyền thông 2.5 tỷ lượt view/năm.
-3. **Trang 3 - Gói Cá Nhân & Bảng Vàng Danh Dự 3D**:
-   - Gói 20.000.000 VNĐ / Suất (01 Slot thi đấu VIP + Bảng Vàng + Bộ Quà Tặng 8 Triệu + Gala Dinner).
-   - **Mockup 3D Bảng Vàng Danh Dự mạ vàng** đặt trang trọng tại sảnh Clubhouse.
-   - Cơ cấu 4 bảng đấu System 36 và Giải thưởng Hole-in-One xe sang tiền tỷ.
-4. **Trang 4 - Lịch Trình & Kênh Liên Hệ Chuyên Trách**:
-   - Lịch trình 4 chặng thi đấu và đêm Gala vinh danh.
-   - 2 Hotline 24/7 chuyên trách: **Mrs. Thanh Thuỳ (0908 221 195)** & **Mr. Thanh Vũ (0901 338 910)**.
-
----
-
-## 🔒 4. CAM KẾT CHẤT LƯỢNG & BẢO MẬT
-- ✅ **Chuẩn nhận diện**: Sử dụng chuẩn xác tên đơn vị phối hợp *"Sân Golf Tân Sơn Nhất"*.
-- ✅ **Bảo mật**: Tuyệt đối không để lộ email công khai trên các ấn phẩm tiếp thị đối ngoại, thông tin được định tuyến qua 3 đầu mối hotline 24/7.
-- ✅ **Tính sẵn sàng**: Toàn bộ mã nguồn, tài nguyên ảnh 8K, tài liệu và PDF đã được kiểm tra nghiêm ngặt, sao lưu đa tầng và sẵn sàng phục vụ công tác truyền thông, kêu gọi tài trợ.
-
-## 💾 5. THÔNG TIN SAO LƯU & QUẢN TRỊ MÃ NGUỒN
-- **Thư mục sao lưu**: `_backups/2026-09-23_phien_ban_chuan_10_trang_tsn/`
-- **Lịch sử Git**: Tất cả các bước chỉnh sửa, tối ưu và xuất bản đã được commit vào nhánh `main` với các thông điệp rõ ràng, sẵn sàng triển khai hoặc bàn giao cho đối tác.
+*Ghi chú: Toàn bộ dữ liệu và tệp tin đã được đóng gói an toàn và ngăn nắp. Sẵn sàng tiếp tục bất kỳ lúc nào!*
