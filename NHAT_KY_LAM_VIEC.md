@@ -1,8 +1,8 @@
 # NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
 **Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
 **Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
-**Thời Điểm Ghi Nhận**: Ngày 11/10/2026 – 17:02  
-**Trạng Thái Đóng Gói**: Đã hoàn tất 100% việc **tinh gọn quyền lợi cá nhân theo chỉ đạo mới nhất**: Chỉ giữ lại đúng **01 suất FOC** và **vinh danh họ tên nhà tài trợ cá nhân là Golfer danh dự trên Bảng Vàng (kích thước size chữ họ tên tỉ lệ thuận với giá trị tài trợ, mốc 20 triệu VNĐ)**. **Đặc biệt bôi đậm nhấn mạnh quy chuẩn:** ***Kích thước size chữ họ tên tỉ lệ thuận với giá trị tài trợ (mốc 20 triệu VNĐ). Mức tài trợ càng cao, kích thước họ tên hiển thị càng lớn tương ứng.*** Đồng thời ở cả hai bộ hồ sơ (Cá nhân & Doanh nghiệp), đã **loại bỏ dòng chữ `TM. BAN BIÊN TẬP BÁO LAO ĐỘNG / Trưởng Ban Tổ Chức Giải`**, chỉ để gọn gàng **`BAN TỔ CHỨC`**. Đã đồng bộ lên Website, Hồ sơ cá nhân độc lập và xuất bản cả 2 bản PDF in ấn mới nhất.
+**Thời Điểm Ghi Nhận**: Ngày 12/10/2026 – 13:25  
+**Trạng Thái Đóng Gói**: Đã hoàn tất 100% việc **đồng bộ dời ngày tổ chức sang Chủ nhật, ngày 15.11.2026** trên toàn bộ mọi ấn phẩm: Landing Page (`index.html`), Hồ sơ cá nhân (`dossier_ca_nhan.html` & `HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`), Hồ sơ doanh nghiệp (`dossier.html` & `Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`), Kịch bản Trailer (`trailer.html`), Countdown Timer (`2026-11-15T12:00:00+07:00`) và toàn bộ bảng lịch trình. Giữ vững quy chuẩn tinh gọn quyền lợi cá nhân (01 suất FOC + vinh danh họ tên Golfer danh dự trên Bảng Vàng tỉ lệ thuận mốc 20Tr) và người ký trang trọng duy nhất là **BAN TỔ CHỨC**.
 
 ---
 
