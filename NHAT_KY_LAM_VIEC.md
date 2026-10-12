@@ -1,8 +1,8 @@
 # NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
 **Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
 **Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
-**Thời Điểm Ghi Nhận**: Ngày 12/10/2026 – 14:06  
-**Trạng Thái Đóng Gói**: Đã khắc phục triệt để lỗi thiết kế hình ảnh AI (hai bàn tay hiển thị chồng nhau) tại Trang 1 của Hồ sơ Đồng hành Cá nhân: Thay thế hoàn toàn bằng bức ảnh danh giá thực tế ghi lại khoảnh khắc Golfer swing đỉnh cao tại Sân Golf Tân Sơn Nhất với hậu cảnh Tòa nhà Câu lạc bộ và Landmark 81 (`dossier_cover_tan_son_nhat.jpg`). Đồng thời đồng bộ thay thế trong `trailer.html`, re-render kết xuất lại bản PDF in ấn [HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf] chuẩn mực và đẩy lên hệ thống Vercel.
+**Thời Điểm Ghi Nhận**: Ngày 12/10/2026 – 14:38  
+**Trạng Thái Đóng Gói**: Đã lược bỏ hoàn toàn khối số liệu thống kê báo chí (`Độc giả: 2.5+ Tỷ View / Năm`, `Uy tín: 97 Năm Lịch Sử`, `Quy mô: 144 Golfer C-Level`) tại Trang 2 của Hồ sơ Đồng hành Cá nhân. Không gian trang được tinh giản tối đa, giúp layout thư ngỏ và 2 bức ảnh sân Tân Sơn Nhất hiển thị thoáng đạt, sang trọng chuẩn Quiet Luxury. Đã kết xuất lại bản PDF [HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf] và đồng bộ lên Vercel.
 
 ---
 
