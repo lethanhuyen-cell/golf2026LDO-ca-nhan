@@ -1,6 +1,6 @@
 ---
 name: event-landing-page
-description: QUY TRÌNH & CẨM NANG TỔ CHỨC GIẢI GOLF VÀ ĐẠI SỰ KIỆN THỂ THAO BÁO LAO ĐỘNG — Bộ khung chuẩn 6 giai đoạn (Chuẩn hóa dữ liệu đầu vào, Cơ chế bảo mật Dossier Mode 3 tầng, Thiết kế Landing Page Sports Luxe, Tích hợp Điều lệ & Form tiếp nhận kép, Xuất bản 2 bộ Hồ sơ Doanh nghiệp 10-12 trang & Cá nhân 3 trang mốc 20Tr, và Xuất in PDF Print-to-PDF). Kích hoạt khi đề cập 'giải golf báo lao động', 'tổ chức giải golf', 'landing page thể thao', 'hồ sơ tài trợ golf', 'dossier mode', 'sự kiện thể thao báo chí'.
+description: QUY TRÌNH & CẨM NANG TỔ CHỨC GIẢI GOLF VÀ ĐẠI SỰ KIỆN THỂ THAO BÁO LAO ĐỘNG — Bộ khung chuẩn 7 giai đoạn, tích hợp cỗ máy nhân bản 1-lệnh 'mau-golf' (./taogiai), bảo mật Dossier Mode 3 tầng, thiết kế Sports Luxe, xuất 2 bộ Hồ sơ Doanh nghiệp 10 trang & Cá nhân 3 trang mốc 20Tr, tự động xuất PDF Print-to-PDF. Kích hoạt khi đề cập 'mau-golf', 'mẫu golf', 'taogiai', 'tạo giải golf', 'giải golf báo lao động', 'tổ chức giải golf', 'landing page thể thao', 'hồ sơ tài trợ golf', 'dossier mode', 'sự kiện thể thao báo chí'.
 ---
 
 # KỸ NĂNG: QUY TRÌNH & CẨM NANG TỔ CHỨC GIẢI GOLF VÀ ĐẠI SỰ KIỆN THỂ THAO BÁO LAO ĐỘNG
