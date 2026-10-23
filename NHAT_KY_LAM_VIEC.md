@@ -1,12 +1,16 @@
 # NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
 **Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
 **Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
-**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 19:15  
-**Trạng Thái Đóng Gói**: Đã chuẩn hóa nội dung hiển thị ở đầu trang chủ (`index.html`) từ "Hồ sơ..." thành "Tài trợ...", cụ thể:
-1. **Top Bar Header**: Nâng cấp thành **TÀI TRỢ DOANH NGHIỆP** • **TÀI TRỢ CÁ NHÂN**.
-2. **Main Navigation Navbar**: Hai nút điều hướng chính thức mang tên **Tài Trợ Doanh Nghiệp** và **Tài Trợ Cá Nhân**.
-3. **Mobile Menu**: Gọn gàng trên smartphone với **Tài Trợ DN** và **Tài Trợ Cá Nhân**.
-4. **Hero Action Card**: Cụm 2 nút bấm trực tiếp **Tài Trợ Doanh Nghiệp** & **Tài Trợ Cá Nhân**.
+**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 19:22  
+**Trạng Thái Đóng Gói**: Đã kích hoạt cơ chế **Bảo Mật Hồ Sơ Đối Ngoại (Confidential Dossier Mode)** 3 tầng trên toàn hệ thống để chống sao chép ý tưởng và cấu trúc tài trợ:
+1. **Trang Chủ (`index.html`)**: Đã gỡ bỏ 100% các đường link truy cập công khai vào 2 file hồ sơ chi tiết. Thay bằng luồng tiếp nhận đối tác chuyên nghiệp:
+   - Nút **"Đăng Ký Tài Trợ"** / **"Liên Hệ Tài Trợ"** (dẫn xuống form đăng ký để Ban Thư ký đối ngoại tiếp nhận thông tin và gửi hồ sơ riêng).
+   - Nút **"Đăng Ký Golfer"** (dành cho golfer đăng ký tham gia thi đấu).
+   - Hotline tiếp nhận bảo mật 24/7: Mr. Bá Trường (0918658465), Mr. Đăng Văn (0905567395), Mrs. Thanh Thuỳ (0908221195).
+2. **Bảo Vệ Tìm Kiếm Search Engine**:
+   - Khởi tạo file `robots.txt` cấm tuyệt đối bot tìm kiếm (Google, Bing, CocCoc) lập chỉ mục các file `dossier.html`, `dossier_ca_nhan.html` và toàn bộ file `*.pdf`.
+   - Gắn thẻ `<meta name="robots" content="noindex, nofollow, noarchive" />` vào thẻ `<head>` của cả 2 hồ sơ.
+3. **Bản Quyền & Sử Dụng Nội Bộ**: Cả 2 bản Web và PDF (`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf` và `Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`) được bảo lưu nguyên vẹn để Ban Tổ chức in ấn hoặc gửi trực tiếp cho từng đối tác VIP.
 
 ---
 
