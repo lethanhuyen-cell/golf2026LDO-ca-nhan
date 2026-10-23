@@ -1,11 +1,15 @@
 # NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
 **Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
 **Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
-**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 16:50  
-**Trạng Thái Đóng Gói**: Đã tích hợp và thay thế đồng bộ 2 ảnh chụp flycam thực tế chính thức của Sân Golf Tân Sơn Nhất vào toàn bộ hệ sinh thái thiết kế:
-- **`tsn_aerial_twilight_fairway.jpg`**: Ảnh flycam toàn cảnh hoàng hôn/chạng vạng, bật sáng hệ thống đèn Night Golf, view hồ nước, fairway và skyline thành phố. Đã đưa vào banner thi đấu `index.html`, trang 2 `dossier_ca_nhan.html`, banner trang 3 `dossier.html` và Scene 2 `trailer.html`.
-- **`tsn_aerial_green_bunkers.jpg`**: Ảnh flycam góc cao sắc nét thể hiện địa hình uốn lượn, green, bẫy cát (sand bunkers), hồ nước và hàng cọ đặc trưng có logo sân. Đã đưa vào gallery `index.html`, trang 4 đơn vị phối hợp `dossier.html` và Scene 2 `trailer.html`.
-Đã kết xuất lại toàn bộ các bản PDF (`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf` và `Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`), bảo vệ an toàn các tệp dự toán và báo cáo nội bộ qua `.gitignore`.
+**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 19:00  
+**Trạng Thái Đóng Gói**: Đã gắn kết nối và bố trí song hành **Hồ Sơ Đồng Hành Cá Nhân** (`dossier_ca_nhan.html`) ngay cạnh **Hồ Sơ Doanh Nghiệp** (`dossier.html`) tại tất cả các điểm chạm chiến lược trên Trang chủ giải golf (`index.html`):
+1. **Top Bar Header**: Nút "Hồ Sơ Doanh Nghiệp" • "Hồ Sơ Cá Nhân" song song trên cùng.
+2. **Main Navigation Navbar**: Cụm 2 nút hành động riêng biệt "Hồ Sơ Doanh Nghiệp" (Tone xanh Emerald) và "Hồ Sơ Cá Nhân" (Tone vàng Amber Luxury có vương miện).
+3. **Mobile Menu**: Phân chia rõ 2 nút "Hồ Sơ DN" & "Hồ Sơ Cá Nhân" trên thiết bị di động.
+4. **Hero Section Action Card**: Card Dành cho Đối tác mở rộng 2 nút song hành lựa chọn trực tiếp.
+5. **Section Không Gian Thương Hiệu & Quyền Lợi (`#sponsorship-dossier`)**: Tích hợp cả 2 nút xem nhanh Dossier Doanh Nghiệp và Dossier Cá Nhân.
+6. **Footer Quick Links**: Bổ sung đường dẫn trực tiếp tới cả 2 bộ hồ sơ chuẩn mực.
+7. **Toolbar của Dossier Doanh Nghiệp (`dossier.html`)**: Gắn nút chuyển đổi nhanh sang "Hồ Sơ Cá Nhân (3 Trang)".
 
 ---
 

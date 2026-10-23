@@ -209,7 +209,11 @@
         </a>
         <span class="text-royal-gold/40">•</span>
         <a href="dossier.html" class="hover:text-royal-gold text-[11px] font-semibold tracking-widest flex items-center gap-1 transition-colors">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-royal-gold"></i> HỒ SƠ TÀI TRỢ DOANH NGHIỆP
+          <i data-lucide="building-2" class="w-3.5 h-3.5 text-royal-gold"></i> HỒ SƠ DOANH NGHIỆP
+        </a>
+        <span class="text-royal-gold/40">•</span>
+        <a href="dossier_ca_nhan.html" class="hover:text-royal-gold text-[11px] font-semibold tracking-widest flex items-center gap-1 transition-colors text-amber-200">
+          <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300"></i> HỒ SƠ CÁ NHÂN
         </a>
         <span class="text-royal-gold/40">•</span>
         <div class="flex items-center gap-2 text-royal-goldLight font-bold text-[11px]">
@@ -254,13 +258,18 @@
         </nav>
 
         <!-- Right Buttons (Public Facing) -->
-        <div class="hidden sm:flex items-center gap-3">
-          <a href="dossier.html" class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-masters-green bg-white hover:bg-emerald-50 border border-masters-green/30 rounded-lg transition-all shadow-sm">
-            <i data-lucide="file-text" class="w-4 h-4 text-royal-goldDark"></i>
-            Hồ Sơ Tài Trợ Doanh Nghiệp
+        <div class="hidden sm:flex items-center gap-2">
+          <a href="dossier.html" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold uppercase tracking-wider text-masters-green bg-white hover:bg-emerald-50 border border-masters-green/30 rounded-lg transition-all shadow-sm" title="Hồ Sơ Mời Tài Trợ Doanh Nghiệp (10 Trang)">
+            <i data-lucide="building-2" class="w-4 h-4 text-royal-goldDark"></i>
+            Hồ Sơ Doanh Nghiệp
           </a>
 
-          <a href="#register-golfer" class="inline-flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-masters-green hover:bg-masters-deep border border-royal-gold/40 rounded-lg shadow-md hover:shadow-lg transition-all">
+          <a href="dossier_ca_nhan.html" class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-50 hover:bg-amber-100 border border-amber-300 rounded-lg transition-all shadow-sm" title="Hồ Sơ Đồng Hành Cá Nhân (3 Trang)">
+            <i data-lucide="crown" class="w-4 h-4 text-amber-600"></i>
+            Hồ Sơ Cá Nhân
+          </a>
+
+          <a href="#register-golfer" class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold uppercase tracking-wider text-white bg-masters-green hover:bg-masters-deep border border-royal-gold/40 rounded-lg shadow-md hover:shadow-lg transition-all">
             <i data-lucide="user-check" class="w-4 h-4 text-royal-gold"></i>
             Đăng Ký Golfer
           </a>
@@ -285,12 +294,17 @@
       <a href="#media-power" class="block py-2 text-sm font-semibold text-charcoal-800 hover:text-masters-green">Nguồn Lực Báo Lao Động</a>
       
       <!-- Mobile Public Buttons -->
-      <div class="pt-3 grid grid-cols-2 gap-2">
-        <a href="dossier.html" class="text-center py-2.5 text-xs font-bold uppercase tracking-wider text-masters-green border border-masters-green rounded-lg flex items-center justify-center gap-1">
-          <i data-lucide="file-text" class="w-3.5 h-3.5"></i> Hồ Sơ Tài Trợ
-        </a>
-        <a href="#register-golfer" class="text-center py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-masters-green rounded-lg flex items-center justify-center gap-1">
-          <i data-lucide="user-check" class="w-3.5 h-3.5 text-royal-gold"></i> Đăng Ký Golfer
+      <div class="pt-3 space-y-2">
+        <div class="grid grid-cols-2 gap-2">
+          <a href="dossier.html" class="text-center py-2.5 text-xs font-bold uppercase tracking-wider text-masters-green border border-masters-green/40 bg-emerald-50/50 rounded-lg flex items-center justify-center gap-1">
+            <i data-lucide="building-2" class="w-3.5 h-3.5"></i> Hồ Sơ DN
+          </a>
+          <a href="dossier_ca_nhan.html" class="text-center py-2.5 text-xs font-bold uppercase tracking-wider text-amber-900 border border-amber-300 bg-amber-50 rounded-lg flex items-center justify-center gap-1">
+            <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-600"></i> Hồ Sơ Cá Nhân
+          </a>
+        </div>
+        <a href="#register-golfer" class="w-full text-center py-2.5 text-xs font-bold uppercase tracking-wider text-white bg-masters-green rounded-lg flex items-center justify-center gap-1">
+          <i data-lucide="user-check" class="w-3.5 h-3.5 text-royal-gold"></i> Đăng Ký Tham Gia Golfer
         </a>
       </div>
     </div>
@@ -442,10 +456,16 @@
             <p class="text-xs text-slate-300 leading-relaxed mb-3 font-light">
               07 không gian đồng hành độc quyền, hiện diện trang trọng trong Đêm Gala trao giải và bảo trợ truyền thông toàn diện trên hệ sinh thái Báo Lao Động.
             </p>
-            <a href="dossier.html" class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-royal-gold hover:bg-royal-goldLight text-charcoal-950 font-bold text-xs uppercase tracking-wider shadow-xl transition-all gap-2">
-              <i data-lucide="file-text" class="w-4 h-4 text-charcoal-950"></i>
-              Nhận Hồ Sơ Quyền Lợi Tài Trợ
-            </a>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <a href="dossier.html" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-royal-gold hover:bg-royal-goldLight text-charcoal-950 font-bold text-xs uppercase tracking-wider shadow-xl transition-all gap-1.5 text-center">
+                <i data-lucide="building-2" class="w-4 h-4 text-charcoal-950 shrink-0"></i>
+                Hồ Sơ Doanh Nghiệp
+              </a>
+              <a href="dossier_ca_nhan.html" class="inline-flex items-center justify-center py-2.5 px-3 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-amber-300/60 font-bold text-xs uppercase tracking-wider shadow-xl transition-all gap-1.5 text-center">
+                <i data-lucide="crown" class="w-4 h-4 text-amber-300 shrink-0"></i>
+                Hồ Sơ Cá Nhân
+              </a>
+            </div>
           </div>
 
           <!-- 2. Golfer Entry Card -->
@@ -1072,9 +1092,14 @@
               <span class="text-royal-gold text-xs font-bold uppercase tracking-widest block mb-1">VIP HOSPITALITY & NETWORKING</span>
               <h4 class="font-serif-luxury text-xl sm:text-2xl font-bold text-white">Không Gian Kết Nối Cấp Cao Doanh Nghiệp</h4>
             </div>
-            <a href="#sponsor-form" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-royal-gold hover:bg-royal-goldLight text-black text-xs font-bold uppercase tracking-wider shrink-0 transition-colors">
-              <i data-lucide="file-text" class="w-4 h-4"></i> Nhận Dossier 2026
-            </a>
+            <div class="flex flex-wrap items-center gap-2">
+              <a href="dossier.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-royal-gold hover:bg-royal-goldLight text-black text-xs font-bold uppercase tracking-wider shrink-0 transition-colors">
+                <i data-lucide="building-2" class="w-4 h-4"></i> Dossier Doanh Nghiệp
+              </a>
+              <a href="dossier_ca_nhan.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-white/15 hover:bg-white/25 text-white border border-amber-300/50 text-xs font-bold uppercase tracking-wider shrink-0 transition-colors">
+                <i data-lucide="crown" class="w-4 h-4 text-amber-300"></i> Dossier Cá Nhân
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -1119,6 +1144,15 @@
               <i data-lucide="send" class="w-4 h-4"></i>
               GỬI YÊU CẦU HỒ SƠ TÀI TRỢ
             </a>
+
+            <div class="mt-3 grid grid-cols-2 gap-2">
+              <a href="dossier.html" class="inline-flex items-center justify-center py-2 px-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-[11px] font-bold border border-white/20 transition-all gap-1">
+                <i data-lucide="building-2" class="w-3.5 h-3.5 text-royal-gold"></i> Hồ Sơ Doanh Nghiệp
+              </a>
+              <a href="dossier_ca_nhan.html" class="inline-flex items-center justify-center py-2 px-2.5 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 text-amber-200 text-[11px] font-bold border border-amber-400/40 transition-all gap-1">
+                <i data-lucide="crown" class="w-3.5 h-3.5 text-amber-300"></i> Hồ Sơ Cá Nhân
+              </a>
+            </div>
 
             <div class="mt-4 text-[11px] text-slate-300">
               Hotline Ban Tài Trợ (24/7): <a href="tel:0918658465" class="text-royal-goldLight font-bold hover:underline">0918 658 465 - Mr. Bá Trường</a> • <a href="tel:0905567395" class="text-royal-goldLight font-bold hover:underline">090 5567395 - Mr. Đăng Văn</a>
@@ -1277,9 +1311,14 @@
               <a href="tel:0908221195" class="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-royal-gold hover:bg-royal-goldLight text-charcoal-950 font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all gap-2">
                 <i data-lucide="phone-call" class="w-4 h-4"></i> Hotline: 0908221195 - Mrs. Thanh Thuỳ
               </a>
-              <a href="#register" class="inline-flex items-center justify-center w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/20 text-royal-goldLight font-bold text-xs uppercase tracking-wider border border-royal-gold/30 transition-all gap-2">
-                <i data-lucide="user-plus" class="w-4 h-4"></i> Điền Form Đăng Ký
-              </a>
+              <div class="grid grid-cols-2 gap-2">
+                <a href="dossier_ca_nhan.html" class="inline-flex items-center justify-center py-2.5 px-2 rounded-xl bg-amber-500/25 hover:bg-amber-500/35 text-amber-200 font-bold text-xs uppercase tracking-wider border border-amber-400/50 shadow-md transition-all gap-1.5" title="Xem Hồ Sơ Cá Nhân (3 Trang)">
+                  <i data-lucide="crown" class="w-4 h-4 text-amber-300"></i> Xem Hồ Sơ
+                </a>
+                <a href="#register" class="inline-flex items-center justify-center py-2.5 px-2 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider border border-white/20 transition-all gap-1.5">
+                  <i data-lucide="user-plus" class="w-4 h-4"></i> Đăng Ký
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1669,7 +1708,8 @@
             <li><a href="#agenda" class="hover:text-royal-gold transition-colors">Lịch trình ngày thi đấu 15.11</a></li>
             <li><a href="#flights" class="hover:text-royal-gold transition-colors">Điều lệ & Thể thức System 36</a></li>
             <li><a href="#sponsorship-dossier" class="hover:text-royal-gold transition-colors">Không gian thương hiệu & Quyền lợi</a></li>
-            <li><a href="#media-power" class="hover:text-royal-gold transition-colors">Nguồn lực truyền thông Báo Lao Động</a></li>
+            <li><a href="dossier.html" class="hover:text-royal-gold transition-colors flex items-center gap-1.5"><i data-lucide="building-2" class="w-3.5 h-3.5 text-royal-gold"></i> Hồ sơ Doanh nghiệp (10 Trang)</a></li>
+            <li><a href="dossier_ca_nhan.html" class="hover:text-royal-gold transition-colors text-amber-300 flex items-center gap-1.5"><i data-lucide="crown" class="w-3.5 h-3.5 text-amber-400"></i> Hồ sơ Đồng hành Cá nhân (3 Trang)</a></li>
             <li><a href="#register-golfer" class="hover:text-royal-gold transition-colors">Đăng ký tham gia thi đấu</a></li>
           </ul>
         </div>
