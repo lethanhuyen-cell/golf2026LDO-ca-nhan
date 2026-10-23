@@ -163,6 +163,32 @@ Khi hoàn tất phiên bản chuẩn được nghiệm thu:
 
 ---
 
+## 7. GIAI ĐOẠN 7: TỰ ĐỘNG HÓA TÁI TẠO DỰ ÁN MỚI (ONE-COMMAND SCAFFOLDING)
+
+Hệ thống trang bị cỗ máy sinh dự án tự động độc lập `scripts/scaffold_event.py` và bộ template `_templates_sports_luxe/sample_event_config.json`. Bất kỳ khi nào cần tạo sự kiện thể thao/golf mới tương tự, thực hiện theo 2 bước:
+
+### 7.1. Chạy bằng CLI
+```bash
+# 1. Khởi tạo file cấu hình sự kiện mới
+python3 scripts/scaffold_event.py --init config_giai_moi.json
+
+# 2. Sinh trọn bộ sản phẩm (Landing Page, 2 Dossier, robots.txt, vercel.json, render script)
+python3 scripts/scaffold_event.py --build --config config_giai_moi.json --out ./Giai_Dau_Moi
+
+# 3. Xuất PDF tự động
+cd ./Giai_Dau_Moi && python3 render_pdf.py
+```
+
+### 7.2. Tương tác với AI qua một câu lệnh
+Khi người dùng yêu cầu: *"Tạo bộ hồ sơ và landing page cho giải [Tên giải]..."*, Agent phải:
+1. Đọc thông số đầu vào từ yêu cầu (hoặc hỏi bổ sung nếu thiếu ngày/địa điểm).
+2. Tạo file cấu hình `event_config.json` theo chuẩn `sample_event_config.json`.
+3. Chạy `scaffold_event.py --build` để sinh toàn bộ mã nguồn.
+4. Tự động chạy `render_pdf.py` qua Headless Chrome để xuất bản sẵn 2 tệp PDF.
+5. Bàn giao đầy đủ đường link và bản sao lưu cho người dùng.
+
+---
+
 ## 📋 CHECKLIST KIỂM TOÁN CHẤT LƯỢNG (BẮT BUỘC TRƯỚC KHI BÀN GIAO)
 
 - [ ] Toàn bộ ngày tháng sự kiện đã được đồng bộ chuẩn xác (Ví dụ: Chủ Nhật 15.11.2026).
@@ -173,3 +199,4 @@ Khi hoàn tất phiên bản chuẩn được nghiệm thu:
 - [ ] Đã xuất in PDF kiểm tra số trang: Hồ sơ Cá nhân đúng 3 trang, Hồ sơ Doanh nghiệp đúng 10 trang.
 - [ ] File Excel dự toán nội bộ nằm trong `.gitignore`, không bao giờ push lên Git/Vercel.
 - [ ] Đã tạo tệp zip sao lưu dự phòng trong thư mục `_backups/`.
+

@@ -1,0 +1,136 @@
+{
+  "event_id": "golf-lao-dong-2026",
+  "event_title": "GIẢI GOLF BÁO LAO ĐỘNG OPEN 2026",
+  "event_subtitle": "Swing for Workers' Children - Gắn kết Doanh nhân, Tiếp bước Em đến trường",
+  "short_title": "Giải Golf Báo Lao Động 2026",
+  "organizer": "Báo Lao Động - Cơ quan Trung ương Tổng Liên đoàn Lao động Việt Nam",
+  "co_organizers": [
+    "Tổng Liên đoàn Lao động Việt Nam",
+    "Ủy ban Nhân dân TP. Hồ Chí Minh",
+    "Hiệp hội Golf Việt Nam (VGA)"
+  ],
+  "date_display": "Chủ Nhật, ngày 15.11.2026",
+  "date_iso": "2026-11-15T06:00:00+07:00",
+  "venue": {
+    "name": "Sân Golf Tân Sơn Nhất (Tan Son Nhat Golf Course)",
+    "address": "Số 6 Tân Sơn, Phường 12, Quận Gò Vấp, TP. Hồ Chí Minh",
+    "scale": "36 hố tiêu chuẩn Championship quốc tế (Sân A & B)",
+    "description": "Sân golf quy mô hàng đầu miền Nam liền kề sân bay quốc tế, thiết kế bởi Nelson & Haworth Golf Course Architects."
+  },
+  "scale_participants": "144 Golfer (Lãnh đạo bộ ngành, Đại sứ, Chủ tịch Tập đoàn, Doanh nhân tiêu biểu)",
+  "charity_cause": "Ủng hộ Quỹ Tấm Lòng Vàng Lao Động - Học bổng 'Tiếp bước em đến trường' cho con em công nhân khó khăn",
+  "theme": {
+    "primary_dark": "#002013",
+    "primary_green": "#004d2c",
+    "emerald": "#056839",
+    "gold": "#C5A059",
+    "gold_light": "#E5CCA0",
+    "gold_dark": "#9E7D3B",
+    "laodong_red": "#BE1E2D"
+  },
+  "contact": {
+    "department": "Ban Thư ký & Ban Vận động Tài trợ Giải",
+    "hotline": "0908.888.888 / 0912.345.678",
+    "email": "golf@laodong.com.vn",
+    "address": "Tòa nhà Báo Lao Động, Văn phòng Đại diện TP. Hồ Chí Minh"
+  },
+  "banking": {
+    "account_name": "BÁO LAO ĐỘNG",
+    "account_number": "0011008889999",
+    "bank_name": "Ngân hàng TMCP Ngoại thương Việt Nam (Vietcombank) - Chi nhánh TP.HCM",
+    "syntax": "[TÊN DOANH NGHIỆP / CÁ NHÂN] - DONG HANH GOLF 2026"
+  },
+  "corporate_packages": [
+    {
+      "id": "diamond",
+      "name": "TÀI TRỢ KIM CƯƠNG",
+      "badge": "ĐỘC QUYỀN TOÀN GIẢI",
+      "value_text": "500.000.000 VNĐ",
+      "value_number": 500000000,
+      "slots": "01 Đơn vị duy nhất",
+      "golfer_slots": "08 Golfer FOC",
+      "gala_seats": "02 Bàn VIP Gala Dinner (20 khách)",
+      "media_rights": [
+        "02 Bài PR chuyên sâu vị trí nổi bật trên Báo Điện tử Lao Động (laodong.vn)",
+        "01 Phóng sự chuyên đề phát sóng trên truyền hình Lao Động TV",
+        "Logo Kim Cương xuất hiện trang trọng trên toàn bộ ấn phẩm báo in, báo điện tử, trailer",
+        "Đại diện Lãnh đạo doanh nghiệp phát biểu truyền hình trực tiếp tại Đêm Gala Trao giải"
+      ],
+      "branding_rights": [
+        "Vị trí trung tâm trang trọng nhất trên toàn bộ Backdrop Check-in, Backdrop Sân khấu Gala",
+        "04 Biển hiệu thương hiệu tại các hố đấu Signature & Tee-box số 1 & số 10",
+        "Cờ thương hiệu độc quyền tại khu vực Putting Green và Clubhouse",
+        "Logo trên áo thi đấu, mũ thi đấu và dù quà tặng chính thức của giải",
+        "Bàn trưng bày sản phẩm / xe / ấn phẩm giới thiệu tại sảnh VIP Tân Sơn Nhất"
+      ]
+    },
+    {
+      "id": "platinum",
+      "name": "TÀI TRỢ BẠCH KIM",
+      "badge": "ĐỐI TÁC CHIẾN LƯỢC",
+      "value_text": "300.000.000 VNĐ",
+      "value_number": 300000000,
+      "slots": "02 Đơn vị",
+      "golfer_slots": "05 Golfer FOC",
+      "gala_seats": "01 Bàn VIP Gala Dinner (10 khách)",
+      "media_rights": [
+        "01 Bài PR vị trí nổi bật trên Báo Điện tử Lao Động",
+        "Phỏng vấn ngắn Lãnh đạo doanh nghiệp trong phóng sự tổng kết giải",
+        "Logo Bạch Kim xuất hiện trên hệ sinh thái truyền thông Báo Lao Động"
+      ],
+      "branding_rights": [
+        "Logo vị trí Hàng 1 trên toàn bộ Backdrop Check-in & Sân khấu",
+        "02 Biển hiệu thương hiệu tại hố Par 3 hoặc Fairway",
+        "Bàn trưng bày giới thiệu sản phẩm tại sảnh đón tiếp",
+        "Logo trong video clip trình chiếu mở màn đêm Gala"
+      ]
+    },
+    {
+      "id": "gold",
+      "name": "TÀI TRỢ VÀNG",
+      "badge": "ĐỒNG HÀNH ĐẲNG CẤP",
+      "value_text": "150.000.000 VNĐ",
+      "value_number": 150000000,
+      "slots": "04 Đơn vị",
+      "golfer_slots": "03 Golfer FOC",
+      "gala_seats": "05 Thư mời VIP Gala Dinner",
+      "media_rights": [
+        "01 Tin bài ảnh cảm ơn các nhà tài trợ trên laodong.vn",
+        "Logo hiển thị trong phần cảm ơn truyền thông giải"
+      ],
+      "branding_rights": [
+        "Logo vị trí Hàng 2 trên Backdrop Check-in & Sân khấu",
+        "01 Biển hiệu thương hiệu tại Tee-box chỉ định",
+        "Logo trong kỷ yếu lưu niệm và clip tổng kết"
+      ]
+    },
+    {
+      "id": "silver",
+      "name": "TÀI TRỢ BẠC",
+      "badge": "ĐỒNG HÀNH TIÊU BIỂU",
+      "value_text": "80.000.000 VNĐ",
+      "value_number": 80000000,
+      "slots": "06 Đơn vị",
+      "golfer_slots": "01 Golfer FOC",
+      "gala_seats": "02 Thư mời VIP Gala Dinner",
+      "media_rights": [
+        "Ghi danh cảm ơn trong danh sách Nhà tài trợ Báo Lao Động"
+      ],
+      "branding_rights": [
+        "Logo vị trí Hàng 3 trên Backdrop Check-in",
+        "Logo trình chiếu tại màn hình LED đêm Gala"
+      ]
+    }
+  ],
+  "personal_patron": {
+    "min_value_text": "20.000.000 VNĐ",
+    "min_value_number": 20000000,
+    "golfer_slots": "01 Suất thi đấu FOC danh dự (Bao gồm trọn gói Green fee, Caddie, Buggy chung, tiệc trưa đón tiếp, Bộ Welcome Kit cao cấp & Tiệc Gala Trao giải)",
+    "gala_invitation": "01 Thư mời VIP tham dự Đêm Gala Dinner nghệ thuật & Lễ Vinh danh",
+    "golden_board_title": "BẢNG VÀNG DANH DỰ ĐỒNG HÀNH (HONORARY PATRON BOARD)",
+    "golden_board_location": "Sảnh đón tiếp sang trọng nhất tại Clubhouse Tân Sơn Nhất & Sân khấu Gala",
+    "proportional_rule": "Kích thước size chữ họ tên hiển thị tỉ lệ thuận với giá trị tài trợ (mốc cơ sở 20 triệu VNĐ). Mức tài trợ càng cao, kích thước họ tên hiển thị càng lớn tương ứng.",
+    "memento": "Kỷ niệm chương Pha lê mạ vàng khắc tên vinh danh chính thức từ Ban Tổ chức Báo Lao Động",
+    "donation_purpose": "Toàn bộ đóng góp sau giải trừ chi phí được đồng hành cùng Quỹ Tấm Lòng Vàng Lao Động giúp đỡ con em công nhân có hoàn cảnh khó khăn."
+  }
+}
