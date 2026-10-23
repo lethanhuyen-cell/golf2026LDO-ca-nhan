@@ -1,15 +1,12 @@
 # NHẬT KÝ PHIÊN LÀM VIỆC & BÀN GIAO DỰ ÁN (SESSION LOG)
 **Dự Án**: Giải Golf Báo Lao Động 2026 (Kỷ niệm 97 năm Báo Lao Động)  
 **Cơ Quan Chủ Trì**: Ban Biên Tập Báo Lao Động (Văn phòng Đại diện tại TP.HCM)  
-**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 19:00  
-**Trạng Thái Đóng Gói**: Đã gắn kết nối và bố trí song hành **Hồ Sơ Đồng Hành Cá Nhân** (`dossier_ca_nhan.html`) ngay cạnh **Hồ Sơ Doanh Nghiệp** (`dossier.html`) tại tất cả các điểm chạm chiến lược trên Trang chủ giải golf (`index.html`):
-1. **Top Bar Header**: Nút "Hồ Sơ Doanh Nghiệp" • "Hồ Sơ Cá Nhân" song song trên cùng.
-2. **Main Navigation Navbar**: Cụm 2 nút hành động riêng biệt "Hồ Sơ Doanh Nghiệp" (Tone xanh Emerald) và "Hồ Sơ Cá Nhân" (Tone vàng Amber Luxury có vương miện).
-3. **Mobile Menu**: Phân chia rõ 2 nút "Hồ Sơ DN" & "Hồ Sơ Cá Nhân" trên thiết bị di động.
-4. **Hero Section Action Card**: Card Dành cho Đối tác mở rộng 2 nút song hành lựa chọn trực tiếp.
-5. **Section Không Gian Thương Hiệu & Quyền Lợi (`#sponsorship-dossier`)**: Tích hợp cả 2 nút xem nhanh Dossier Doanh Nghiệp và Dossier Cá Nhân.
-6. **Footer Quick Links**: Bổ sung đường dẫn trực tiếp tới cả 2 bộ hồ sơ chuẩn mực.
-7. **Toolbar của Dossier Doanh Nghiệp (`dossier.html`)**: Gắn nút chuyển đổi nhanh sang "Hồ Sơ Cá Nhân (3 Trang)".
+**Thời Điểm Ghi Nhận**: Ngày 23/10/2026 – 19:15  
+**Trạng Thái Đóng Gói**: Đã chuẩn hóa nội dung hiển thị ở đầu trang chủ (`index.html`) từ "Hồ sơ..." thành "Tài trợ...", cụ thể:
+1. **Top Bar Header**: Nâng cấp thành **TÀI TRỢ DOANH NGHIỆP** • **TÀI TRỢ CÁ NHÂN**.
+2. **Main Navigation Navbar**: Hai nút điều hướng chính thức mang tên **Tài Trợ Doanh Nghiệp** và **Tài Trợ Cá Nhân**.
+3. **Mobile Menu**: Gọn gàng trên smartphone với **Tài Trợ DN** và **Tài Trợ Cá Nhân**.
+4. **Hero Action Card**: Cụm 2 nút bấm trực tiếp **Tài Trợ Doanh Nghiệp** & **Tài Trợ Cá Nhân**.
 
 ---
 
