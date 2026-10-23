@@ -34,6 +34,7 @@
 | 5 | **`Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`** | PDF (5.38 MB) | Bản xuất in PDF Hồ sơ Doanh nghiệp 12 trang | ✅ Đã xuất bản |
 | 6 | **`DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.xlsx`** | Excel (.xlsx) | Bảng dự toán 2 sheet (Phương án 5 VVIP Hà Nội) | 🔒 Local Only |
 | 7 | **`NHAT_KY_LAM_VIEC.md`** | Markdown | Nhật ký bàn giao dự án master | ✅ Đã cập nhật |
+| 8 | **`_backups/BAN_SAO_DU_PHONG_GOLF_LAO_DONG_2026_10_23.zip`** | Nén .ZIP (7.1 MB) | Bản sao lưu toàn diện dự phòng chống hỏng/mất dữ liệu | 🔒 Đã lưu trữ |
 
 ---
 *Ghi chú: Toàn bộ dữ liệu tài chính nội bộ được bảo vệ 100% Local qua `.gitignore`.*

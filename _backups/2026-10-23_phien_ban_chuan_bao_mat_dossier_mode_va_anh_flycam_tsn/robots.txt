@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /dossier.html
+Disallow: /dossier_ca_nhan.html
+Disallow: /*.pdf
+Allow: /
