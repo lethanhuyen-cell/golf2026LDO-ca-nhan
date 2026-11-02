@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poster & Tờ Rơi Giới Thiệu - {{TOURNAMENT_NAME_TITLE}}</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display, Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            masters: {
+              green: '#004d2c',
+              deep: '#00331e',
+              emerald: '#056839',
+              dark: '#002013',
+              night: '#00140c'
+            },
+            royal: {
+              gold: '#C5A059',
+              goldLight: '#E5CCA0',
+              goldDark: '#9E7D3B',
+              bronze: '#7A562B'
+            },
+            laodong: {
+              red: '#BE1E2D',
+              crimson: '#DA251D'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            cinzel: ['"Cinzel"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #0b1310;
+      color: #f8fafc;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .font-serif-luxury {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+    .gold-foil-text {
+      background: linear-gradient(135deg, #FFE8B8 0%, #C5A059 45%, #E5CCA0 70%, #9E7D3B 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .page-sheet {
+      width: 210mm;
+      height: 297mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      margin: 20px auto;
+      background: radial-gradient(circle at 80% 15%, #064E2B 0%, #002B18 50%, #00140c 100%);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 16px 20px 14px 20px;
+      overflow: hidden;
+    }
+    @media print {
+      body {
+        background: #000000 !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .page-sheet {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        padding: 16px 20px 14px 20px !important;
+      }
+    }
+  </style>
+</head>
+<body class="py-4 print:py-0">
+
+  <!-- PRINT TOOLBAR (NO-PRINT) -->
+  <div class="no-print max-w-[210mm] mx-auto mb-3 flex items-center justify-between bg-slate-900/90 text-white px-5 py-2.5 rounded-xl border border-royal-gold/50 shadow-xl backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-royal-gold text-masters-dark font-black flex items-center justify-center text-xs shadow">
+        A4
+      </div>
+      <div>
+        <div class="text-xs font-bold text-royal-goldLight uppercase tracking-wider">POSTER & TỜ RƠI QUẢNG BÁ CHÍNH THỨC</div>
+        <div class="text-[11px] text-slate-300">{{TOURNAMENT_NAME_TITLE}} • Chuẩn in ấn sắc nét & Gửi Zalo/Web</div>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <a href="index.html" class="px-3.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs font-semibold text-slate-200 transition">
+        Trang Chủ Giải
+      </a>
+      <button onclick="window.print()" class="px-4 py-1.5 bg-gradient-to-r from-royal-gold via-amber-400 to-royal-goldDark text-masters-dark font-extrabold text-xs rounded-lg shadow-lg hover:brightness-110 transition flex items-center gap-1.5">
+        <i data-lucide="printer" class="w-3.5 h-3.5"></i> In / Xuất PDF (A4)
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= MASTER A4 POSTER SHEET ================= -->
+  <div class="page-sheet text-white relative">
+
+    <!-- Ambient Flares & Double Gold Fillet Border -->
+    <div class="absolute -top-24 -right-24 w-80 h-80 bg-royal-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-24 -left-24 w-80 h-80 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute inset-2 border border-royal-gold/35 rounded-xl pointer-events-none"></div>
+    <div class="absolute inset-3 border border-royal-gold/15 rounded-lg pointer-events-none"></div>
+
+    <!-- ================= 1. HEADER BRANDING BAR ================= -->
+    <div class="relative z-10 flex items-center justify-between border-b border-royal-gold/30 pb-2">
+      <!-- Left: Logo Báo Lao Động -->
+      <div class="flex items-center gap-2.5">
+        <div class="bg-white px-2.5 py-1 rounded-lg shadow-sm flex items-center">
+          <img src="assets/images/logo_lao_dong_official.png" alt="Báo Lao Động" class="h-6 w-auto object-contain" />
+        </div>
+        <div class="h-5 w-px bg-royal-gold/40"></div>
+        <div class="bg-white/95 px-2 py-0.5 rounded-md shadow-xs flex items-center">
+          <img src="assets/images/logo_tan_son_nhat.png" alt="{{VENUE_NAME}}" class="h-4.5 w-auto object-contain" />
+        </div>
+      </div>
+
+      <!-- Center / Right: Badge Kỷ Niệm & Tính Chất Sự Kiện -->
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-0.5 rounded-full bg-emerald-950/80 border border-royal-gold/40 text-[9.5px] font-bold text-royal-goldLight tracking-widest uppercase">
+          ★ KỶ NIỆM 97 NĂM BÁO LAO ĐỘNG (1929 - 2026)
+        </span>
+      </div>
+    </div>
+
+    <!-- ================= 2. MAIN TOURNAMENT TITLE ================= -->
+    <div class="relative z-10 text-center pt-1.5 pb-1 space-y-0.5">
+      <div class="inline-flex items-center gap-1.5 text-royal-goldLight text-[10px] font-bold tracking-[0.25em] uppercase">
+        <i data-lucide="trophy" class="w-3.5 h-3.5 text-royal-gold"></i> ĐẤU TRƯỜNG THỂ THAO ĐỈNH CAO THƯỜNG NIÊN
+      </div>
+      
+      <h1 class="font-serif-luxury text-[32px] font-black text-white leading-[1.05] tracking-tight">
+        GIẢI GOLF BÁO LAO ĐỘNG <span class="gold-foil-text italic font-normal">OPEN 2026</span>
+      </h1>
+
+      <p class="text-[11px] text-amber-200/90 font-light italic">
+        "{{TOURNAMENT_FULL_SLOGAN}}"
+      </p>
+
+      <!-- 4 Pillars of Info Bar -->
+      <div class="grid grid-cols-4 gap-1.5 pt-1 max-w-[98%] mx-auto text-left">
+        <div class="p-1.5 rounded-lg bg-black/45 border border-royal-gold/30 backdrop-blur-sm">
+          <span class="text-[8.5px] uppercase font-bold text-royal-gold block">Thời gian</span>
+          <strong class="text-[10.5px] text-white leading-tight block">12:00 Shotgun • {{TOURNAMENT_DATE_SHORT}}</strong>
+        </div>
+        <div class="p-1.5 rounded-lg bg-black/45 border border-royal-gold/30 backdrop-blur-sm">
+          <span class="text-[8.5px] uppercase font-bold text-royal-gold block">Địa điểm</span>
+          <strong class="text-[10.5px] text-white leading-tight block truncate">{{VENUE_NAME}}</strong>
+        </div>
+        <div class="p-1.5 rounded-lg bg-black/45 border border-royal-gold/30 backdrop-blur-sm">
+          <span class="text-[8.5px] uppercase font-bold text-royal-gold block">Quy mô</span>
+          <strong class="text-[10.5px] text-white leading-tight block">144 Golfer • System 36</strong>
+        </div>
+        <div class="p-1.5 rounded-lg bg-black/45 border border-royal-gold/30 backdrop-blur-sm">
+          <span class="text-[8.5px] uppercase font-bold text-royal-gold block">Đêm Gala</span>
+          <strong class="text-[10.5px] text-white leading-tight block truncate">18:00 Grand Ballroom</strong>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 3. HERO VISUAL: HOLE-IN-ONE & PRIZE SYSTEM ================= -->
+    <div class="relative z-10 rounded-xl overflow-hidden border-2 border-royal-gold/60 shadow-2xl bg-black/60">
+      
+      <!-- Top Banner in Card: Hole In One Super Attraction -->
+      <div class="relative h-[160px] overflow-hidden group">
+        <img src="assets/images/golf_hio_luxury_car_podium.jpg" alt="Giải Hole In One Xe Điện VinFast VF 7 & VF 3" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-black/30"></div>
+        
+        <!-- Floating Tag HIO -->
+        <div class="absolute top-2 left-2.5 bg-red-600/90 backdrop-blur-md px-2.5 py-0.5 rounded-full border border-white/20 text-[9px] font-black text-white uppercase tracking-wider flex items-center gap-1 shadow-md">
+          <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
+          CƠ CẤU GIẢI THƯỞNG ĐẶC BIỆT HOLE-IN-ONE (HIO)
+        </div>
+
+        <div class="absolute top-2 right-2.5 bg-black/70 backdrop-blur-md px-2 py-0.5 rounded border border-royal-gold/40 text-[9px] font-bold text-royal-goldLight">
+          TẠI TẤT CẢ CÁC HỐ PAR 3
+        </div>
+
+        <!-- Bottom Overlay on Visual -->
+        <div class="absolute bottom-2 left-2.5 right-2.5 flex justify-between items-end">
+          <div class="space-y-0.5 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg border border-royal-gold/40">
+            <span class="text-[9px] uppercase font-extrabold text-royal-gold block tracking-wider">HIO SIÊU KHỦNG</span>
+            <div class="text-sm sm:text-base font-black text-white tracking-tight flex items-center gap-1.5">
+              <span>🚗 02 XE Ô TÔ ĐIỆN VINFAST VF 7 & VF 3</span>
+            </div>
+            <div class="text-[10px] text-amber-200 font-semibold">
+              + Bộ Gậy PRGR Cao Cấp & Tiền Mặt Giá Trị
+            </div>
+          </div>
+
+          <div class="text-right bg-gradient-to-r from-amber-700/95 to-amber-950/95 px-3 py-1.5 rounded-lg border border-royal-gold/50 shadow-md">
+            <span class="text-[8.5px] uppercase font-bold text-amber-200 block">VÔ ĐỊCH TOÀN GIẢI</span>
+            <strong class="text-xs font-black text-white uppercase">CÚP BEST GROSS</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Grid of Categories: 4 Flights & Skill Prizes -->
+      <div class="p-2.5 bg-gradient-to-b from-[#001c10] to-[#00140c] border-t border-royal-gold/30">
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          
+          <!-- Flights -->
+          <div class="p-2 rounded-lg bg-black/40 border border-white/10">
+            <div class="flex items-center justify-between text-[10px] font-bold text-royal-gold uppercase mb-1">
+              <span>🏆 04 BẢNG ĐẤU CHÍNH THỨC (System 36)</span>
+              <span class="text-[8.5px] text-emerald-400">Nhất • Nhì • Ba</span>
+            </div>
+            <div class="grid grid-cols-2 gap-1 text-[9.5px] text-slate-200">
+              <div class="bg-white/5 px-1.5 py-0.5 rounded"><strong>Bảng A:</strong> HDC 0 – 15</div>
+              <div class="bg-white/5 px-1.5 py-0.5 rounded"><strong>Bảng B:</strong> HDC 16 – 28</div>
+              <div class="bg-white/5 px-1.5 py-0.5 rounded"><strong>Bảng C:</strong> HDC 29+ & Callaway</div>
+              <div class="bg-white/5 px-1.5 py-0.5 rounded text-amber-300"><strong>Bảng Nữ:</strong> HDC 0 – 36</div>
+            </div>
+          </div>
+
+          <!-- Skill Prizes & Gala Lucky Draw -->
+          <div class="p-2 rounded-lg bg-black/40 border border-white/10">
+            <div class="flex items-center justify-between text-[10px] font-bold text-royal-gold uppercase mb-1">
+              <span>🎯 GIẢI KỸ THUẬT & LUCKY DRAW</span>
+              <span class="text-[8.5px] text-amber-300">Cúp & Quà VIP</span>
+            </div>
+            <div class="text-[9.5px] text-slate-200 space-y-0.5">
+              <div>• <strong>02 Nearest to the Pin</strong> • <strong>01 Longest Drive</strong> • <strong>01 Nearest to the Line</strong></div>
+              <div class="text-amber-200/90">• <strong>Lucky Draw Gala Dinner:</strong> Quà tặng giá trị từ các nhà tài trợ thương hiệu.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ================= 4. GOLFER PACKAGE & FEE SECTION ================= -->
+    <div class="relative z-10 bg-gradient-to-r from-amber-950/70 via-emerald-950/90 to-amber-950/70 rounded-xl p-2.5 border border-royal-gold shadow-lg flex items-center justify-between gap-3">
+      <div class="space-y-0.5">
+        <span class="inline-block px-2 py-0.5 rounded bg-royal-gold text-masters-dark text-[9px] font-black uppercase tracking-wider">
+          CHI PHÍ THAM DỰ TRỌN GÓI
+        </span>
+        <div class="text-xl sm:text-2xl font-black text-white font-cinzel">
+          {{ENTRY_FEE_NUMBER}} <span class="text-sm font-sans font-bold text-amber-300">VNĐ / Golfer</span>
+        </div>
+      </div>
+
+      <div class="flex-1 border-l border-royal-gold/40 pl-3">
+        <span class="text-[9px] font-extrabold uppercase text-royal-goldLight block mb-0.5">QUYỀN LỢI BAO GỒM TOÀN DIỆN:</span>
+        <div class="grid grid-cols-3 gap-1 text-[9.5px] text-slate-200">
+          <div><i data-lucide="check" class="w-3 h-3 text-emerald-400 inline"></i> Phí sân 18 hố & Caddie</div>
+          <div><i data-lucide="check" class="w-3 h-3 text-emerald-400 inline"></i> 1/2 Buggy thi đấu</div>
+          <div><i data-lucide="check" class="w-3 h-3 text-emerald-400 inline"></i> Doorgift VIP cao cấp</div>
+          <div><i data-lucide="check" class="w-3 h-3 text-emerald-400 inline"></i> Tiệc trưa đón tiếp</div>
+          <div class="col-span-2"><i data-lucide="check" class="w-3 h-3 text-emerald-400 inline"></i> <strong>Đại tiệc Gala Dinner</strong> sang trọng tại Grand Ballroom</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 5. TIMELINE / SCHEDULE SUMMARY ================= -->
+    <div class="relative z-10 rounded-xl bg-black/40 border border-royal-gold/30 p-2">
+      <div class="flex items-center justify-between text-[9px] font-extrabold uppercase tracking-widest text-royal-gold mb-1 px-1">
+        <span>LỊCH TRÌNH NGÀY THI ĐẤU (CHỦ NHẬT - {{TOURNAMENT_DATE_SHORT}})</span>
+        <span class="text-slate-400">SÂN GOLF TÂN SƠN NHẤT</span>
+      </div>
+
+      <div class="grid grid-cols-5 gap-1.5 text-center text-[9px]">
+        <div class="p-1 rounded bg-white/5 border border-white/10">
+          <div class="font-bold text-royal-gold text-[10px]">09:00 – 11:15</div>
+          <div class="text-slate-300 mt-0.5 leading-tight">Check-in, Doorgift & Dùng tiệc trưa</div>
+        </div>
+        <div class="p-1 rounded bg-white/5 border border-white/10">
+          <div class="font-bold text-royal-gold text-[10px]">11:30 – 11:45</div>
+          <div class="text-slate-300 mt-0.5 leading-tight">Lễ Khai mạc & Chụp ảnh lưu niệm</div>
+        </div>
+        <div class="p-1 rounded bg-white/5 border border-white/10">
+          <div class="font-bold text-royal-gold text-[10px]">11:45 – 12:00</div>
+          <div class="text-slate-300 mt-0.5 leading-tight">Golfer di chuyển ra Teebox</div>
+        </div>
+        <div class="p-1 rounded bg-emerald-950/80 border border-emerald-500/50">
+          <div class="font-bold text-emerald-300 text-[10px]">12:00 SHOTGUN</div>
+          <div class="text-slate-200 mt-0.5 leading-tight">Tranh tài đồng loạt 18 hố System 36</div>
+        </div>
+        <div class="p-1 rounded bg-amber-950/80 border border-amber-500/50">
+          <div class="font-bold text-amber-300 text-[10px]">18:00 GALA DINNER</div>
+          <div class="text-slate-200 mt-0.5 leading-tight">Trao giải thưởng & Bốc thăm may mắn</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= 6. REGISTRATION, QR & CONTACT BLOCK ================= -->
+    <div class="relative z-10 grid grid-cols-12 gap-2 text-xs">
+      
+      <!-- Left: QR Code & Bank Transfer Form Spec (5 Cols) -->
+      <div class="col-span-5 p-2 rounded-xl bg-black/60 border border-royal-gold/40 flex items-center gap-2.5">
+        <div class="w-20 h-20 bg-white p-1 rounded-lg shrink-0 shadow-md">
+          <img src="assets/images/qr_dang_ky_golf.svg" alt="Mã QR Đăng Ký Giải Golf" class="w-full h-full object-contain" />
+        </div>
+        <div class="space-y-0.5 text-[9px] leading-tight">
+          <span class="inline-block px-1.5 py-0.5 rounded bg-red-600 text-white font-extrabold uppercase text-[8px] tracking-wider mb-0.5">
+            QUÉT QR ĐĂNG KÝ
+          </span>
+          <div class="font-bold text-white text-[10px]">Đăng ký trực tiếp qua Zalo / Web</div>
+          <div class="text-slate-300 pt-0.5">
+            <strong>Cú pháp CK:</strong><br/>
+            <span class="text-amber-300 font-mono">[Họ Tên] + [SĐT] + [HDC/VGA]</span>
+          </div>
+          <div class="text-[8.5px] text-slate-400">Ban Thư ký liên hệ gửi số tài khoản và xác nhận flight sau 15 phút.</div>
+        </div>
+      </div>
+
+      <!-- Right: Organizing Committee Contact & Address (7 Cols) -->
+      <div class="col-span-7 p-2 rounded-xl bg-black/60 border border-royal-gold/40 flex flex-col justify-between">
+        
+        <div>
+          <div class="flex items-center justify-between text-[9px] font-bold text-royal-gold uppercase mb-1">
+            <span>BAN TỔ CHỨC TIẾP NHẬN 24/7</span>
+            <span class="text-emerald-400">HOTLINE CHÍNH THỨC</span>
+          </div>
+          
+          <div class="grid grid-cols-2 gap-1 text-[9.5px]">
+            <div class="bg-white/5 p-1 rounded border border-white/10">
+              <span class="text-[8px] text-slate-400 uppercase block">Trưởng Ban Tổ Chức</span>
+              <strong class="text-white">Nhà báo Thanh Uyên</strong><br/>
+              <a href="tel:0932311012" class="text-amber-300 font-bold hover:underline">📞 0932.311.012</a>
+            </div>
+            
+            <div class="bg-white/5 p-1 rounded border border-white/10">
+              <span class="text-[8px] text-slate-400 uppercase block">Phó Ban Tổ Chức</span>
+              <strong class="text-white">Nhà báo Bá Trường</strong><br/>
+              <a href="tel:0918658465" class="text-amber-300 font-bold hover:underline">📞 0918.658.465</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-1 text-[8.5px] text-slate-400 border-t border-white/10 mt-1 flex justify-between items-center">
+          <div>
+            <strong>BÁO LAO ĐỘNG</strong> — VPĐD TP.HCM & Đông Nam Bộ (198 Nguyễn Thị Minh Khai, P. Xuân Hoà, TP.HCM)
+          </div>
+          <div class="text-right text-royal-gold font-bold">
+            laodong.vn/golf2026
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= 7. FOOTER NOTE ================= -->
+    <div class="relative z-10 text-center text-[8.5px] text-slate-400 pt-0.5 flex justify-between items-center border-t border-royal-gold/20">
+      <span>© 2026 Báo Lao Động • Tất cả quyền lợi tài trợ & thi đấu được quản lý chuyên nghiệp</span>
+      <span class="text-royal-gold font-cinzel font-bold">{{TOURNAMENT_NAME_UPPER}}</span>
+    </div>
+
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

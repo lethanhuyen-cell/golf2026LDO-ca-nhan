@@ -40,6 +40,13 @@
 2. **Workspace Skill**: `.agents/skills/event-landing-page/SKILL.md`.
 - Kích hoạt tự động khi người dùng nhắc tới: `mau-golf`, `mẫu golf`, `taogiai`, `tạo giải golf`, `giải golf báo lao động`, `tổ chức giải golf`, `hồ sơ tài trợ golf`, `dossier mode`.
 
+### 1.7. Xuất Bản Tờ Rơi / Poster Quảng Bá Giải Chuẩn A4 (Poster Edition)
+- **Tệp Web**: `poster.html` (1 trang A4 chuẩn in tuyệt đối, Sports Luxe, HIO VinFast VF 7 & VF 3, PRGR, Cúp Best Gross, 4 Bảng đấu, Phí 3.5Tr, Lịch trình, QR code, Hotline Thanh Uyên trước, Bá Trường sau).
+- **Tệp In Ấn & Truyền Thông**:
+  - `Poster_Golf_Bao_Lao_Dong_2026.pdf` (Bản PDF chuẩn in ấn A4 1 trang sắc nét).
+  - `Poster_Golf_Bao_Lao_Dong_2026.png` (Ảnh độ phân giải cao 643 KB tối ưu gửi Zalo, Facebook, Email).
+- **Mẫu Tái Sử Dụng**: Đã đóng gói thành `template_poster.html` trong `mau-golf` để tự động hóa sinh poster cho các giải tiếp theo.
+
 ---
 
 ## 📂 2. BẢNG DANH MỤC CÁC TỆP TIN DỰ ÁN & BÀN GIAO
@@ -47,18 +54,21 @@
 | STT | Tên Tệp Tin / Thư Mục | Định Dạng | Mô Tả Chức Năng | Tình Trạng |
 |:---:|---|:---:|---|:---:|
 | 1 | **`index.html`** | Landing Page | Website chính thức sự kiện (Sports Luxe, Dossier Mode) | ✅ Đã đồng bộ |
-| 2 | **`dossier_ca_nhan.html`** | Web / In A4 | Hồ sơ Cá nhân 3 trang A4 độc lập (Đã tinh gọn) | ✅ Đã đồng bộ |
-| 3 | **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.9 MB) | Bản xuất in PDF Hồ sơ Cá nhân 3 trang mới nhất | ✅ Đã xuất bản |
-| 4 | **`dossier.html`** | Web / In A4 | Quyển Hồ sơ Doanh nghiệp 10 trang chuẩn A4 | ✅ Đã đồng bộ |
-| 5 | **`Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`** | PDF (4.2 MB) | Bản xuất in PDF Hồ sơ Doanh nghiệp 10 trang | ✅ Đã xuất bản |
-| 6 | **`taogiai`** | Python Executable | Công cụ 1 lệnh tạo giải siêu tốc ngay tại thư mục gốc | ✅ Hoạt động tốt |
-| 7 | **`cauhinh.json`** | JSON | File cấu hình nhanh thông số giải mới | ✅ Sẵn sàng |
-| 8 | **`mau-golf/`** | Thư mục Template | Bộ template master giữ nguyên 100% thiết kế & đồ họa | ✅ Đã đóng gói |
-| 9 | **`BO_TEMPLATE_SPORTS_LUXE_LAO_DONG_CHUAN_DONG_GOI.zip`** | Nén .ZIP (16 MB) | Trọn gói template + assets + script biên dịch | 🔒 Đã đóng gói |
-| 10 | **`_backups/BAN_SAO_DU_PHONG_GOLF_LAO_DONG_2026_10_23.zip`** | Nén .ZIP (7.1 MB) | Bản sao lưu toàn diện snapshot phiên bản chuẩn 23.10 | 🔒 Đã lưu trữ |
-| 11 | **`CAM_NANG_QUY_TRINH_TO_CHUC_SU_KIEN_GOLF.md`** | Markdown | Cẩm nang master 6 giai đoạn tổ chức giải | ✅ Đã ban hành |
-| 12 | **`QUY_TRINH_CHUAN_KHOI_TAO_SU_KIEN_SPORTS_LUXE.md`** | Markdown | Quy trình chuẩn hóa khởi tạo sự kiện Sports Luxe | ✅ Đã ban hành |
-| 13 | **`DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.xlsx`** | Excel (.xlsx) | Bảng dự toán chi phí nội bộ 2 sheet | 🔒 Local Only (.gitignore) |
+| 2 | **`poster.html`** | Web / In A4 | Tờ rơi Poster quảng bá giải A4 chuẩn in tuyệt đối | ✅ Đã xuất bản |
+| 3 | **`Poster_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (1.65 MB) | File xuất in PDF Poster A4 chính thức (Đúng 1 trang) | ✅ Đã xuất bản |
+| 4 | **`Poster_Golf_Bao_Lao_Dong_2026.png`** | PNG (643 KB) | Ảnh Poster sắc nét gửi Zalo, Facebook & Email | ✅ Đã xuất bản |
+| 5 | **`dossier_ca_nhan.html`** | Web / In A4 | Hồ sơ Cá nhân 3 trang A4 độc lập (Đã tinh gọn) | ✅ Đã đồng bộ |
+| 6 | **`HSTT_Ca_Nhan_Golf_Bao_Lao_Dong_2026.pdf`** | PDF (2.9 MB) | Bản xuất in PDF Hồ sơ Cá nhân 3 trang mới nhất | ✅ Đã xuất bản |
+| 7 | **`dossier.html`** | Web / In A4 | Quyển Hồ sơ Doanh nghiệp 10 trang chuẩn A4 | ✅ Đã đồng bộ |
+| 8 | **`Ho_So_Moi_Tai_Tro_Golf_Bao_Lao_Dong_Open_2026.pdf`** | PDF (4.2 MB) | Bản xuất in PDF Hồ sơ Doanh nghiệp 10 trang | ✅ Đã xuất bản |
+| 9 | **`taogiai`** | Python Executable | Công cụ 1 lệnh tạo giải siêu tốc ngay tại thư mục gốc | ✅ Hoạt động tốt |
+| 10 | **`cauhinh.json`** | JSON | File cấu hình nhanh thông số giải mới | ✅ Sẵn sàng |
+| 11 | **`mau-golf/`** | Thư mục Template | Bộ template master giữ nguyên 100% thiết kế & đồ họa | ✅ Đã đóng gói |
+| 12 | **`BO_TEMPLATE_SPORTS_LUXE_LAO_DONG_CHUAN_DONG_GOI.zip`** | Nén .ZIP (16 MB) | Trọn gói template + assets + script biên dịch | 🔒 Đã đóng gói |
+| 13 | **`_backups/BAN_SAO_DU_PHONG_GOLF_LAO_DONG_2026_10_23.zip`** | Nén .ZIP (7.1 MB) | Bản sao lưu toàn diện snapshot phiên bản chuẩn 23.10 | 🔒 Đã lưu trữ |
+| 14 | **`CAM_NANG_QUY_TRINH_TO_CHUC_SU_KIEN_GOLF.md`** | Markdown | Cẩm nang master 6 giai đoạn tổ chức giải | ✅ Đã ban hành |
+| 15 | **`QUY_TRINH_CHUAN_KHOI_TAO_SU_KIEN_SPORTS_LUXE.md`** | Markdown | Quy trình chuẩn hóa khởi tạo sự kiện Sports Luxe | ✅ Đã ban hành |
+| 16 | **`DU_TOAN_CHI_PHI_GOLF_LAO_DONG_2026.xlsx`** | Excel (.xlsx) | Bảng dự toán chi phí nội bộ 2 sheet | 🔒 Local Only (.gitignore) |
 
 ---
 

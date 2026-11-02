@@ -99,6 +99,7 @@ def render_pdf(html_file, pdf_output):
 if __name__ == '__main__':
     render_pdf("dossier_ca_nhan.html", "HSTT_Ca_Nhan_Chuan_In.pdf")
     render_pdf("dossier.html", "HSTT_Doanh_Nghiep_Chuan_In.pdf")
+    render_pdf("poster.html", "Poster_Quang_Ba_A4.pdf")
 """
 
 def main():
@@ -138,14 +139,22 @@ def main():
         f.write(corp_out)
 
     # 3. Personal Dossier (3 pages)
-    print("[3/5] Biên dịch Hồ sơ Cá nhân 3 trang (dossier_ca_nhan.html)...")
+    print("[3/6] Biên dịch Hồ sơ Cá nhân 3 trang (dossier_ca_nhan.html)...")
     pers_tpl = base_dir / "template_dossier_ca_nhan.html"
     pers_out = apply_template(pers_tpl, vars_map)
     with open(out_path / "dossier_ca_nhan.html", "w", encoding="utf-8") as f:
         f.write(pers_out)
 
-    # 4. Copy Assets (Images, Logos, Textures)
-    print("[4/5] Sao chép toàn bộ kho tài nguyên đồ họa (assets/images)...")
+    # 4. Marketing Poster / Flyer A4 (1 page)
+    print("[4/6] Biên dịch Poster & Tờ Rơi A4 (poster.html)...")
+    poster_tpl = base_dir / "template_poster.html"
+    if poster_tpl.exists():
+        poster_out = apply_template(poster_tpl, vars_map)
+        with open(out_path / "poster.html", "w", encoding="utf-8") as f:
+            f.write(poster_out)
+
+    # 5. Copy Assets (Images, Logos, Textures)
+    print("[5/6] Sao chép toàn bộ kho tài nguyên đồ họa (assets/images)...")
     src_assets = base_dir / "assets"
     dst_assets = out_path / "assets"
     if src_assets.exists():
@@ -153,8 +162,8 @@ def main():
             shutil.rmtree(dst_assets)
         shutil.copytree(src_assets, dst_assets)
 
-    # 5. Security & Build Tools
-    print("[5/5] Cài đặt Dossier Mode bảo mật & Tool in PDF...")
+    # 6. Security & Build Tools
+    print("[6/6] Cài đặt Dossier Mode bảo mật & Tool in PDF...")
     with open(out_path / "robots.txt", "w", encoding="utf-8") as f:
         f.write(generate_robots_txt())
     with open(out_path / "vercel.json", "w", encoding="utf-8") as f:
