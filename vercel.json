@@ -5,16 +5,16 @@
   "trailingSlash": false,
   "routes": [
     {
-      "src": "/trailer",
-      "dest": "/trailer.html"
-    },
-    {
       "src": "/dossier",
       "dest": "/dossier.html"
     },
     {
       "src": "/dossier-ca-nhan",
       "dest": "/dossier_ca_nhan.html"
+    },
+    {
+      "src": "/dossier-hon-hop",
+      "dest": "/dossier_hon_hop.html"
     },
     {
       "src": "/(.*)",

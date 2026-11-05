@@ -114,7 +114,7 @@ def main():
         print("\n" + "=" * 65)
         print("🎉 HOÀN THÀNH XUẤT SẮC!")
         print(f"👉 Thư mục dự án: {out_dir}")
-        print("👉 Các file đã tạo sẵn: index.html, dossier.html (10 trang), dossier_ca_nhan.html (3 trang), poster.html (Poster A4)")
+        print("👉 Các file đã tạo sẵn: index.html, dossier_hon_hop.html (12 trang), dossier.html (10 trang), dossier_ca_nhan.html (3 trang), poster.html (Poster A4)")
         print(f"👉 Để xuất in PDF ngay: cd '{folder_name}' && python3 render_pdf.py")
         print("=" * 65)
     else:

@@ -18,14 +18,17 @@ Khi bắt đầu một giải đấu mới, hãy tạo cấu trúc thư mục ch
 ```
 📁 [TÊN_GIAI_DAU_NAM]/
 ├── 📄 index.html                       # Landing Page chính thức (Public & Sports Luxe)
+├── 📄 dossier_hon_hop.html             # Hồ sơ Mời tài trợ Toàn diện Hỗn hợp (12 trang A4)
 ├── 📄 dossier.html                     # Hồ sơ Mời tài trợ Doanh nghiệp (10-12 trang A4)
 ├── 📄 dossier_ca_nhan.html             # Hồ sơ Đồng hành Cá nhân (3 trang A4 Quiet Luxury)
-├── 📄 trailer.html                     # Video Motion / Trailer tương tác 60s
+├── 📄 poster.html                      # Poster & tờ rơi quảng bá giải đấu (A4 / Standee / Banner)
 ├── 📄 robots.txt                       # Chặn Google lập chỉ mục dossier & pdf
 ├── 📄 NHAT_KY_LAM_VIEC.md              # Session Log ghi nhận tiến độ & audit trail
 ├── 📄 CAM_NANG_QUY_TRINH_TO_CHUC.md    # Cẩm nang vận hành (Tài liệu này)
+├── 📕 Ho_So_Tai_Tro_Hon_Hop_*.pdf      # File PDF Hỗn hợp in ấn & gửi VIP (12 trang)
 ├── 📕 Ho_So_Moi_Tai_Tro_*.pdf          # File PDF Doanh nghiệp in ấn & gửi VIP
 ├── 📕 HSTT_Ca_Nhan_*.pdf               # File PDF Cá nhân in ấn & gửi VIP
+├── 📕 Poster_*.pdf                     # File PDF Poster / Tờ rơi in ấn quảng bá
 ├── 📁 assets/
 │   └── 📁 images/                      # Ảnh flycam thực tế, logo chuẩn, cúp, gala
 ├── 📁 _backups/                        # Lưu trữ các điểm phục hồi (Restore points & zip)
@@ -145,7 +148,7 @@ Khi chốt phiên bản chính thức:
 ```bash
 BACKUP_DIR="_backups/YYYY-MM-DD_ten_phien_ban"
 mkdir -p "$BACKUP_DIR"
-cp index.html dossier.html dossier_ca_nhan.html trailer.html robots.txt NHAT_KY_LAM_VIEC.md *.pdf "$BACKUP_DIR/"
+cp index.html dossier.html dossier_ca_nhan.html dossier_hon_hop.html poster.html robots.txt NHAT_KY_LAM_VIEC.md *.pdf "$BACKUP_DIR/"
 cd "$BACKUP_DIR" && zip -r "../BAN_SAO_DU_PHONG.zip" . && cd -
 git add _backups/ && git commit -m "chore: save backup restore point" && git push
 ```
